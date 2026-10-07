@@ -1,0 +1,911 @@
+/* =========================================
+   BASE
+========================================= */
+
+:root {
+    --primary: #1188B5;
+    --primary-bg:#026AA2;
+    --primary-text:#48B1DC;
+    --primary-dark: #0D6F93;
+    --radius-sm: 8px;
+    --radius-md: 10px;
+    --radius-lg: 12px;
+    --transition: 220ms ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* यह हॉरिजॉन्टल स्क्रॉल को रोक देगा */
+}
+
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: clip;
+    /* Satoshi के बाद Noto Sans Devanagari को जोड़ दिया है */
+    font-family: "Satoshi", "Noto Sans Devanagari", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background var(--transition), color var(--transition);
+}
+
+body.drawer-open {
+    overflow: hidden;
+}
+
+body.dark-theme {
+    --bg: #000000;
+    --bg-secondary: #0F0F0F;
+    --card-bg: #222222;
+    --card-bg-hover: #292929;
+    --border: #343434;
+    --text: #FFFFFF;
+    --text-secondary: #CFCFCF;
+    --drawer-bg: #121212;
+    --overlay: rgba(0, 0, 0, 0.45);
+}
+
+body.light-theme {
+    --bg: #F7F8FA;
+    --bg-secondary: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --card-bg-hover: #F4F4F4;
+    --border: #E5E7EB;
+    --text: #111827;
+    --text-secondary: #6B7280;
+    --drawer-bg: #FFFFFF;
+    --overlay: rgba(0, 0, 0, 0.15);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--text);
+    font-weight: 700;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+.container {
+    width: min(1250px, 90%); /* डेस्कटॉप पर मार्जिन बढ़ाने के लिए चौड़ाई थोड़ी कम की */
+    margin-inline: auto;
+}
+
+.header .container {
+    width: min(1360px, 94%); /* इससे लोगो और Contact Now बटन किनारों पर खिसक जाएंगे */
+}
+
+
+/* =========================================
+   SHARED CONTROLS
+========================================= */
+
+.contact-btn,
+.hero-btn,
+.drawer-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 24px;
+    border-radius: var(--radius-md);
+    background: var(--primary-bg);
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 700;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.contact-btn:hover,
+.hero-btn:hover,
+.drawer-contact-btn:hover {
+    background: var(--primary-dark);
+}
+
+.contact-btn:active,
+.hero-btn:active,
+.drawer-contact-btn:active {
+    transform: translateY(1px);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   HEADER AND NAVIGATION
+========================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    transition: background var(--transition), box-shadow var(--transition);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 2.4vw, 32px);
+    min-height: 82px;
+}
+
+.logo-wrapper {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-image {
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+}
+
+.logo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    line-height: 1;
+}
+
+.logo-small {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.logo-script {
+    font-family: "Allura", cursive;
+    font-size: 29px;
+    line-height: 0.78;
+    white-space: nowrap;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(22px, 2.8vw, 40px);
+    margin-left: auto;
+    font-family: "Lato", sans-serif;
+}
+
+.desktop-nav a {
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 500; /* भारीपन थोड़ा कम किया (500) */
+    letter-spacing: 0.02em; /* अक्षरों के बीच हल्का स्पेस दिया */
+    transition: color var(--transition);
+}
+
+.desktop-nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: -7px;
+    left: 0;
+    height: 2px;
+    background: var(--primary);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+}
+
+.desktop-nav a:hover {
+    color: var(--primary);
+}
+
+.desktop-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.desktop-actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.theme-toggle,
+.menu-btn,
+.drawer-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: border-color var(--transition), background var(--transition);
+}
+
+.theme-toggle,
+.drawer-close {
+    border-radius: 50%;
+}
+
+.theme-toggle {
+    font-size: 18px;
+}
+
+.theme-toggle:hover,
+.drawer-close:hover,
+.menu-btn:hover {
+    border-color: var(--primary);
+}
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: var(--radius-sm);
+}
+
+.menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text);
+}
+
+/* =========================================
+   MOBILE DRAWER
+========================================= */
+
+.drawer-overlay {
+    position: fixed;
+    z-index: 90;
+    inset: 0;
+    visibility: hidden;
+    background: var(--overlay);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 280ms ease, visibility 280ms ease;
+}
+
+.drawer-overlay.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-drawer {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    width: min(328px, 88vw);
+    height: 100dvh;
+    overflow-y: auto;
+    padding: 22px;
+    border-left: 1px solid var(--border);
+    background: var(--drawer-bg);
+    box-shadow: -12px 0 32px rgba(0, 0, 0, 0.16);
+    transform: translateX(100%);
+    transition: transform 280ms ease, background var(--transition);
+}
+
+.mobile-drawer.active {
+    transform: translateX(0);
+}
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.drawer-header h2 {
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.drawer-link,
+.dropdown-btn {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.drawer-link {
+    display: block;
+    padding: 15px 0;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    text-align: left;
+}
+
+.dropdown-icon {
+    display: inline-block;
+    transition: transform var(--transition);
+}
+
+.dropdown-btn.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 280ms ease, padding 280ms ease;
+}
+
+.dropdown-content.open {
+    max-height: 520px;
+    padding: 4px 0 10px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 0 8px 14px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    color: var(--primary);
+}
+
+.drawer-theme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 22px 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.switch {
+    position: relative;
+    width: 52px;
+    height: 28px;
+}
+
+.switch input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: #555555;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.slider::before {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    content: "";
+    transition: transform var(--transition);
+}
+
+.switch input:checked + .slider {
+    background: var(--primary);
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+.drawer-contact-btn {
+    display: flex;
+    width: 100%;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 0 60px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
+    align-items: center;
+    gap: clamp(32px, 5vw, 64px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-pill {
+    width: 80px;
+    height: 10px;
+    margin-bottom: 20px;
+    border-radius: 999px;
+    background: var(--primary);
+}
+
+.hero-content h1 {
+    margin-bottom: 24px;
+    font-size: clamp(44px, 4.5vw, 54px);
+    line-height: 1.25; /* चिपकने से रोकने के लिए लाइन हाइट बढ़ाई */
+    letter-spacing: -0.02em;
+}
+
+
+.hero-content h1 span {
+    margin-left: 4px;
+    color: var(--primary);
+    font-family: "Allura", cursive;
+    font-size: 1.15em;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.hero-content p {
+    max-width: 540px; /* थोड़ा चौड़ाई बढ़ाया ताकि हिंदी टेक्स्ट सही से फैले */
+    margin-bottom: 32px;
+    font-size: clamp(16px, 1.3vw, 18px);
+    line-height: 1.8; /* हिंदी पढ़ने में अब आँखों पर ज़ोर नहीं पड़ेगा */
+    font-weight: 400;
+}
+
+
+.hero-btn {
+    min-width: 168px;
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 330px;
+}
+
+.bubble,
+.ring,
+.particle {
+    position: absolute;
+    pointer-events: none;
+}
+
+.bubble {
+    border-radius: 50%;
+    background: var(--primary);
+    opacity: 0.12;
+}
+
+.bubble-1 { top: 22px; right: 10%; width: 190px; height: 190px; }
+.bubble-2 { top: 120px; left: 5%; width: 136px; height: 136px; }
+.bubble-3 { right: 18%; bottom: 22px; width: 92px; height: 92px; }
+.bubble-4 { top: 20px; left: 26%; width: 62px; height: 62px; }
+.bubble-5 { right: 0; bottom: 86px; width: 42px; height: 42px; }
+
+.ring {
+    border: 1px solid rgba(17, 136, 181, 0.3);
+    border-radius: 50%;
+}
+
+.ring-1 { top: 48px; right: 8%; width: 240px; height: 240px; }
+.ring-2 { bottom: 16px; left: 11%; width: 150px; height: 150px; }
+.ring-3 { top: 12px; left: 11%; width: 98px; height: 98px; }
+
+.particle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.particle-1 { top: 16%; right: 40%; }
+.particle-2 { top: 72%; left: 36%; }
+.particle-3 { top: 44%; right: 2%; }
+.particle-4 { top: 82%; right: 34%; }
+.particle-5 { top: 36%; left: 20%; }
+
+/* =========================================
+   POPULAR SERVICES
+========================================= */
+
+.popular-services {
+    padding: 28px 0 80px;
+}
+
+.section-heading {
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 2.5vw, 36px);
+    line-height: 1.2;
+}
+
+
+.servicesSwiper {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important; /* यह कार्ड्स को बाहर भागने से पूरी तरह रोकेगा */
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+.servicesSwiper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.servicesSwiper .swiper-slide {
+    display: flex;
+    height: auto;
+}
+
+.service-card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 316px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--card-bg);
+    transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.service-card:hover {
+    border-color: var(--primary);
+    background: var(--card-bg-hover);
+    transform: translateY(-4px);
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.service-item + .service-item {
+    margin-top: 20px;
+}
+
+.service-icon {
+    display: inline-flex;
+    flex: 0 0 48px;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 700;   
+}
+
+.service-icon.red1, .red2, .red3 {
+    color: #FF2C2C;
+    background-image: url("/lnmu..png");
+    background-position: center;
+    background-size: cover;
+}
+
+.service-icon.red2{
+    background-image: url("/railway\ logo.png");  
+}
+
+.service-icon.red3{
+    background-image: url("/ssc.png");  
+}
+
+.service-item h3 {
+    margin-bottom: 3px;
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.service-item p {
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.service-chips {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 6px;
+    flex-direction: column;
+}
+
+.service-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 5px 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.35;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chip-circle{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.view-all {
+    margin-top: auto;
+    padding-top: 20px;
+    color: var(--primary-text);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: end;
+    padding-right: 20px;
+}
+
+.view-all:hover {
+    color: var(--primary-dark);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (min-width: 769px) {
+    .servicesSwiper .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        transform: none !important;
+    }
+
+    .servicesSwiper .swiper-slide {
+        width: auto !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    @media (max-width: 1100px) {
+    .container {
+        width: 90%; 
+    }
+    .desktop-nav {
+        gap: 22px;
+    }
+}
+
+    .hero-grid {
+        gap: 36px;
+    }
+
+    .hero-visual {
+        min-height: 300px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .desktop-nav,
+    .desktop-actions {
+        display: none;
+    }
+
+    .menu-btn {
+        display: inline-flex;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+     .container {
+        width: 90% !important; /* मोबाइल पर लेफ्ट-राइट मार्जिन बढ़ाने के लिए */
+    }
+    .navbar {
+        min-height: 72px;
+    }
+    /* बाकी कोड... */
+
+    .logo-image {
+        width: 44px;
+        height: 44px;
+    }
+
+    .logo-small {
+        font-size: 13px;
+    }
+
+    .logo-script {
+       font-size: 22px;
+       white-space: normal;
+    }
+
+    .hero {
+        padding: 52px 0 30px;
+    }
+
+    .hero-grid {
+        display: block;
+    }
+
+    .hero-pill {
+        width: 72px;
+        height: 9px;
+        margin-bottom: 18px;
+    }
+
+    .hero-content h1 {
+        margin-bottom: 16px;
+        font-size: clamp(36px, 10vw, 42px);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+    }
+
+    .hero-content h1 span {
+        font-size: 1.16em;
+    }
+
+    .hero-content p {
+        max-width: 340px;
+        margin-bottom: 24px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .popular-services {
+        padding: 24px 0 64px;
+    }
+
+    .section-heading {
+        margin-bottom: 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .service-card {
+        min-height: 280px;
+        padding: 14px;
+    }
+
+    .service-item + .service-item {
+        margin-top: 16px;
+    }
+
+    .service-icon {
+        flex-basis: 42px;
+        width: 42px;
+        height: 42px;
+        font-size: 12px;
+    }
+
+    .service-item h3 {
+        font-size: 20px;
+    }
+
+    .service-item p,
+    .service-chip {
+        font-size: 14px;
+    }
+
+    .service-chips {
+        gap: 8px;
+    }
+
+    .service-chip {
+        min-height: 36px;
+        padding: 7px 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .container {
+        width: 86%
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-btn {
+        min-width: 156px;
+    }
+
+    .service-card {
+        padding: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media print {
+    .header,
+    .drawer-overlay,
+    .mobile-drawer {
+        display: none !important;
+    }
+}
+

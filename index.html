@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Sharda Cyber</title>
+
+    <!-- Satoshi -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Script Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+
+    <!-- Swiper -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+
+<!-- =========================================
+     MOBILE DRAWER BACKDROP
+========================================= -->
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <!-- Logo -->
+
+            <a href="#" class="logo-wrapper">
+
+                <div class="logo-image">
+
+                    <!-- Replace with your logo -->
+
+                    <img src="image_577e3bf5.jpg" alt="Maa Sharda Cyber">
+
+                </div>
+
+                <div class="logo-content">
+
+                    <span class="logo-small">
+                        Maa
+                    </span>
+
+                    <span class="logo-script">
+                        Sharda Cyber
+                    </span>
+
+                </div>
+
+            </a>
+
+            <!-- Desktop Navigation -->
+
+            <div class="desktop-nav">
+
+                <a href="#">Home</a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#">
+                    Pricing
+                </a>
+
+                <a href="#">
+                    About Us
+                </a>
+
+                <a href="#">
+                    Job Vacancies
+                </a>
+
+            </div>
+
+            <!-- Desktop Actions -->
+
+            <div class="desktop-actions">
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                type="button"
+                aria-label="Theme Toggle"
+                >
+                    🌙
+                </button>
+
+                <a href="#" class="contact-btn">
+                    Contact Now
+                </a>
+
+            </div>
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open Menu"
+                aria-controls="mobileDrawer"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- =========================================
+     MOBILE DRAWER
+========================================= -->
+
+<aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Mobile navigation">
+
+    <div class="drawer-header">
+
+        <h2>
+            Maa Sharda Cyber
+        </h2>
+
+        <button
+            class="drawer-close"
+            id="drawerClose"
+            type="button"
+            aria-label="Close menu"
+        >
+            ✕
+        </button>
+
+    </div>
+
+    <!-- Services Dropdown -->
+
+    <div class="drawer-dropdown">
+
+        <button class="dropdown-btn active" type="button" aria-expanded="true">
+
+            <span>
+                Our Services
+            </span>
+
+            <span class="dropdown-icon">
+                ⌃
+            </span>
+
+        </button>
+
+        <div class="dropdown-content open">
+
+            <a href="#">
+                Online Forms
+            </a>
+
+            <a href="#">
+                Document Scanning
+            </a>
+
+            <a href="#">
+                Print & Photocopy
+            </a>
+
+            <a href="#">
+                Passport Photos
+            </a>
+
+            <a href="#">
+                Digital Services
+            </a>
+
+            <a href="#">
+                PAN Services
+            </a>
+
+            <a href="#">
+                Aadhaar Services
+            </a>
+
+            <a href="#">
+                University Forms
+            </a>
+
+        </div>
+
+    </div>
+
+    <a href="#" class="drawer-link">
+        Pricing
+    </a>
+
+    <a href="#" class="drawer-link">
+        About Us
+    </a>
+
+    <!-- Jobs Dropdown -->
+
+    <div class="drawer-dropdown">
+
+        <button class="dropdown-btn" type="button" aria-expanded="false">
+
+            <span>
+                New Job Vacancies
+            </span>
+
+            <span class="dropdown-icon">
+                ⌄
+            </span>
+
+        </button>
+
+        <div class="dropdown-content">
+
+            <a href="#">
+                SSC Jobs
+            </a>
+
+            <a href="#">
+                Railway Jobs
+            </a>
+
+            <a href="#">
+                Banking Jobs
+            </a>
+
+            <a href="#">
+                State Jobs
+            </a>
+
+            <a href="#">
+                Central Govt Jobs
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Theme Switch -->
+
+    <div class="drawer-theme">
+
+        <span>
+            Dark Mode
+        </span>
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="drawerThemeToggle"
+            >
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <a href="#" class="drawer-contact-btn">
+
+        Contact Us
+
+    </a>
+
+</aside>
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <!-- Left -->
+
+            <div class="hero-content">
+
+                <div class="hero-pill"></div>
+
+                <h1>
+
+                    Digital Service
+
+                    <br>
+
+                    Cyber
+
+                    <span>
+
+                        cafe
+
+                    </span>
+
+                </h1>
+
+                <p>
+
+                    घर बैठे जाति, आवासीय, आय एवं सेमेस्टर परीक्षा फॉर्म और एडमिशन जैसे और भी सेवा लेने के लिए नीचे दिए गए बटन पर क्लिक करें
+
+                </p>
+
+                <a href="#" class="hero-btn">
+
+                    Contact Now
+
+                </a>
+
+            </div>
+
+            <!-- Right Visual -->
+
+            <div class="hero-visual">
+
+                <div class="bubble bubble-1"></div>
+                <div class="bubble bubble-2"></div>
+                <div class="bubble bubble-3"></div>
+                <div class="bubble bubble-4"></div>
+                <div class="bubble bubble-5"></div>
+
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     POPULAR SERVICES
+========================================= -->
+
+<section
+    class="popular-services"
+    id="services"
+>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+
+                Popular Services
+
+            </h2>
+
+        </div>
+
+        <!-- Swiper -->
+
+        <div class="swiper servicesSwiper">
+
+            <div class="swiper-wrapper">
+
+                <!-- =====================================
+                     CARD 1
+                ====================================== -->
+
+                <div class="swiper-slide">
+
+                    <div class="service-card">
+
+                        <div class="service-item">
+
+                            <div class="service-icon red1">
+                                
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    LMNU
+                                </h3>
+
+                                <p>
+
+                                    Admission & Exam Form
+                                    <br>
+                                    (B.A / B.Sc / B.Com)
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="service-item">
+
+                            <div class="service-icon red2">
+                                S
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    RRB
+                                </h3>
+
+                                <p>
+
+                                    Exam Form & Admit Card
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="service-item">
+
+                            <div class="service-icon red3">
+                                R
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    SSC
+                                </h3>
+
+                                <p>
+
+                                    Exam Form & Admit Card
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="view-all">
+
+                            View All →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- =====================================
+                     CARD 2
+                ====================================== -->
+
+                <div class="swiper-slide">
+
+                    <div class="service-card">
+
+                        <div class="service-chips" aria-label="Available print and document services">
+
+                            <span class="service-chip">
+                                <div class="chip-circle"></div>
+                                Black & Color Printout
+                            </span>
+
+                            <span class="service-chip">
+                                Document Printing
+                            </span>
+
+                            <span class="service-chip">
+                                PAN Card
+                            </span>
+
+                            <span class="service-chip">
+                                Passport
+                            </span>
+
+                            <span class="service-chip">
+                                AEPS
+                            </span>
+
+                        </div>
+
+                        <a href="#" class="view-all">
+
+                            View All →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- =====================================
+                     CARD 3
+                ====================================== -->
+
+                <div class="swiper-slide">
+
+                    <div class="service-card">
+
+                        <div class="service-chips" aria-label="Available digital services">
+
+                            <span class="service-chip">
+                                Online Job Applications
+                            </span>
+
+                            <span class="service-chip">
+                                Education Services
+                            </span>
+
+                            <span class="service-chip">
+                                Internet & Wi-Fi
+                            </span>
+
+                            <span class="service-chip">
+                                Digital Solutions
+                            </span>
+
+                            <span class="service-chip">
+                                Other Services
+                            </span>
+
+                        </div>
+
+                        <a href="#" class="view-all">
+
+                            View All →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SCRIPTS
+========================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
