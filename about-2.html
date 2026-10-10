@@ -1,0 +1,293 @@
+<!-- =========================================
+     ABOUT US (+ Reviews + Feedback Form)
+     इस पूरे <section> को index.html में
+     "CATEGORIES" वाले </section> के ठीक बाद paste करें
+========================================= -->
+
+<section class="about-section" id="about" aria-labelledby="aboutTitle">
+
+    <!-- Icons (एक बार define, बार-बार use) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="ab-star" viewBox="0 0 24 24">
+            <path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9L12 2.5z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="ab-user" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M4.5 20.5c.6-3.9 3.7-6 7.5-6s6.9 2.1 7.5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </symbol>
+    </svg>
+
+    <!-- हल्के background shapes -->
+    <div class="ab-bg" aria-hidden="true">
+        <span class="ab-shape ab-ring-1"></span>
+        <span class="ab-shape ab-ring-2"></span>
+        <span class="ab-shape ab-bubble"></span>
+        <span class="ab-shape ab-watermark"></span>
+    </div>
+
+    <div class="container ab-inner">
+
+        <!-- =====================================
+             HEADING
+        ====================================== -->
+
+        <header class="ab-head">
+
+            <div class="ab-pill" aria-hidden="true"></div>
+
+            <h2 id="aboutTitle">About Us</h2>
+
+            <p>
+                माँ शारदा साइबर आपके पास का भरोसेमंद डिजिटल सेवा केंद्र है।
+                फ़ॉर्म, दस्तावेज़ और प्रिंट, हर काम सही और समय पर।
+            </p>
+
+        </header>
+
+        <!-- =====================================
+             LOGO + WHY CHOOSE US + WORKING DAYS
+        ====================================== -->
+
+        <div class="ab-intro">
+
+            <!-- Logo (header के logo जैसा ही) -->
+
+            <div class="ab-brand">
+
+                <span class="ab-badge">
+                    <span class="ab-logo" role="img" aria-label="Maa Sharda Cyber logo"></span>
+                </span>
+
+                <p class="ab-brand-name">
+                    <span class="ab-brand-small">Maa</span>
+                    <span class="ab-brand-script">Sharda Cyber</span>
+                </p>
+
+            </div>
+
+            <!-- Why choose us -->
+
+            <div class="ab-why">
+
+                <h3>Why Choose Us</h3>
+
+                <ul class="ab-reasons">
+
+                    <li class="ab-reason">
+                        <span class="ab-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="m3 12.5 9 5 9-5"/><path d="m3 17 9 4.6 9-4.6"/></svg>
+                        </span>
+                        <div>
+                            <h4>One Stop Solution</h4>
+                            <p>फ़ॉर्म, प्रिंट, ID और डिजिटल सेवाएँ, सब एक जगह।</p>
+                        </div>
+                    </li>
+
+                    <li class="ab-reason">
+                        <span class="ab-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.2 8 8 9 4.8-1 8-4.5 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
+                        </span>
+                        <div>
+                            <h4>Accurate Work</h4>
+                            <p>जमा करने से पहले हर फ़ॉर्म दोबारा जाँचा जाता है।</p>
+                        </div>
+                    </li>
+
+                    <li class="ab-reason">
+                        <span class="ab-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M6 4h12M6 8.5h12M9 4c4.5 0 6 4.5 0 4.5L15 20"/></svg>
+                        </span>
+                        <div>
+                            <h4>Fair Pricing</h4>
+                            <p>साफ़ और वाजिब दाम, कोई छुपा खर्च नहीं।</p>
+                        </div>
+                    </li>
+
+                    <li class="ab-reason">
+                        <span class="ab-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        </span>
+                        <div>
+                            <h4>On-time Service</h4>
+                            <p>आपका समय बचाने के लिए काम जल्दी और समय पर।</p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Working days (समय जोड़ना हो तो यहाँ एक <p> और जोड़ दें) -->
+
+            <div class="ab-days">
+
+                <h3>Our Working Days</h3>
+
+                <p class="ab-days-main">Monday – Saturday</p>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================
+             CUSTOMER REVIEWS
+        ====================================== -->
+
+        <div class="rv-block" id="reviews">
+
+            <div class="rv-head">
+
+                <h3 id="rvTitle" tabindex="-1">What Our Customers Say</h3>
+
+                <div class="rv-tools">
+
+                    <div class="rv-nav">
+                        <button class="rv-arrow rv-prev" type="button" aria-label="Previous reviews">
+                            <svg viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></svg>
+                        </button>
+                        <button class="rv-arrow rv-next" type="button" aria-label="Next reviews">
+                            <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>
+                        </button>
+                    </div>
+
+                    <a href="feedback.html" class="ab-btn ab-btn-ghost" data-feedback-link>See all</a>
+
+                </div>
+
+            </div>
+
+            <div class="swiper reviewsSwiper" id="reviewsSwiper">
+                <div class="swiper-wrapper" id="reviewsWrapper"></div>
+            </div>
+
+            <noscript>
+                <p class="rv-noscript">Customer reviews need JavaScript to load.</p>
+            </noscript>
+
+        </div>
+
+        <!-- =====================================
+             FEEDBACK FORM
+        ====================================== -->
+
+        <div class="fb-block" id="feedback">
+
+            <div class="fb-intro">
+
+                <h3>Share Your Experience</h3>
+
+                <p>अपना अनुभव बताइए, अधिकतम 150 शब्द।</p>
+
+            </div>
+
+            <form class="fb-form" id="feedbackForm" novalidate>
+
+                <!-- Name -->
+
+                <div class="fb-field fb-name">
+                    <label for="fbName">Your name</label>
+                    <input
+                        id="fbName"
+                        name="name"
+                        type="text"
+                        maxlength="40"
+                        autocomplete="name"
+                        placeholder="e.g. Rahul Kumar"
+                        aria-describedby="fbNameError"
+                        required
+                    >
+                    <p class="fb-error" id="fbNameError" hidden></p>
+                </div>
+
+                <!-- Rating -->
+
+                <fieldset class="fb-field fb-rating" aria-describedby="fbRatingError">
+
+                    <legend>Your rating</legend>
+
+                    <div class="rate-chips" id="rateChips">
+
+                        <label class="rate-chip"><input type="radio" name="rating" value="1" class="sr-only"><span class="rate-chip-face">1.0<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="1.5" class="sr-only"><span class="rate-chip-face">1.5<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="2" class="sr-only"><span class="rate-chip-face">2.0<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="2.5" class="sr-only"><span class="rate-chip-face">2.5<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="3" class="sr-only"><span class="rate-chip-face">3.0<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="3.5" class="sr-only"><span class="rate-chip-face">3.5<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="4" class="sr-only"><span class="rate-chip-face">4.0<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="4.5" class="sr-only"><span class="rate-chip-face">4.5<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="5" class="sr-only"><span class="rate-chip-face">5.0<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+
+                    </div>
+
+                    <!-- चुनी हुई rating का star-preview -->
+
+                    <div class="rate-summary">
+
+                        <span class="stars" id="fbStars" style="--rating:0" aria-hidden="true">
+                            <span class="stars-base">
+                                <svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg>
+                            </span>
+                            <span class="stars-fill">
+                                <svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg>
+                            </span>
+                        </span>
+
+                        <span class="rate-text" id="fbRateText" aria-live="polite">Choose a rating</span>
+
+                    </div>
+
+                    <p class="fb-error" id="fbRatingError" hidden></p>
+
+                </fieldset>
+
+                <!-- Feedback text -->
+
+                <div class="fb-field fb-text">
+                    <label for="fbText">Your feedback</label>
+                    <textarea
+                        id="fbText"
+                        name="text"
+                        rows="4"
+                        maxlength="1500"
+                        placeholder="Tell us how your experience was..."
+                        aria-describedby="fbTextError fbCount"
+                        required
+                    ></textarea>
+                    <div class="fb-meta">
+                        <p class="fb-error" id="fbTextError" hidden></p>
+                        <span class="fb-count" id="fbCount">0 / 150 words</span>
+                    </div>
+                </div>
+
+                <!-- Spam से बचाव (असली लोग इसे नहीं देखते) -->
+                <input type="text" name="website" class="fb-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <p class="fb-error fb-form-error" id="fbFormError" role="alert" hidden></p>
+
+                <button type="submit" class="ab-btn ab-btn-primary fb-submit">Submit feedback</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- =====================================
+         THANK YOU (submit के बाद कुछ सेकंड)
+    ====================================== -->
+
+    <div class="fb-thanks" id="fbThanks" role="status" aria-live="polite" hidden>
+        <div class="fb-thanks-card">
+
+            <svg class="fb-check" viewBox="0 0 52 52" aria-hidden="true">
+                <circle class="fb-check-circle" cx="26" cy="26" r="23"/>
+                <path class="fb-check-mark" d="m15.5 27 7.5 7.5L37 19"/>
+            </svg>
+
+            <h3 id="fbThanksTitle">Thank you!</h3>
+            <p>Your feedback has been submitted.</p>
+
+        </div>
+    </div>
+
+</section>

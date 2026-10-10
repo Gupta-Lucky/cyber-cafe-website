@@ -1,586 +1,1331 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maa Sharda Cyber</title>
 
     <!-- Satoshi -->
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Lato -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <!-- Script Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://googleapis.com">
-<link rel="preconnect" href="https://gstatic.com" crossorigin>
-
-    <!-- Swiper -->
     <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
     />
-    <link href="https://googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+      rel="stylesheet"
+    />
 
-<body class="dark-theme">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<!-- =========================================
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="categories.css" />
+    <link rel="stylesheet" href="about-2.css">
+    <link rel="stylesheet" href="contact.css">
+  </head>
+
+  <body class="dark-theme">
+    <script>
+      try {
+        if (localStorage.getItem("theme") === "light-theme") {
+          document.body.className = "light-theme";
+        }
+      } catch (e) {}
+    </script>
+    <!-- =========================================
      MOBILE DRAWER BACKDROP
 ========================================= -->
 
-<div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
 
-<!-- =========================================
+    <!-- =========================================
      HEADER
 ========================================= -->
 
-<header class="header">
-
-    <div class="container">
-
+    <header class="header">
+      <div class="container">
         <nav class="navbar">
+          <!-- Logo -->
 
-            <!-- Logo -->
+          <a href="#" class="logo-wrapper">
+            <div class="logo-image">
+              <!-- Replace with your logo -->
 
-            <a href="#" class="logo-wrapper">
-
-                <div class="logo-image">
-
-                    <!-- Replace with your logo -->
-
-                    <img src="image_577e3bf5.jpg" alt="Maa Sharda Cyber">
-
-                </div>
-
-                <div class="logo-content">
-
-                    <span class="logo-small">
-                        Maa
-                    </span>
-
-                    <span class="logo-script">
-                        Sharda Cyber
-                    </span>
-
-                </div>
-
-            </a>
-
-            <!-- Desktop Navigation -->
-
-            <div class="desktop-nav">
-
-                <a href="#">Home</a>
-
-                <a href="#services">
-                    Services
-                </a>
-
-                <a href="#">
-                    Pricing
-                </a>
-
-                <a href="#">
-                    About Us
-                </a>
-
-                <a href="#">
-                    Job Vacancies
-                </a>
-
+              <img src="/image/sharda-logo-white.webp" alt="Maa Sharda Cyber" />
             </div>
 
-            <!-- Desktop Actions -->
+            <div class="logo-content">
+              <span class="logo-small"> Maa </span>
 
-            <div class="desktop-actions">
-
-            <button
-                class="theme-toggle"
-                id="themeToggle"
-                type="button"
-                aria-label="Theme Toggle"
-                >
-                    🌙
-                </button>
-
-                <a href="#" class="contact-btn">
-                    Contact Now
-                </a>
-
+              <span class="logo-script"> Sharda Cyber </span>
             </div>
+          </a>
 
-            <!-- Mobile Menu -->
+          <!-- Desktop Navigation -->
 
+          <div class="desktop-nav">
+            <a href="#">Home</a>
+
+            <a href="#categories"> Services </a>
+
+            <a href="#"> Pricing </a>
+
+            <a href="/about.html"> About Us </a>
+
+            <a href="#"> Job Vacancies </a>
+          </div>
+
+          <!-- Desktop Actions -->
+
+          <div class="desktop-actions">
             <button
-                class="menu-btn"
-                id="menuBtn"
-                type="button"
-                aria-label="Open Menu"
-                aria-controls="mobileDrawer"
-                aria-expanded="false"
+              class="theme-toggle"
+              id="themeToggle"
+              type="button"
+              aria-label="Theme Toggle"
             >
-
-                <span></span>
-                <span></span>
-                <span></span>
-
+              🌙
             </button>
 
+            <a href="#" class="contact-btn"> Contact Now </a>
+          </div>
+
+          <!-- Mobile Menu -->
+
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Open Menu"
+            aria-controls="mobileDrawer"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
+      </div>
+    </header>
 
-    </div>
-
-</header>
-
-<!-- =========================================
+    <!-- =========================================
      MOBILE DRAWER
 ========================================= -->
 
-<aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Mobile navigation">
-
-    <div class="drawer-header">
-
-        <h2>
-            Maa Sharda Cyber
-        </h2>
+    <aside
+      class="mobile-drawer"
+      id="mobileDrawer"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-label="Mobile navigation"
+    >
+      <div class="drawer-header">
+        <h2>Maa Sharda Cyber</h2>
 
         <button
-            class="drawer-close"
-            id="drawerClose"
-            type="button"
-            aria-label="Close menu"
+          class="drawer-close"
+          id="drawerClose"
+          type="button"
+          aria-label="Close menu"
         >
-            ✕
+          ✕
         </button>
+      </div>
 
-    </div>
+      <!-- Services Dropdown -->
 
-    <!-- Services Dropdown -->
-
-    <div class="drawer-dropdown">
-
+      <div class="drawer-dropdown">
         <button class="dropdown-btn active" type="button" aria-expanded="true">
+          <span> Our Services </span>
 
-            <span>
-                Our Services
-            </span>
-
-            <span class="dropdown-icon">
-                ⌃
-            </span>
-
+          <span class="dropdown-icon"> ⌄ </span>
         </button>
 
         <div class="dropdown-content open">
+          <a href="#"> Online Forms </a>
 
-            <a href="#">
-                Online Forms
-            </a>
+          <a href="#"> Document Scanning </a>
 
-            <a href="#">
-                Document Scanning
-            </a>
+          <a href="#"> Print & Photocopy </a>
 
-            <a href="#">
-                Print & Photocopy
-            </a>
+          <a href="#"> Passport Photos </a>
 
-            <a href="#">
-                Passport Photos
-            </a>
+          <a href="#"> Digital Services </a>
 
-            <a href="#">
-                Digital Services
-            </a>
+          <a href="#"> PAN Services </a>
 
-            <a href="#">
-                PAN Services
-            </a>
+          <a href="#"> Aadhaar Services </a>
 
-            <a href="#">
-                Aadhaar Services
-            </a>
-
-            <a href="#">
-                University Forms
-            </a>
-
+          <a href="#"> University Forms </a>
         </div>
+      </div>
 
-    </div>
+      <a href="#" class="drawer-link"> Pricing </a>
 
-    <a href="#" class="drawer-link">
-        Pricing
-    </a>
+      <a href="/about.html" class="drawer-link"> About Us </a>
+      <a href="#feedback" class="drawer-link">Feedback</a>
 
-    <a href="#" class="drawer-link">
-        About Us
-    </a>
+      <!-- Jobs Dropdown -->
 
-    <!-- Jobs Dropdown -->
-
-    <div class="drawer-dropdown">
-
+      <div class="drawer-dropdown">
         <button class="dropdown-btn" type="button" aria-expanded="false">
+          <span> New Job Vacancies </span>
 
-            <span>
-                New Job Vacancies
-            </span>
-
-            <span class="dropdown-icon">
-                ⌄
-            </span>
-
+          <span class="dropdown-icon"> ⌄ </span>
         </button>
 
         <div class="dropdown-content">
+          <a href="#"> SSC Jobs </a>
 
-            <a href="#">
-                SSC Jobs
-            </a>
+          <a href="#"> Railway Jobs </a>
 
-            <a href="#">
-                Railway Jobs
-            </a>
+          <a href="#"> Banking Jobs </a>
 
-            <a href="#">
-                Banking Jobs
-            </a>
+          <a href="#"> State Jobs </a>
 
-            <a href="#">
-                State Jobs
-            </a>
-
-            <a href="#">
-                Central Govt Jobs
-            </a>
-
+          <a href="#"> Central Govt Jobs </a>
         </div>
+      </div>
 
-    </div>
+      <!-- Theme Switch -->
 
-    <!-- Theme Switch -->
-
-    <div class="drawer-theme">
-
-        <span>
-            Dark Mode
-        </span>
+      <div class="drawer-theme">
+        <span> Dark Mode </span>
 
         <label class="switch">
+          <input type="checkbox" id="drawerThemeToggle" />
 
-            <input
-                type="checkbox"
-                id="drawerThemeToggle"
-            >
-
-            <span class="slider"></span>
-
+          <span class="slider"></span>
         </label>
+      </div>
 
-    </div>
+      <a href="#" class="drawer-contact-btn"> Contact Us </a>
+    </aside>
 
-    <a href="#" class="drawer-contact-btn">
-
-        Contact Us
-
-    </a>
-
-</aside>
-
-<!-- =========================================
+    <!-- =========================================
      HERO SECTION
 ========================================= -->
 
-<section class="hero">
-
-    <div class="container">
-
+    <section class="hero">
+      <div class="container">
         <div class="hero-grid">
+          <!-- Left -->
 
-            <!-- Left -->
+          <div class="hero-content">
+            <div class="hero-pill"></div>
 
-            <div class="hero-content">
+            <h1>
+              Digital Service
 
-                <div class="hero-pill"></div>
+              <br />
 
-                <h1>
+              Cyber
 
-                    Digital Service
+              <span> cafe </span>
+            </h1>
 
-                    <br>
+            <p>
+              घर बैठे जाति, आवासीय, आय एवं सेमेस्टर परीक्षा फॉर्म और एडमिशन जैसे
+              और भी सेवा लेने के लिए नीचे दिए गए बटन पर क्लिक करें
+            </p>
 
-                    Cyber
+            <a href="#" class="hero-btn"> Contact Now </a>
+          </div>
 
-                    <span>
+          <!-- Right Visual -->
 
-                        cafe
+          <div class="hero-visual">
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+            <div class="bubble bubble-4"></div>
+            <div class="bubble bubble-5"></div>
 
-                    </span>
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
 
-                </h1>
-
-                <p>
-
-                    घर बैठे जाति, आवासीय, आय एवं सेमेस्टर परीक्षा फॉर्म और एडमिशन जैसे और भी सेवा लेने के लिए नीचे दिए गए बटन पर क्लिक करें
-
-                </p>
-
-                <a href="#" class="hero-btn">
-
-                    Contact Now
-
-                </a>
-
-            </div>
-
-            <!-- Right Visual -->
-
-            <div class="hero-visual">
-
-                <div class="bubble bubble-1"></div>
-                <div class="bubble bubble-2"></div>
-                <div class="bubble bubble-3"></div>
-                <div class="bubble bubble-4"></div>
-                <div class="bubble bubble-5"></div>
-
-                <div class="ring ring-1"></div>
-                <div class="ring ring-2"></div>
-                <div class="ring ring-3"></div>
-
-                <div class="particle particle-1"></div>
-                <div class="particle particle-2"></div>
-                <div class="particle particle-3"></div>
-                <div class="particle particle-4"></div>
-                <div class="particle particle-5"></div>
-
-            </div>
-
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- =========================================
+    <!-- =========================================
      POPULAR SERVICES
 ========================================= -->
 
-<section
-    class="popular-services"
-    id="services"
->
-
-    <div class="container">
-
+    <section class="popular-services">
+      <div class="container">
         <div class="section-heading">
-
-            <h2>
-
-                Popular Services
-
-            </h2>
-
+          <h2>Popular Services</h2>
         </div>
 
         <!-- Swiper -->
 
         <div class="swiper servicesSwiper">
-
-            <div class="swiper-wrapper">
-
-                <!-- =====================================
+          <div class="swiper-wrapper">
+            <!-- =====================================
                      CARD 1
                 ====================================== -->
 
-                <div class="swiper-slide">
+            <div class="swiper-slide">
+              <div class="service-card">
+                <div class="service-item">
+                  <div class="service-icon red1"></div>
 
-                    <div class="service-card">
+                  <div>
+                    <h3>LNMU</h3>
 
-                        <div class="service-item">
-
-                            <div class="service-icon red1">
-                                
-                            </div>
-
-                            <div>
-
-                                <h3>
-                                    LMNU
-                                </h3>
-
-                                <p>
-
-                                    Admission & Exam Form
-                                    <br>
-                                    (B.A / B.Sc / B.Com)
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="service-item">
-
-                            <div class="service-icon red2">
-                                S
-                            </div>
-
-                            <div>
-
-                                <h3>
-                                    RRB
-                                </h3>
-
-                                <p>
-
-                                    Exam Form & Admit Card
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="service-item">
-
-                            <div class="service-icon red3">
-                                R
-                            </div>
-
-                            <div>
-
-                                <h3>
-                                    SSC
-                                </h3>
-
-                                <p>
-
-                                    Exam Form & Admit Card
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                        <a href="#" class="view-all">
-
-                            View All →
-
-                        </a>
-
-                    </div>
-
+                    <p>
+                      Admission & Exam Form
+                      <br />
+                      (B.A / B.Sc / B.Com)
+                    </p>
+                  </div>
                 </div>
 
-                <!-- =====================================
+                <div class="service-item">
+                  <div class="service-icon red2"></div>
+
+                  <div>
+                    <h3>RRB</h3>
+
+                    <p>Exam Form & Admit Card</p>
+                  </div>
+                </div>
+
+                <div class="service-item">
+                  <div class="service-icon red3"></div>
+
+                  <div>
+                    <h3>SSC</h3>
+
+                    <p>Exam Form & Admit Card</p>
+                  </div>
+                </div>
+
+                <a href="#" class="view-all"> View All → </a>
+              </div>
+            </div>
+
+            <!-- =====================================
                      CARD 2
                 ====================================== -->
 
-                <div class="swiper-slide">
+            <div class="swiper-slide">
+              <div class="service-card">
+                <div
+                  class="service-chips"
+                  aria-label="Available print and document services"
+                >
+                  <span class="service-chip">
+                    <span class="chip-circle"></span>
+                    Black & Color Printout
+                  </span>
 
-                    <div class="service-card">
+                  <span class="service-chip"> Document Printing </span>
 
-                        <div class="service-chips" aria-label="Available print and document services">
+                  <span class="service-chip"> PAN Card </span>
 
-                            <span class="service-chip">
-                                <div class="chip-circle"></div>
-                                Black & Color Printout
-                            </span>
+                  <span class="service-chip"> Passport </span>
 
-                            <span class="service-chip">
-                                Document Printing
-                            </span>
-
-                            <span class="service-chip">
-                                PAN Card
-                            </span>
-
-                            <span class="service-chip">
-                                Passport
-                            </span>
-
-                            <span class="service-chip">
-                                AEPS
-                            </span>
-
-                        </div>
-
-                        <a href="#" class="view-all">
-
-                            View All →
-
-                        </a>
-
-                    </div>
-
+                  <span class="service-chip"> AEPS </span>
                 </div>
 
-                <!-- =====================================
+                <a href="#" class="view-all"> View All → </a>
+              </div>
+            </div>
+
+            <!-- =====================================
                      CARD 3
                 ====================================== -->
 
-                <div class="swiper-slide">
+            <div class="swiper-slide">
+              <div class="service-card">
+                <div
+                  class="service-chips"
+                  aria-label="Available digital services"
+                >
+                  <span class="service-chip"> Online Job Applications </span>
 
-                    <div class="service-card">
+                  <span class="service-chip"> Education Services </span>
 
-                        <div class="service-chips" aria-label="Available digital services">
+                  <span class="service-chip"> Internet & Wi-Fi </span>
 
-                            <span class="service-chip">
-                                Online Job Applications
-                            </span>
+                  <span class="service-chip"> Digital Solutions </span>
 
-                            <span class="service-chip">
-                                Education Services
-                            </span>
+                  <span class="service-chip"> Other Services </span>
+                </div>
 
-                            <span class="service-chip">
-                                Internet & Wi-Fi
-                            </span>
+                <a href="#" class="view-all"> View All → </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="category-section" id="categories">
+      <div class="container">
+        <!-- =====================================
+             GROUP 1 : VIEW SERVICES BY CATEGORY
+        ====================================== -->
 
-                            <span class="service-chip">
-                                Digital Solutions
-                            </span>
+        <div class="cat-group">
+          <div class="cat-head">
+            <h2>View Services by Category</h2>
 
-                            <span class="service-chip">
-                                Other Services
-                            </span>
+            <a href="#" class="cat-see-all">See all</a>
+          </div>
 
+          <div class="cat-grid">
+            <!-- Card 1 : For Students -->
+
+            <a
+              href="student-services.html"
+              class="cat-card tone-1"
+              aria-labelledby="cat-students"
+            >
+              <div class="cat-banner">
+                <!-- Optional banner image:
+                             <img class="cat-banner-img" src="images/students.jpg" alt="" loading="lazy"> -->
+
+                <span class="cat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M22 10 12 5 2 10l10 5 10-5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg>
+                </span>
+
+                <span class="cat-go" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="cat-body">
+                <h3 id="cat-students">For Students</h3>
+
+                <ul class="cat-list">
+                  <li>University Admission</li>
+                  <li>Exam Form Fill-up</li>
+                  <li>Scholarship Forms</li>
+                  <li>Admit Card &amp; Result</li>
+                  <li>Study Material Print</li>
+                </ul>
+
+                <span class="cat-more">
+                  View all services
+                  <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card 2 : Common Services -->
+
+            <a
+              href="common-services.html"
+              class="cat-card tone-2"
+              aria-labelledby="cat-common"
+            >
+              <div class="cat-banner">
+                <span class="cat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <circle cx="9" cy="11" r="2.2" />
+                    <path
+                      d="M5.5 17c.6-1.8 2-2.7 3.5-2.7s2.9.9 3.5 2.7M15 9.5h3M15 13h3"
+                    />
+                  </svg>
+                </span>
+
+                <span class="cat-go" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="cat-body">
+                <h3 id="cat-common">Common Services</h3>
+
+                <ul class="cat-list">
+                  <li>Aadhaar Services</li>
+                  <li>PAN Services</li>
+                  <li>Passport Application</li>
+                  <li>Voter ID Services</li>
+                  <li>Online Job Apply</li>
+                </ul>
+
+                <span class="cat-more">
+                  View all services
+                  <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card 3 : Gov Services -->
+
+            <a
+              href="gov-services.html"
+              class="cat-card tone-3"
+              aria-labelledby="cat-gov"
+            >
+              <div class="cat-banner">
+                <span class="cat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M2 10 12 4l10 6z" />
+                    <path d="M5 10v9M9.5 10v9M14.5 10v9M19 10v9M3 21h18" />
+                  </svg>
+                </span>
+
+                <span class="cat-go" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="cat-body">
+                <h3 id="cat-gov">Gov Services</h3>
+
+                <ul class="cat-list">
+                  <li>Caste Certificate</li>
+                  <li>Residence Certificate</li>
+                  <li>Income Certificate</li>
+                  <li>Ration Card Services</li>
+                  <li>Pension &amp; Scheme Forms</li>
+                </ul>
+
+                <span class="cat-more">
+                  View all services
+                  <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card 4 : Print & Documents
+                     (आपने 4th card का नाम भी "Common Services" लिखा था, इसलिए
+                      मैंने इसे Print & Documents रखा है। चाहें तो नाम बदल लें) -->
+
+            <a
+              href="print-documents.html"
+              class="cat-card tone-4"
+              aria-labelledby="cat-print"
+            >
+              <div class="cat-banner">
+                <span class="cat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M7 9V3h10v6" />
+                    <rect x="3" y="9" width="18" height="8" rx="2" />
+                    <path d="M7 14h10v7H7z" />
+                  </svg>
+                </span>
+
+                <span class="cat-go" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="cat-body">
+                <h3 id="cat-print">Print &amp; Documents</h3>
+
+                <ul class="cat-list">
+                  <li>B/W &amp; Color Printout</li>
+                  <li>Photocopy</li>
+                  <li>Document Scanning</li>
+                  <li>Passport Photos</li>
+                  <li>Lamination</li>
+                </ul>
+
+                <span class="cat-more">
+                  View all services
+                  <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- =====================================
+             GROUP 2 : ADVANCE SERVICES
+        ====================================== -->
+
+        <div class="cat-group">
+          <div class="cat-head">
+            <h2>Advance Services</h2>
+
+            <a href="#" class="cat-see-all">See all</a>
+          </div>
+
+          <div class="cat-grid">
+            <!-- Card 1 : MS Excel Works -->
+
+            <a
+              href="excel-works.html"
+              class="cat-card tone-1"
+              aria-labelledby="cat-excel"
+            >
+              <div class="cat-banner">
+                <span class="cat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="16" rx="2" />
+                    <path d="M3 10h18M3 15h18M9 4v16" />
+                  </svg>
+                </span>
+
+                <span class="cat-go" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="cat-body">
+                <h3 id="cat-excel">MS Excel Works</h3>
+
+                <ul class="cat-list">
+                  <li>Data Entry</li>
+                  <li>Formulas &amp; Reports</li>
+                  <li>Charts &amp; Dashboards</li>
+                  <li>Bill &amp; Invoice Format</li>
+                </ul>
+
+                <span class="cat-more">
+                  View all services
+                  <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card 2 : Website Development -->
+
+            <a
+              href="website-development.html"
+              class="cat-card tone-2"
+              aria-labelledby="cat-web"
+            >
+              <div class="cat-banner">
+                <span class="cat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9" />
+                    <path
+                      d="M3 12h18M12 3c3.2 3 3.2 15 0 18M12 3c-3.2 3-3.2 15 0 18"
+                    />
+                  </svg>
+                </span>
+
+                <span class="cat-go" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="cat-body">
+                <h3 id="cat-web">Website Development</h3>
+
+                <ul class="cat-list">
+                  <li>Business Websites</li>
+                  <li>Landing Pages</li>
+                  <li>Portfolio Websites</li>
+                  <li>Website Maintenance</li>
+                </ul>
+
+                <span class="cat-more">
+                  View all services
+                  <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card 3 : Videography -->
+
+            <a
+              href="videography.html"
+              class="cat-card tone-3"
+              aria-labelledby="cat-video"
+            >
+              <div class="cat-banner">
+                <span class="cat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="2" y="6" width="14" height="12" rx="2" />
+                    <path d="m16 10 6-3v10l-6-3z" />
+                  </svg>
+                </span>
+
+                <span class="cat-go" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="cat-body">
+                <h3 id="cat-video">Videography</h3>
+
+                <ul class="cat-list">
+                  <li>Event Coverage</li>
+                  <li>Video Editing</li>
+                  <li>Reels &amp; Shorts</li>
+                  <li>Product Videos</li>
+                </ul>
+
+                <span class="cat-more">
+                  View all services
+                  <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+
+            <!-- Card 4 : Digital Marketing -->
+
+            <a
+              href="digital-marketing.html"
+              class="cat-card tone-4"
+              aria-labelledby="cat-marketing"
+            >
+              <div class="cat-banner">
+                <span class="cat-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M3 11v2a1 1 0 0 0 1 1h3l8 4V6L7 10H4a1 1 0 0 0-1 1z"
+                    />
+                    <path d="M18.5 9a4 4 0 0 1 0 6" />
+                  </svg>
+                </span>
+
+                <span class="cat-go" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="cat-body">
+                <h3 id="cat-marketing">Digital Marketing</h3>
+
+                <ul class="cat-list">
+                  <li>Social Media Posts</li>
+                  <li>Google Business Profile</li>
+                  <li>Poster &amp; Banner Design</li>
+                  <li>Ads Setup</li>
+                </ul>
+
+                <span class="cat-more">
+                  View all services
+                  <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" /></svg>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  <section class="about-section" id="about" aria-labelledby="aboutTitle">
+
+    <!-- Icons (एक बार define, बार-बार use) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="ab-star" viewBox="0 0 24 24">
+            <path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9L12 2.5z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="ab-user" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M4.5 20.5c.6-3.9 3.7-6 7.5-6s6.9 2.1 7.5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </symbol>
+    </svg>
+
+    <!-- हल्के background shapes -->
+    <div class="ab-bg" aria-hidden="true">
+        <span class="ab-shape ab-ring-1"></span>
+        <span class="ab-shape ab-ring-2"></span>
+        <span class="ab-shape ab-bubble"></span>
+        <span class="ab-shape ab-watermark"></span>
+    </div>
+
+    <div class="container ab-inner">
+
+        <!-- =====================================
+             HEADING
+        ====================================== -->
+
+        <header class="ab-head">
+
+            <div class="ab-pill" aria-hidden="true"></div>
+
+            <h2 id="aboutTitle">About Us</h2>
+
+            
+
+        </header>
+
+        <!-- =====================================
+             LOGO + WHY CHOOSE US + WORKING DAYS
+        ====================================== -->
+
+        <div class="ab-intro">
+
+            <!-- Logo (header के logo जैसा ही) -->
+
+            <div class="ab-brand">
+
+                <span class="ab-badge">
+                    <span class="ab-logo" role="img" aria-label="Maa Sharda Cyber logo"></span>
+                </span>
+
+                <p class="ab-brand-name">
+                    <span class="ab-brand-small">Maa</span>
+                    <span class="ab-brand-script">Sharda Cyber</span>
+                </p>
+
+            </div>
+
+            <!-- Why choose us -->
+
+            <div class="ab-why">
+
+                <h3>Why Choose Us</h3>
+
+                <ul class="ab-reasons">
+
+                    <li class="ab-reason">
+                        <span class="ab-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="m3 12.5 9 5 9-5"/><path d="m3 17 9 4.6 9-4.6"/></svg>
+                        </span>
+                        <div>
+                            <h4>One Stop Solution</h4>
+                            <p>फ़ॉर्म, प्रिंट, ID और डिजिटल सेवाएँ, सब एक जगह।</p>
                         </div>
+                    </li>
 
-                        <a href="#" class="view-all">
+                    <li class="ab-reason">
+                        <span class="ab-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.2 8 8 9 4.8-1 8-4.5 8-9V6l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
+                        </span>
+                        <div>
+                            <h4>Accurate Work</h4>
+                            <p>जमा करने से पहले हर फ़ॉर्म दोबारा जाँचा जाता है।</p>
+                        </div>
+                    </li>
 
-                            View All →
+                    <li class="ab-reason">
+                        <span class="ab-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M6 4h12M6 8.5h12M9 4c4.5 0 6 4.5 0 4.5L15 20"/></svg>
+                        </span>
+                        <div>
+                            <h4>Fair Pricing</h4>
+                            <p>साफ़ और वाजिब दाम, कोई छुपा खर्च नहीं।</p>
+                        </div>
+                    </li>
 
-                        </a>
+                    <li class="ab-reason">
+                        <span class="ab-reason-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        </span>
+                        <div>
+                            <h4>On-time Service</h4>
+                            <p>आपका समय बचाने के लिए काम जल्दी और समय पर।</p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Working days (समय जोड़ना हो तो यहाँ एक <p> और जोड़ दें) -->
+
+            <div class="ab-days">
+
+                <h3>Our Working Days</h3>
+
+                <p class="ab-days-main">Monday – Saturday</p>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================
+             CUSTOMER REVIEWS
+        ====================================== -->
+
+        <section id="feedback">
+        <div class="rv-block" id="reviews">
+
+            <div class="rv-head">
+
+                <h3 id="rvTitle" tabindex="-1">What Our Customers Say</h3>
+
+                <div class="rv-tools">
+
+                    <div class="rv-nav">
+                        <button class="rv-arrow rv-prev" type="button" aria-label="Previous reviews">
+                            <svg viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></svg>
+                        </button>
+                        <button class="rv-arrow rv-next" type="button" aria-label="Next reviews">
+                            <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>
+                        </button>
+                    </div>
+
+                    <a href="feedback.html" class="ab-btn ab-btn-ghost" data-feedback-link>See all</a>
+
+                </div>
+
+            </div>
+
+            <div class="swiper reviewsSwiper" id="reviewsSwiper">
+                <div class="swiper-wrapper" id="reviewsWrapper"></div>
+            </div>
+
+            <noscript>
+                <p class="rv-noscript">Customer reviews need JavaScript to load.</p>
+            </noscript>
+
+        </div>
+
+        <!-- =====================================
+             FEEDBACK FORM
+        ====================================== -->
+
+        <div class="fb-block" id="feedback">
+
+            <div class="fb-intro">
+
+                <h3>Share Your Experience</h3>
+
+                <p>अपना अनुभव बताइए, अधिकतम 150 शब्द।</p>
+
+            </div>
+
+            <form class="fb-form" id="feedbackForm" novalidate>
+
+                <!-- Name -->
+
+                <div class="fb-field fb-name">
+                    <label for="fbName">Your name</label>
+                    <input
+                        id="fbName"
+                        name="name"
+                        type="text"
+                        maxlength="40"
+                        autocomplete="name"
+                        placeholder="e.g. Rahul Kumar"
+                        aria-describedby="fbNameError"
+                        required
+                    >
+                    <p class="fb-error" id="fbNameError" hidden></p>
+                </div>
+
+                <!-- Rating -->
+
+                <fieldset class="fb-field fb-rating" aria-describedby="fbRatingError">
+
+                    <legend>Your rating</legend>
+
+                    <div class="rate-chips" id="rateChips">
+
+                        <label class="rate-chip"><input type="radio" name="rating" value="1" class="sr-only"><span class="rate-chip-face">1.0<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="2" class="sr-only"><span class="rate-chip-face">2.0<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="2.5" class="sr-only"><span class="rate-chip-face">2.5<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="3" class="sr-only"><span class="rate-chip-face">3.0<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="3.5" class="sr-only"><span class="rate-chip-face">3.5<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="4" class="sr-only"><span class="rate-chip-face">4.0<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="4.5" class="sr-only"><span class="rate-chip-face">4.5<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
+                        <label class="rate-chip"><input type="radio" name="rating" value="5" class="sr-only"><span class="rate-chip-face">5.0<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ab-star"/></svg></span></label>
 
                     </div>
 
+                    <!-- चुनी हुई rating का star-preview -->
+
+                    <div class="rate-summary">
+
+                        <span class="stars" id="fbStars" style="--rating:0" aria-hidden="true">
+                            <span class="stars-base">
+                                <svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg>
+                            </span>
+                            <span class="stars-fill">
+                                <svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg><svg viewBox="0 0 24 24"><use href="#ab-star"/></svg>
+                            </span>
+                        </span>
+
+                        <span class="rate-text" id="fbRateText" aria-live="polite">Choose a rating</span>
+
+                    </div>
+
+                    <p class="fb-error" id="fbRatingError" hidden></p>
+
+                </fieldset>
+
+                <!-- Feedback text -->
+
+                <div class="fb-field fb-text">
+                    <label for="fbText">Your feedback</label>
+                    <textarea
+                        id="fbText"
+                        name="text"
+                        rows="4"
+                        maxlength="1500"
+                        placeholder="Tell us how your experience was..."
+                        aria-describedby="fbTextError fbCount"
+                        required
+                    ></textarea>
+                    <div class="fb-meta">
+                        <p class="fb-error" id="fbTextError" hidden></p>
+                        <span class="fb-count" id="fbCount">0 / 150 words</span>
+                    </div>
+                </div>
+
+                <!-- Spam से बचाव (असली लोग इसे नहीं देखते) -->
+                <input type="text" name="website" class="fb-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <p class="fb-error fb-form-error" id="fbFormError" role="alert" hidden></p>
+
+                <button type="submit" class="ab-btn ab-btn-primary fb-submit">Submit feedback</button>
+
+            </form>
+
+        </div>
+        </section>
+
+    </div>
+    
+
+    <!-- =====================================
+         THANK YOU (submit के बाद कुछ सेकंड)
+    ====================================== -->
+
+    <div class="fb-thanks" id="fbThanks" role="status" aria-live="polite" hidden>
+        <div class="fb-thanks-card">
+
+            <svg class="fb-check" viewBox="0 0 52 52" aria-hidden="true">
+                <circle class="fb-check-circle" cx="26" cy="26" r="23"/>
+                <path class="fb-check-mark" d="m15.5 27 7.5 7.5L37 19"/>
+            </svg>
+
+            <h3 id="fbThanksTitle">Thank you!</h3>
+            <p>Your feedback has been submitted.</p>
+
+        </div>
+    </div>
+
+</section>
+<section class="contact-section" id="contact" aria-labelledby="contactTitle">
+
+    <!-- हल्के background shapes -->
+    <div class="ct-bg" aria-hidden="true">
+        <span class="ct-shape ct-ring-a"></span>
+        <span class="ct-shape ct-ring-b"></span>
+        <span class="ct-shape ct-dots"></span>
+    </div>
+
+    <div class="container ct-inner">
+
+        <!-- =====================================
+             HEADING
+        ====================================== -->
+
+        <header class="ct-head">
+
+            <h2 id="contactTitle">Contact Us</h2>
+
+            <span class="ct-divider" aria-hidden="true"></span>
+
+        </header>
+
+        <!-- =====================================
+             SHOP LOCATION (Google Maps link)
+        ====================================== -->
+
+        <div class="ct-block ct-location">
+
+            <h3>Our Shop Location</h3>
+
+            <!-- Phone पर Google Maps app खुलेगा, desktop पर browser में map -->
+            <a
+                class="ct-map"
+                href="https://maps.app.goo.gl/QKYQZ7fWPP4RtKxd8"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Maa Sharda Cyber, open location in Google Maps"
+            >
+
+                <span class="ct-map-art">
+
+                    <svg class="ct-map-svg" viewBox="0 0 360 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                        <rect class="m-road-bg" width="360" height="260"/>
+                        <rect class="m-block" x="0" y="0" width="34" height="60" rx="5"/>
+                        <rect class="m-block" x="40" y="0" width="64" height="60" rx="5"/>
+                        <rect class="m-block" x="114" y="0" width="130" height="60" rx="5"/>
+                        <path class="m-road" d="M179 0V60" stroke-width="5"/>
+                        <rect class="m-block" x="250" y="0" width="110" height="60" rx="5"/>
+                        <rect class="m-block" x="0" y="66" width="34" height="58" rx="5"/>
+                        <rect class="m-block" x="40" y="66" width="64" height="58" rx="5"/>
+                        <rect class="m-park" x="114" y="66" width="130" height="58" rx="5"/>
+                        <rect class="m-block" x="250" y="66" width="110" height="58" rx="5"/>
+                        <rect class="m-block" x="0" y="136" width="34" height="56" rx="5"/>
+                        <rect class="m-block" x="114" y="136" width="130" height="56" rx="5"/>
+                        <path class="m-road" d="M179 136V192" stroke-width="5"/>
+                        <rect class="m-block" x="250" y="136" width="110" height="56" rx="5"/>
+                        <rect class="m-block" x="0" y="198" width="34" height="62" rx="5"/>
+                        <rect class="m-block" x="40" y="198" width="64" height="62" rx="5"/>
+                        <rect class="m-block" x="114" y="198" width="130" height="62" rx="5"/>
+                        <path class="m-road" d="M179 198V260" stroke-width="5"/>
+                        <rect class="m-block" x="250" y="198" width="110" height="62" rx="5"/>
+                        <circle class="m-pulse" cx="180" cy="130" r="28"/>
+                        <path class="m-pin" d="M180 134c-10-11-17-18-17-27a17 17 0 0 1 34 0c0 9-7 16-17 27z"/>
+                        <circle class="m-dot" cx="180" cy="107" r="6"/>
+                        </svg>
+
+                    <span class="ct-map-tag">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Google Maps
+                    </span>
+
+                </span>
+
+                <span class="ct-map-info">
+
+                    <span class="ct-map-text">
+                        <strong>Maa Sharda Cyber</strong>
+                        <span>Tap to open in Google Maps</span>
+                    </span>
+
+                    <span class="ct-map-cta">
+                        Open map
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </span>
+
+                </span>
+
+            </a>
+
+        </div>
+
+        <!-- =====================================
+             FOR ANY QUERIES
+        ====================================== -->
+
+        <div class="ct-block ct-queries">
+
+            <h3 id="queriesTitle">For any queries</h3>
+
+            <div class="ct-q-grid" role="group" aria-labelledby="queriesTitle">
+
+                <!-- 1) WhatsApp QR card खुलेगा -->
+                <button type="button" class="ct-q" data-dialog="waDialog" aria-haspopup="dialog">
+                    <span class="ct-q-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                    </span>
+                    <span class="ct-q-text">Scan WhatsApp code</span>
+                </button>
+
+                <!-- 2) सीधा dial pad खुलेगा (number पहले से भरा हुआ) -->
+                <a class="ct-q" href="tel:+919241062900">
+                    <span class="ct-q-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </span>
+                    <span class="ct-q-text">Call on Mobile number</span>
+                </a>
+
+                <!-- 3) Instagram QR card खुलेगा -->
+                <button type="button" class="ct-q" data-dialog="igDialog" aria-haspopup="dialog">
+                    <span class="ct-q-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+                    </span>
+                    <span class="ct-q-text">DM on Instagram</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================
+             WHATSAPP CHANNEL
+        ====================================== -->
+
+        <div class="ct-block ct-channel">
+
+            <h3>See all new updates</h3>
+
+            <div class="ct-channel-row">
+
+                <span class="ct-wa-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                        <path class="wa-bubble" d="M6 43l2.9-9.6A19 19 0 1 1 15 40.2L6 43z"/>
+                        <g transform="translate(14 13.5) scale(.85)">
+                            <path class="wa-phone" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </g>
+                    </svg>
+                </span>
+
+                <div class="ct-channel-text">
+                    <p>On our WhatsApp channel</p>
+
+                    <!-- DEMO link: अपना असली channel link यहाँ डालें -->
+                    <a href="https://whatsapp.com/channel/your-channel-id" target="_blank" rel="noopener noreferrer">Join now</a>
                 </div>
 
             </div>
 
         </div>
 
+        <!-- =====================================
+             SOCIAL MEDIA
+        ====================================== -->
+
+        <div class="ct-block ct-social">
+
+            <h3>Stay connected with us</h3>
+
+            <ul class="ct-social-grid">
+
+                <li>
+                    <a class="ct-soc" href="https://www.instagram.com/shardacyber_0099/" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+                    </a>
+                    <span class="ct-soc-text">Instagram</span>
+                </li>
+                
+
+                <li>
+                    <!-- DEMO link: अपना YouTube channel link डालें -->
+                    <a class="ct-soc" href="https://www.youtube.com/@your-channel" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                        
+                    </a>
+                    <span class="ct-soc-text">YouTube</span>
+                </li>
+
+                <li>
+                    <!-- DEMO link: अपना Facebook page link डालें -->
+                    <a class="ct-soc" href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        
+                    </a>
+                    <span class="ct-soc-text">Facebook</span>
+                </li>
+
+                <li>
+                    <!-- DEMO link: अपना Twitter link डालें -->
+                    <a class="ct-soc" href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        
+                    </a>
+                    <span class="ct-soc-text ct-soc-text1">Twitter</span>
+                </li>
+
+            </ul>
+            
+
+        </div>
+
     </div>
 
+    <!-- =====================================
+         QR CARD 1 : WHATSAPP
+    ====================================== -->
+
+    <dialog class="ct-dialog" id="waDialog" aria-labelledby="waTitle">
+
+        <button type="button" class="ct-close" data-close aria-label="Close">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+
+        <div class="ct-card">
+
+            <div class="ct-card-head">
+                <p class="ct-kicker">WhatsApp</p>
+                <h3 id="waTitle">Maa Sharda Cyber</h3>
+                <p class="ct-owner">Lucky Gupta</p>
+            </div>
+
+            <div class="ct-qr">
+                <img src="/image/whatsapp-qr.webp" alt="WhatsApp QR code of Maa Sharda Cyber" width="336" height="336" loading="lazy" decoding="async">
+            </div>
+
+            <div class="ct-card-meta">
+                <p class="ct-contact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>+91 92410 62900</span>
+                </p>
+                <a class="ct-visit" href="https://wa.me/919241062900" target="_blank" rel="noopener noreferrer">Visit now</a>
+            </div>
+
+        </div>
+
+    </dialog>
+
+    <!-- =====================================
+         QR CARD 2 : INSTAGRAM
+    ====================================== -->
+
+    <dialog class="ct-dialog" id="igDialog" aria-labelledby="igTitle">
+
+        <button type="button" class="ct-close" data-close aria-label="Close">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+
+        <div class="ct-card">
+
+            <div class="ct-card-head">
+                <p class="ct-kicker">Instagram</p>
+                <h3 id="igTitle">Maa Sharda Cyber</h3>
+                <p class="ct-owner">Lucky Gupta</p>
+            </div>
+
+            <div class="ct-qr">
+                <img src="/image/insta-qr.webp" alt="Instagram QR code of Maa Sharda Cyber" width="408" height="408" loading="lazy" decoding="async">
+            </div>
+
+            <div class="ct-card-meta">
+                <p class="ct-contact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+                    <span>@shardacyber_0099</span>
+                </p>
+                <a class="ct-visit" href="https://www.instagram.com/shardacyber_0099/" target="_blank" rel="noopener noreferrer">Visit now</a>
+            </div>
+
+        </div>
+
+    </dialog>
+
 </section>
+    
 
-
-<!-- =========================================
+    <!-- =========================================
      SCRIPTS
 ========================================= -->
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+    <script src="categories.js"></script>
+    <SCRipt src="about-2.js"></SCRipt>
+    <script src="feedback-data.js"></script>
+    <script src="contact.js"></script>
+  </body>
 </html>

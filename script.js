@@ -18,6 +18,7 @@
 
   let servicesSwiper = null;
   let drawerOpener = null;
+  let lastScrollY = window.scrollY;
 
   function readStoredTheme() {
     try {
@@ -110,15 +111,15 @@
     if (mobileBreakpoint.matches && typeof window.Swiper === "function") {
       if (!servicesSwiper) {
         servicesSwiper = new window.Swiper(swiperElement, {
-          slidesPerView: 1.2, //
+          slidesPerView: 1.45, //
           spaceBetween: 16,
           loop: true,
           speed: 800,
 
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-          },
+          // autoplay: {
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          // },
           grabCursor: true,
           allowTouchMove: true,
           watchOverflow: false,
@@ -134,11 +135,27 @@
     }
   }
 
-  function updateHeaderState() {
-    if (header) {
-      header.classList.toggle("is-scrolled", window.scrollY > 30);
+    function updateHeaderState() {
+    if (!header) return;
+
+    const currentScrollY = window.scrollY;
+
+    
+    header.classList.toggle("is-scrolled", currentScrollY > 30);
+
+    
+    if (currentScrollY > lastScrollY && currentScrollY > 320) {
+      
+      header.classList.add("header-hidden");
+    } else {
+  
+      header.classList.remove("header-hidden");
     }
+
+    
+    lastScrollY = currentScrollY;
   }
+
 
   function initialise() {
     const storedTheme = readStoredTheme();

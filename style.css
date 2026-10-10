@@ -148,18 +148,36 @@ input:focus-visible {
     outline-offset: 3px;
 }
 
+.nav-logo {
+    content: url("/image/sharda-swirl-blue.webp");
+}
+
+body.light-theme .nav-logo {
+    content: url("/image/sharda-logo-white.webp");
+}
+
 /* =========================================
    HEADER AND NAVIGATION
 ========================================= */
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 50;
     width: 100%;
+    opacity: 1;
     border-bottom: 1px solid var(--border);
     background: var(--bg);
-    transition: background var(--transition), box-shadow var(--transition);
+        transition: background var(--transition), 
+                box-shadow var(--transition), 
+                transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), 
+                opacity 0.7s ease-in-out;
+}
+
+.header-hidden {
+    opacity: 0;
+    transform: translateY(-10px); 
+    pointer-events: none; 
 }
 
 .navbar {
@@ -205,10 +223,11 @@ input:focus-visible {
 }
 
 .logo-script {
-    font-family: "Allura", cursive;
-    font-size: 29px;
+    font-family: "Segoe Script", cursive;
+    font-size: 19px;
     line-height: 0.78;
     white-space: nowrap;
+    margin-top: 8px;
 }
 
 .desktop-nav {
@@ -473,6 +492,7 @@ input:focus-visible {
 }
 
 .hero-grid {
+    padding-top: 100px;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
     align-items: center;
@@ -503,7 +523,7 @@ input:focus-visible {
 .hero-content h1 span {
     margin-left: 4px;
     color: var(--primary);
-    font-family: "Allura", cursive;
+    font-family: "Segoe Script", cursive;
     font-size: 1.15em;
     font-weight: 400;
     letter-spacing: 0;
@@ -646,17 +666,17 @@ input:focus-visible {
 
 .service-icon.red1, .red2, .red3 {
     color: #FF2C2C;
-    background-image: url("/lnmu..png");
+    background-image: url("/image/lnmu.png");
     background-position: center;
     background-size: cover;
 }
 
 .service-icon.red2{
-    background-image: url("/railway\ logo.png");  
+    background-image: url("/image/railway.png")
 }
 
 .service-icon.red3{
-    background-image: url("/ssc.png");  
+    background-image: url("/image/ssc.png");  
 }
 
 .service-item h3 {
@@ -787,8 +807,9 @@ input:focus-visible {
     }
 
     .logo-script {
-       font-size: 22px;
+       font-size: 18px;
        white-space: normal;
+       margin-top: 8px;
     }
 
     .hero {
@@ -814,6 +835,8 @@ input:focus-visible {
 
     .hero-content h1 span {
         font-size: 1.16em;
+        margin-top: 4px;
+        display: inline-block;
     }
 
     .hero-content p {
@@ -840,6 +863,7 @@ input:focus-visible {
     }
 
     .service-card {
+        max-width: 285px;
         min-height: 280px;
         padding: 14px;
     }

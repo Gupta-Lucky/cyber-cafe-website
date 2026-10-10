@@ -1,0 +1,282 @@
+<!-- =========================================
+     CONTACT US (Location + Queries + Channel + Social)
+     इस पूरे <section> को index.html में
+     "ABOUT" वाले </section> के ठीक बाद paste करें
+========================================= -->
+
+<section class="contact-section" id="contact" aria-labelledby="contactTitle">
+
+    <!-- हल्के background shapes -->
+    <div class="ct-bg" aria-hidden="true">
+        <span class="ct-shape ct-ring-a"></span>
+        <span class="ct-shape ct-ring-b"></span>
+        <span class="ct-shape ct-dots"></span>
+    </div>
+
+    <div class="container ct-inner">
+
+        <!-- =====================================
+             HEADING
+        ====================================== -->
+
+        <header class="ct-head">
+
+            <h2 id="contactTitle">Contact Us</h2>
+
+            <span class="ct-divider" aria-hidden="true"></span>
+
+        </header>
+
+        <!-- =====================================
+             SHOP LOCATION (Google Maps link)
+        ====================================== -->
+
+        <div class="ct-block ct-location">
+
+            <h3>Our Shop Location</h3>
+
+            <!-- Phone पर Google Maps app खुलेगा, desktop पर browser में map -->
+            <a
+                class="ct-map"
+                href="https://maps.app.goo.gl/QKYQZ7fWPP4RtKxd8"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Maa Sharda Cyber, open location in Google Maps"
+            >
+
+                <span class="ct-map-art">
+
+                    <svg class="ct-map-svg" viewBox="0 0 360 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                        <rect class="m-road-bg" width="360" height="260"/>
+                        <rect class="m-block" x="0" y="0" width="34" height="60" rx="5"/>
+                        <rect class="m-block" x="40" y="0" width="64" height="60" rx="5"/>
+                        <rect class="m-block" x="114" y="0" width="130" height="60" rx="5"/>
+                        <path class="m-road" d="M179 0V60" stroke-width="5"/>
+                        <rect class="m-block" x="250" y="0" width="110" height="60" rx="5"/>
+                        <rect class="m-block" x="0" y="66" width="34" height="58" rx="5"/>
+                        <rect class="m-block" x="40" y="66" width="64" height="58" rx="5"/>
+                        <rect class="m-park" x="114" y="66" width="130" height="58" rx="5"/>
+                        <rect class="m-block" x="250" y="66" width="110" height="58" rx="5"/>
+                        <rect class="m-block" x="0" y="136" width="34" height="56" rx="5"/>
+                        <rect class="m-block" x="114" y="136" width="130" height="56" rx="5"/>
+                        <path class="m-road" d="M179 136V192" stroke-width="5"/>
+                        <rect class="m-block" x="250" y="136" width="110" height="56" rx="5"/>
+                        <rect class="m-block" x="0" y="198" width="34" height="62" rx="5"/>
+                        <rect class="m-block" x="40" y="198" width="64" height="62" rx="5"/>
+                        <rect class="m-block" x="114" y="198" width="130" height="62" rx="5"/>
+                        <path class="m-road" d="M179 198V260" stroke-width="5"/>
+                        <rect class="m-block" x="250" y="198" width="110" height="62" rx="5"/>
+                        <circle class="m-pulse" cx="180" cy="130" r="28"/>
+                        <path class="m-pin" d="M180 134c-10-11-17-18-17-27a17 17 0 0 1 34 0c0 9-7 16-17 27z"/>
+                        <circle class="m-dot" cx="180" cy="107" r="6"/>
+                        </svg>
+
+                    <span class="ct-map-tag">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Google Maps
+                    </span>
+
+                </span>
+
+                <span class="ct-map-info">
+
+                    <span class="ct-map-text">
+                        <strong>Maa Sharda Cyber</strong>
+                        <span>Tap to open in Google Maps</span>
+                    </span>
+
+                    <span class="ct-map-cta">
+                        Open map
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </span>
+
+                </span>
+
+            </a>
+
+        </div>
+
+        <!-- =====================================
+             FOR ANY QUERIES
+        ====================================== -->
+
+        <div class="ct-block ct-queries">
+
+            <h3 id="queriesTitle">For any queries</h3>
+
+            <div class="ct-q-grid" role="group" aria-labelledby="queriesTitle">
+
+                <!-- 1) WhatsApp QR card खुलेगा -->
+                <button type="button" class="ct-q" data-dialog="waDialog" aria-haspopup="dialog">
+                    <span class="ct-q-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                    </span>
+                    <span class="ct-q-text">Scan WhatsApp code</span>
+                </button>
+
+                <!-- 2) सीधा dial pad खुलेगा (number पहले से भरा हुआ) -->
+                <a class="ct-q" href="tel:+919241062900">
+                    <span class="ct-q-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </span>
+                    <span class="ct-q-text">Call on Mobile number</span>
+                </a>
+
+                <!-- 3) Instagram QR card खुलेगा -->
+                <button type="button" class="ct-q" data-dialog="igDialog" aria-haspopup="dialog">
+                    <span class="ct-q-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+                    </span>
+                    <span class="ct-q-text">DM on Instagram</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================
+             WHATSAPP CHANNEL
+        ====================================== -->
+
+        <div class="ct-block ct-channel">
+
+            <h3>See all new updates</h3>
+
+            <div class="ct-channel-row">
+
+                <span class="ct-wa-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                        <path class="wa-bubble" d="M6 43l2.9-9.6A19 19 0 1 1 15 40.2L6 43z"/>
+                        <g transform="translate(14 13.5) scale(.85)">
+                            <path class="wa-phone" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </g>
+                    </svg>
+                </span>
+
+                <div class="ct-channel-text">
+                    <p>On our WhatsApp channel</p>
+
+                    <!-- DEMO link: अपना असली channel link यहाँ डालें -->
+                    <a href="https://whatsapp.com/channel/your-channel-id" target="_blank" rel="noopener noreferrer">Join now</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================
+             SOCIAL MEDIA
+        ====================================== -->
+
+        <div class="ct-block ct-social">
+
+            <h3>Stay connected with us</h3>
+
+            <ul class="ct-social-grid">
+
+                <li>
+                    <a class="ct-soc" href="https://www.instagram.com/shardacyber_0099/" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+
+                <li>
+                    <!-- DEMO link: अपना YouTube channel link डालें -->
+                    <a class="ct-soc" href="https://www.youtube.com/@your-channel" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                        <span>YouTube</span>
+                    </a>
+                </li>
+
+                <li>
+                    <!-- DEMO link: अपना Facebook page link डालें -->
+                    <a class="ct-soc" href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        <span>Facebook</span>
+                    </a>
+                </li>
+
+                <li>
+                    <!-- DEMO link: अपना Twitter link डालें -->
+                    <a class="ct-soc" href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        <span>Twitter</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- =====================================
+         QR CARD 1 : WHATSAPP
+    ====================================== -->
+
+    <dialog class="ct-dialog" id="waDialog" aria-labelledby="waTitle">
+
+        <button type="button" class="ct-close" data-close aria-label="Close">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+
+        <div class="ct-card">
+
+            <div class="ct-card-head">
+                <p class="ct-kicker">WhatsApp</p>
+                <h3 id="waTitle">Maa Sharda Cyber</h3>
+                <p class="ct-owner">Lucky Gupta</p>
+            </div>
+
+            <div class="ct-qr">
+                <img src="images/whatsapp-qr.webp" alt="WhatsApp QR code of Maa Sharda Cyber" width="336" height="336" loading="lazy" decoding="async">
+            </div>
+
+            <div class="ct-card-meta">
+                <p class="ct-contact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>+91 92410 62900</span>
+                </p>
+                <a class="ct-visit" href="https://wa.me/919241062900" target="_blank" rel="noopener noreferrer">Visit now</a>
+            </div>
+
+        </div>
+
+    </dialog>
+
+    <!-- =====================================
+         QR CARD 2 : INSTAGRAM
+    ====================================== -->
+
+    <dialog class="ct-dialog" id="igDialog" aria-labelledby="igTitle">
+
+        <button type="button" class="ct-close" data-close aria-label="Close">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+
+        <div class="ct-card">
+
+            <div class="ct-card-head">
+                <p class="ct-kicker">Instagram</p>
+                <h3 id="igTitle">Maa Sharda Cyber</h3>
+                <p class="ct-owner">Lucky Gupta</p>
+            </div>
+
+            <div class="ct-qr">
+                <img src="images/insta-qr.webp" alt="Instagram QR code of Maa Sharda Cyber" width="408" height="408" loading="lazy" decoding="async">
+            </div>
+
+            <div class="ct-card-meta">
+                <p class="ct-contact">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+                    <span>@shardacyber_0099</span>
+                </p>
+                <a class="ct-visit" href="https://www.instagram.com/shardacyber_0099/" target="_blank" rel="noopener noreferrer">Visit now</a>
+            </div>
+
+        </div>
+
+    </dialog>
+
+</section>

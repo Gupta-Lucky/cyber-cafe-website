@@ -1,0 +1,1214 @@
+/* =========================================
+   ABOUT US + REVIEWS + FEEDBACK FORM
+   (style.css के बाद लोड करें — वहाँ के variables use होते हैं)
+========================================= */
+
+/*
+  Section का background website से उल्टा है:
+  - Website dark  -> About section हल्का (सफ़ेद-नीला)
+  - Website light -> About section गहरा (काला-नीला)
+  पूरा design flat रखा है: कोई shadow, gradient या 3D effect नहीं।
+*/
+
+.about-section {
+  --ab-bg: #eaf1f8;
+  --ab-surface: #ffffff;
+  --ab-surface-2: #f3f7fb;
+  --ab-text: #0b1b2b;
+  --ab-text-2: #425569;
+  --ab-line: #d3dfea;
+  --ab-accent: #026aa2;
+  --ab-accent-soft: rgba(2, 106, 162, 0.1);
+  --ab-star: #e8a400;
+  --ab-star-off: #cbd8e4;
+  --ab-star-chip: #9db2c7;
+  --ab-warn: #9a5b00;
+  --ab-badge: #0a3c63;
+
+  position: relative;
+  overflow: hidden;
+  padding: 28px 0 36px;
+  background: var(--ab-bg);
+  color: var(--ab-text);
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+body.dark-theme .about-section {
+  --ab-bg: #0a111a;
+  --ab-surface: #121d2a;
+  --ab-surface-2: #0e1722;
+  --ab-text: #f1f6fb;
+  --ab-text-2: #a9bbcc;
+  --ab-line: #24384c;
+  --ab-accent: #48b1dc;
+  --ab-accent-soft: rgba(72, 177, 220, 0.14);
+  --ab-star: #ffc21a;
+  --ab-star-off: #33475b;
+  --ab-star-chip: #5f788f;
+  --ab-warn: #fbbf24;
+  --ab-badge: #0b4a75;
+}
+
+/* style.css के global h/p colors को इस section में override */
+.about-section h2,
+.about-section h3,
+.about-section h4 {
+  color: var(--ab-text);
+}
+
+.about-section p {
+  color: var(--ab-text-2);
+}
+
+.about-section [hidden] {
+  display: none !important;
+}
+
+.about-section ul {
+  list-style: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+/* ---------- Background shapes (हल्के, section के अंदर ही) ---------- */
+
+.ab-bg {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ab-shape {
+  position: absolute;
+  display: block;
+}
+
+.ab-ring-1,
+.ab-ring-2 {
+  border: 1px solid var(--ab-accent);
+  border-radius: 50%;
+  opacity: 0.18;
+}
+
+.ab-ring-1 {
+  top: -110px;
+  right: -100px;
+  width: 280px;
+  height: 280px;
+}
+
+.ab-ring-2 {
+  top: -60px;
+  right: -50px;
+  width: 180px;
+  height: 180px;
+}
+
+.ab-bubble {
+  bottom: 30%;
+  left: -90px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--ab-accent-soft);
+}
+
+.ab-watermark {
+  right: -140px;
+  bottom: 0;
+  width: 340px;
+  height: 340px;
+  background: url("images/sharda-swirl-blue.webp") center / contain no-repeat;
+  opacity: 0.07;
+}
+
+.ab-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Heading ---------- */
+
+.ab-head {
+  max-width: 560px;
+  margin-bottom: 22px;
+}
+
+.ab-pill {
+  width: 48px;
+  height: 6px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: var(--ab-accent);
+}
+
+.about-section h2 {
+  font-size: clamp(28px, 8.4vw, 34px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.about-section h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.ab-head p {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* ---------- Intro : logo / why / days ---------- */
+
+.ab-intro {
+  display: grid;
+  grid-template-areas:
+    "brand"
+    "why"
+    "days";
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.ab-brand {
+  grid-area: brand;
+}
+.ab-why {
+  grid-area: why;
+}
+.ab-days {
+  grid-area: days;
+}
+
+/* Logo : header के logo जैसा ही (गोल image + Maa + Sharda Cyber script) */
+
+.ab-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ab-badge {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--ab-badge);
+}
+
+.ab-logo {
+  width: 76%;
+  aspect-ratio: 1;
+  background: url("/image/sharda-swirl-blue.webp") center / contain no-repeat;
+}
+
+/* Dark Mode */
+body.dark-theme .ab-logo {
+  background-image: url("/image/sharda-swirl-blue.webp");
+}
+
+/* Light Mode */
+body.light-theme .ab-logo {
+  background-image: url("/image/sharda-logo-white.webp");
+}
+
+.ab-brand-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+}
+
+.about-section .ab-brand-small {
+  color: var(--ab-text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about-section .ab-brand-script {
+  margin-top: 6px;
+  color: var(--ab-text);
+  font-family: "Segoe Script", cursive;
+  font-size: 34px;
+  line-height: 0.78;
+  white-space: nowrap;
+}
+
+/* Why choose us : बिना अलग background के, section के साथ मिला हुआ */
+
+.ab-why h3 {
+  margin-bottom: 4px;
+}
+
+.ab-reasons {
+  display: grid;
+}
+
+.ab-reason {
+  display: flex;
+  gap: 12px;
+  padding: 11px 0;
+  border-top: 1px solid var(--ab-line);
+}
+
+.ab-reason-icon {
+  display: grid;
+  flex: 0 0 36px;
+  place-items: center;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--ab-accent-soft);
+  color: var(--ab-accent);
+}
+
+.ab-reason-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ab-reason h4 {
+  margin-bottom: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ab-reason p {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* Working days : सादी एक line */
+
+.ab-days {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-block: 1px solid var(--ab-line);
+}
+
+.about-section .ab-days h3 {
+  font-size: 14px;
+}
+
+.about-section .ab-days-main {
+  color: var(--ab-accent);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-right: 5px;
+}
+
+/* ---------- Buttons ---------- */
+
+.ab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+}
+
+.ab-btn-ghost {
+  flex: 0 0 auto;
+  border: 1px solid var(--ab-line);
+  color: var(--ab-accent);
+}
+
+.ab-btn-ghost:hover {
+  border-color: var(--ab-accent);
+}
+
+.ab-btn-primary {
+  background: var(--primary-bg);
+  color: #ffffff;
+}
+
+.ab-btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.ab-btn-primary:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* ---------- Stars (4.5 जैसी half rating के लिए) ---------- */
+
+.stars {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.stars-base,
+.stars-fill {
+  display: flex;
+}
+
+.stars-base {
+  color: var(--ab-star-off);
+}
+
+.stars-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--rating, 0) / 5 * 100%);
+  overflow: hidden;
+  color: var(--ab-star);
+  transition: width 200ms ease;
+}
+
+.stars svg {
+  flex: 0 0 var(--star, 15px);
+  width: var(--star, 15px);
+  height: var(--star, 15px);
+}
+
+/* ---------- Reviews ---------- */
+
+.rv-block {
+  margin-bottom: 28px;
+  scroll-margin-top: 90px;
+}
+
+.rv-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.rv-head h3:focus {
+  outline: none;
+}
+
+.rv-tools {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.rv-nav {
+  display: none;
+  gap: 6px;
+}
+
+.rv-arrow {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--ab-line);
+  border-radius: 50%;
+  color: var(--ab-text);
+  transition:
+    border-color var(--transition),
+    color var(--transition),
+    opacity var(--transition);
+}
+
+.rv-arrow:hover {
+  border-color: var(--ab-accent);
+  color: var(--ab-accent);
+}
+
+.rv-arrow svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.rv-arrow.swiper-button-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Mobile पर swiper screen के दाएँ किनारे तक, ताकि अगला card 1/3 दिखे */
+.reviewsSwiper {
+  margin-right: calc((100% - 100vw) / 2);
+  cursor: grab;
+}
+
+.reviewsSwiper .swiper-slide {
+  display: flex;
+  height: auto;
+}
+
+/* अगर Swiper load न हो सके तो भी swipe हो जाए */
+.reviewsSwiper.rv-fallback .swiper-wrapper {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.reviewsSwiper.rv-fallback .swiper-slide {
+  flex: 0 0 76%;
+  scroll-snap-align: start;
+}
+
+.rv-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 16px 14px 14px;
+  border: 1px solid var(--ab-line);
+  border-radius: 10px;
+  background: var(--ab-surface);
+  transition: border-color var(--transition);
+}
+
+@media (hover: hover) {
+  .rv-card:hover {
+    border-color: var(--ab-accent);
+  }
+}
+
+.rv-card:has(.rv-more:focus-visible) {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.rv-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rv-avatar {
+  display: grid;
+  flex: 0 0 40px;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ab-accent-soft);
+  color: var(--ab-accent);
+}
+
+.rv-avatar svg {
+  width: 22px;
+  height: 22px;
+}
+
+.rv-who {
+  min-width: 0;
+}
+
+.rv-name {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.rv-rate {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+}
+
+.rv-score {
+  padding: 1px 8px;
+  border: 1px solid var(--ab-line);
+  border-radius: 999px;
+  color: var(--ab-text);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.about-section .rv-text {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  font-size: 13.5px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.rv-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+  color: var(--ab-accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.rv-more:focus-visible {
+  outline: none;
+}
+
+/* पूरा card clickable */
+.rv-more::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.rv-more svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* "See more" वाला आख़िरी card + खाली स्थिति */
+
+.rv-card-more,
+.rv-empty {
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--ab-accent);
+  background: transparent;
+  text-align: center;
+}
+
+.rv-card-more .rv-more {
+  margin-top: 0;
+}
+
+.rv-more-count {
+  color: var(--ab-accent);
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.about-section .rv-more-label {
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.rv-empty h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.rv-empty p {
+  font-size: 13.5px;
+}
+
+.rv-noscript {
+  padding: 12px 0;
+  font-size: 13px;
+}
+
+/* ---------- Feedback block ---------- */
+
+.fb-intro {
+  margin-bottom: 10px;
+}
+
+.about-section .fb-intro p {
+  margin-top: 6px;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.fb-form {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--ab-line);
+  border-radius: 12px;
+  background: var(--ab-surface);
+}
+
+.fb-field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.fb-field label,
+.fb-field legend {
+  padding: 0;
+  color: var(--ab-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.fb-field legend {
+  margin-bottom: 6px;
+}
+
+.fb-field input[type="text"],
+.fb-field textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1.5px solid var(--ab-line);
+  border-radius: 8px;
+  background: var(--ab-surface-2);
+  color: var(--ab-text);
+  font: inherit;
+  font-size: 16px; /* iPhone पर zoom न हो */
+  line-height: 1.5;
+  transition: border-color var(--transition);
+}
+
+.fb-field textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.fb-field ::placeholder {
+  color: var(--ab-text-2);
+  opacity: 0.8;
+}
+
+.fb-field input[type="text"]:focus,
+.fb-field textarea:focus {
+  border-color: var(--ab-accent);
+}
+
+.fb-field textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.fb-field [aria-invalid="true"] {
+  border-color: var(--ab-warn);
+}
+
+.about-section .fb-error {
+  color: var(--ab-warn);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.fb-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.fb-count {
+  margin-left: auto;
+  color: var(--ab-text-2);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.fb-count.is-near {
+  color: var(--ab-warn);
+}
+
+.fb-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.fb-submit {
+  width: 100%;
+  min-height: 46px;
+  font-size: 15px;
+}
+
+/* Rating chips : सादे और flat */
+
+.rate-chips {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.rate-chip {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.rate-chip-face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-height: 40px;
+  border: 1.5px solid var(--ab-line);
+  border-radius: 8px;
+  background: var(--ab-surface-2);
+  color: var(--ab-text);
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    color var(--transition);
+}
+
+.rate-chip-face svg {
+  width: 13px;
+  height: 13px;
+  color: var(--ab-star-chip);
+  transition: color var(--transition);
+}
+
+@media (hover: hover) {
+  .rate-chip:hover .rate-chip-face {
+    border-color: var(--ab-accent);
+  }
+}
+
+/* चुनी हुई rating: रंग और border बदलते हैं */
+.rate-chip input:checked + .rate-chip-face {
+  border-color: var(--ab-accent);
+  background: var(--ab-accent-soft);
+  color: var(--ab-accent);
+}
+
+.rate-chip input:checked + .rate-chip-face svg {
+  color: var(--ab-star);
+}
+
+.rate-chip input:focus-visible + .rate-chip-face {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.rate-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 20px;
+  margin-top: 10px;
+}
+
+.rate-summary .stars {
+  --star: 18px;
+}
+
+.about-section .rate-text {
+  color: var(--ab-text-2);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rate-summary.is-set .rate-text {
+  color: var(--ab-accent);
+}
+
+.fb-rating .fb-error {
+  margin-top: 6px;
+}
+
+/* ---------- Thank you screen ---------- */
+
+.fb-thanks {
+  position: fixed;
+  z-index: 300;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(6, 18, 30, 0.72);
+  animation: fbFade 200ms ease both;
+}
+
+.fb-thanks-card {
+  width: min(320px, 100%);
+  padding: 28px 24px 24px;
+  border: 1px solid var(--ab-line);
+  border-radius: 14px;
+  background: var(--ab-surface);
+  text-align: center;
+  animation: fbPop 300ms ease both;
+}
+
+.fb-check {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 12px;
+}
+
+.fb-check-circle {
+  fill: var(--ab-accent-soft);
+  stroke: var(--ab-accent);
+  stroke-width: 2.5;
+  stroke-dasharray: 145;
+  stroke-dashoffset: 145;
+  animation: fbDraw 500ms ease forwards;
+}
+
+.fb-check-mark {
+  fill: none;
+  stroke: var(--ab-accent);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: fbDraw 340ms 360ms ease forwards;
+}
+
+.fb-thanks-card h3 {
+  font-size: 20px;
+}
+
+.about-section .fb-thanks-card p {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+@keyframes fbFade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fbPop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes fbDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+/* बड़े phones */
+@media (min-width: 600px) {
+  .about-section {
+    padding: 48px 0 56px;
+  }
+
+  .about-section h2 {
+    font-size: 36px;
+  }
+
+  .ab-head p {
+    font-size: 15px;
+  }
+
+  .about-section .rv-text {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .ab-badge {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-section .ab-brand-script {
+    font-size: 38px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .ab-intro {
+    grid-template-areas:
+      "brand days"
+      "why   why";
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+    align-items: center;
+  }
+
+  .ab-reasons {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+  }
+
+  .reviewsSwiper {
+    margin-right: 0;
+  }
+
+  .reviewsSwiper.rv-fallback .swiper-slide {
+    flex-basis: 44%;
+  }
+
+  .rv-nav {
+    display: flex;
+  }
+
+  .rate-chips {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .about-section {
+    padding: 96px 0 104px;
+  }
+
+  .ab-ring-1 {
+    top: -140px;
+    right: -110px;
+    width: 360px;
+    height: 360px;
+  }
+
+  .ab-ring-2 {
+    top: -80px;
+    right: -50px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .ab-bubble {
+    left: -110px;
+    width: 220px;
+    height: 220px;
+  }
+
+  .ab-watermark {
+    right: -60px;
+    width: 460px;
+    height: 460px;
+  }
+
+  /* Heading : बाएँ title, दाएँ intro text */
+  .ab-head {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 440px);
+    grid-template-rows: auto auto;
+    align-items: end;
+    column-gap: 48px;
+    max-width: none;
+    margin-bottom: 64px;
+  }
+
+  .ab-pill {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .about-section h2 {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 44px;
+  }
+
+  .ab-head p {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: end;
+    margin-top: 0;
+    font-size: 15px;
+  }
+
+  .about-section h3 {
+    font-size: 20px;
+  }
+
+  /* Logo + Working days बाएँ, Why choose us दाएँ */
+  .ab-intro {
+    grid-template-areas:
+      "brand why"
+      "days  why";
+    grid-template-columns: minmax(300px, 0.7fr) 1.6fr;
+    gap: 36px 64px;
+    align-items: start;
+    margin-bottom: 96px;
+  }
+
+  .ab-brand {
+    gap: 18px;
+  }
+
+  .ab-badge {
+    width: 132px;
+    height: 132px;
+  }
+
+  .about-section .ab-brand-small {
+    font-size: 17px;
+  }
+
+  .about-section .ab-brand-script {
+    margin-top: 8px;
+    font-size: 25px;
+  }
+
+  .ab-why {
+    padding-top: 60px;
+    margin-left: 45px;
+  }
+
+  .ab-why h3 {
+    margin-bottom: 8px;
+  }
+
+  .ab-reasons {
+    column-gap: 48px;
+  }
+
+  .ab-reason {
+    padding: 22px 0;
+  }
+
+  .ab-reason-icon {
+    flex-basis: 40px;
+    height: 40px;
+  }
+
+  .ab-reason h4 {
+    font-size: 16px;
+  }
+
+  .ab-reason p {
+    font-size: 13.5px;
+  }
+
+  .rv-block {
+    margin-bottom: 96px;
+  }
+
+  .rv-head {
+    margin-bottom: 24px;
+  }
+
+  .reviewsSwiper.rv-fallback .swiper-slide {
+    flex-basis: 31%;
+  }
+
+  .rv-card {
+    gap: 14px;
+    padding: 22px 24px 20px 22px;
+  }
+
+  .about-section .rv-text {
+    font-size: 14px;
+  }
+
+  /* Feedback : बाएँ heading, दाएँ form (2 columns) */
+  .fb-block {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.7fr) 1.8fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .fb-intro {
+    margin-bottom: 0;
+  }
+
+  .about-section .fb-intro p {
+    font-size: 14.5px;
+  }
+
+  .fb-form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "name   text"
+      "rating text"
+      "error  error"
+      "submit submit";
+    gap: 22px 32px;
+    padding: 32px;
+  }
+
+  .fb-name {
+    grid-area: name;
+  }
+  .fb-rating {
+    grid-area: rating;
+  }
+  .fb-text {
+    grid-area: text;
+    grid-template-rows: auto 1fr auto;
+  }
+  .fb-form-error {
+    grid-area: error;
+  }
+  .fb-submit {
+    grid-area: submit;
+  }
+
+  .fb-text textarea {
+    height: 100%;
+    min-height: 190px;
+  }
+
+  .rate-chips {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fb-thanks,
+  .fb-thanks-card {
+    animation: none;
+  }
+
+  .fb-check-circle,
+  .fb-check-mark {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
