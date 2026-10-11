@@ -143,7 +143,7 @@ body.light-theme .about-section {
     bottom: 0;
     width: 420px;
     height: 420px;
-    background: url("images/sharda-swirl-blue.webp") center / contain no-repeat;
+    background: url("image/sharda-swirl-blue.webp") center / contain no-repeat;
     opacity: 0.08;
 }
 
@@ -235,7 +235,7 @@ body.light-theme .about-section {
 .ab-logo {
     width: 76%;
     aspect-ratio: 1;
-    background: url("images/sharda-logo-white.webp") center / contain no-repeat;
+    background: url("image/sharda-logo-white.webp") center / contain no-repeat;
 }
 
 .ab-brand-name {
@@ -763,7 +763,7 @@ body.light-theme .about-section {
     bottom: -34px;
     width: 190px;
     aspect-ratio: 1;
-    background: url("images/sharda-logo-white.webp") center / contain no-repeat;
+    background: url("image/sharda-logo-white.webp") center / contain no-repeat;
     opacity: 0.1;
     pointer-events: none;
 }

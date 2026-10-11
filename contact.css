@@ -384,7 +384,7 @@ body.light-theme .contact-section {
     aspect-ratio: 1;
     border: 1px solid var(--border);
     border-radius: 50%;
-    background: var(--card-bg);
+    /* background: var(--card-bg); */
     color: var(--text);
     text-align: center;
     transition: border-color var(--transition);

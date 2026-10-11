@@ -20,6 +20,16 @@
   let drawerOpener = null;
   let lastScrollY = window.scrollY;
 
+  function getDrawerFocusableElements() {
+    if (!drawer) {
+      return [];
+    }
+
+    return [...drawer.querySelectorAll(
+      "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])",
+    )].filter((element) => !element.hasAttribute("hidden"));
+  }
+
   function readStoredTheme() {
     try {
       return localStorage.getItem("theme");
@@ -45,10 +55,15 @@
         "aria-label",
         isDark ? "Switch to light theme" : "Switch to dark theme",
       );
+      themeToggle.setAttribute("aria-pressed", String(!isDark));
     }
 
     if (drawerThemeToggle) {
       drawerThemeToggle.checked = !isDark;
+      drawerThemeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Use light theme" : "Use dark theme",
+      );
     }
   }
 
@@ -66,6 +81,7 @@
 
     drawerOpener = document.activeElement;
     drawer.classList.add("active");
+    drawer.removeAttribute("inert");
     drawerOverlay.classList.add("active");
     drawer.setAttribute("aria-hidden", "false");
     menuBtn?.setAttribute("aria-expanded", "true");
@@ -79,6 +95,7 @@
     }
 
     drawer.classList.remove("active");
+    drawer.setAttribute("inert", "");
     drawerOverlay.classList.remove("active");
     drawer.setAttribute("aria-hidden", "true");
     menuBtn?.setAttribute("aria-expanded", "false");
@@ -86,6 +103,30 @@
 
     if (restoreFocus && drawerOpener instanceof HTMLElement) {
       drawerOpener.focus({ preventScroll: true });
+    }
+  }
+
+  function trapDrawerFocus(event) {
+    if (event.key !== "Tab" || !drawer?.classList.contains("active")) {
+      return;
+    }
+
+    const focusable = getDrawerFocusableElements();
+
+    if (focusable.length === 0) {
+      event.preventDefault();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
     }
   }
 
@@ -169,6 +210,8 @@
       if (event.key === "Escape" && drawer?.classList.contains("active")) {
         closeDrawer();
       }
+
+      trapDrawerFocus(event);
     });
 
     dropdownButtons.forEach((button) => {

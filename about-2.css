@@ -132,7 +132,7 @@ body.dark-theme .about-section {
   bottom: 0;
   width: 340px;
   height: 340px;
-  background: url("images/sharda-swirl-blue.webp") center / contain no-repeat;
+  background: url("image/sharda-swirl-blue.webp") center / contain no-repeat;
   opacity: 0.07;
 }
 
@@ -219,17 +219,17 @@ body.dark-theme .about-section {
 .ab-logo {
   width: 76%;
   aspect-ratio: 1;
-  background: url("/image/sharda-swirl-blue.webp") center / contain no-repeat;
+  background: url("image/sharda-swirl-blue.webp") center / contain no-repeat;
 }
 
 /* Dark Mode */
 body.dark-theme .ab-logo {
-  background-image: url("/image/sharda-swirl-blue.webp");
+  background-image: url("image/sharda-swirl-blue.webp");
 }
 
 /* Light Mode */
 body.light-theme .ab-logo {
-  background-image: url("/image/sharda-logo-white.webp");
+  background-image: url("image/sharda-logo-white.webp");
 }
 
 .ab-brand-name {

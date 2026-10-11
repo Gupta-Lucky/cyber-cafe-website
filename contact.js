@@ -15,14 +15,14 @@
       return;
     }
 
-    let opener = null;
+    const openers = new WeakMap();
 
     function openDialog(dialog, trigger) {
       if (!dialog || dialog.open) {
         return;
       }
 
-      opener = trigger;
+      openers.set(dialog, trigger);
 
       if (typeof dialog.showModal === "function") {
         dialog.showModal();
@@ -31,14 +31,19 @@
       }
     }
 
+    function restoreFocus(dialog) {
+      const opener = openers.get(dialog);
+      openers.delete(dialog);
+      opener?.focus({ preventScroll: true });
+    }
+
     function closeDialog(dialog) {
-      if (typeof dialog.close === "function") {
+      if (typeof dialog.close === "function" && dialog.open) {
         dialog.close();
       } else {
         dialog.removeAttribute("open");
+        restoreFocus(dialog);
       }
-
-      opener?.focus({ preventScroll: true });
     }
 
     triggers.forEach((trigger) => {
@@ -48,6 +53,8 @@
     });
 
     document.querySelectorAll(".ct-dialog").forEach((dialog) => {
+      dialog.addEventListener("close", () => restoreFocus(dialog));
+
       // Card के बाहर (अँधेरे हिस्से पर) tap करने से बंद
       dialog.addEventListener("click", (event) => {
         if (event.target === dialog) {

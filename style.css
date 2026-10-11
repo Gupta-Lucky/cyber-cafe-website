@@ -23,16 +23,9 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden; /* यह हॉरिजॉन्टल स्क्रॉल को रोक देगा */
-}
-
-
 body {
     min-width: 320px;
     min-height: 100vh;
-    overflow-x: clip;
     /* Satoshi के बाद Noto Sans Devanagari को जोड़ दिया है */
     font-family: "Satoshi", "Noto Sans Devanagari", sans-serif;
     background: var(--bg);
@@ -143,17 +136,18 @@ p {
 
 button:focus-visible,
 a:focus-visible,
-input:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
     outline: 2px solid var(--primary);
     outline-offset: 3px;
 }
 
 .nav-logo {
-    content: url("/image/sharda-swirl-blue.webp");
+    content: url("image/sharda-swirl-blue.webp");
 }
 
 body.light-theme .nav-logo {
-    content: url("/image/sharda-logo-white.webp");
+    content: url("image/sharda-logo-white.webp");
 }
 
 /* =========================================
@@ -666,17 +660,17 @@ body.light-theme .nav-logo {
 
 .service-icon.red1, .red2, .red3 {
     color: #FF2C2C;
-    background-image: url("/image/lnmu.png");
+    background-image: url("image/lnmu.png");
     background-position: center;
     background-size: cover;
 }
 
 .service-icon.red2{
-    background-image: url("/image/railway.png")
+    background-image: url("image/railway.png");
 }
 
 .service-icon.red3{
-    background-image: url("/image/ssc.png");  
+    background-image: url("image/ssc.png");
 }
 
 .service-item h3 {
@@ -754,15 +748,12 @@ body.light-theme .nav-logo {
 }
 
 @media (max-width: 1100px) {
-    @media (max-width: 1100px) {
     .container {
         width: 90%; 
     }
     .desktop-nav {
         gap: 22px;
     }
-}
-
     .hero-grid {
         gap: 36px;
     }
@@ -783,7 +774,7 @@ body.light-theme .nav-logo {
     }
 
     .menu-btn {
-        display: inline-flex;
+        display: inline-flex !important;
         margin-left: auto;
     }
 }
@@ -932,4 +923,3 @@ body.light-theme .nav-logo {
         display: none !important;
     }
 }
-

@@ -1,0 +1,59 @@
+<!-- =========================================
+     PRICING
+     इस पूरे <section> को index.html में
+     "CATEGORIES" वाले </section> के ठीक बाद, "ABOUT" से पहले paste करें
+     (Cards यहाँ नहीं लिखने, वो pricing-data.js से अपने-आप बनते हैं)
+========================================= -->
+
+<section class="pricing-section" id="pricing" aria-labelledby="pricingTitle">
+
+    <!-- हल्के background shapes -->
+    <div class="pr-bg" aria-hidden="true">
+        <span class="pr-shape pr-ring-a"></span>
+        <span class="pr-shape pr-ring-b"></span>
+        <span class="pr-shape pr-dots"></span>
+    </div>
+
+    <div class="container pr-inner">
+
+        <!-- =====================================
+             HEADING
+        ====================================== -->
+
+        <header class="pr-head">
+
+            <h2 id="pricingTitle">Pricing</h2>
+
+            <span class="pr-divider" aria-hidden="true"></span>
+
+            <p>No need to visit the cafe! Complete cyber services at home, priced perfectly for you.</p>
+
+        </header>
+
+        <!-- जब तक दाम नमूना हैं, तब तक एक छोटी चेतावनी (pricing-data.js से बंद होती है) -->
+        <p class="pr-sample" id="pricingSample" hidden></p>
+
+        <!-- =====================================
+             CARDS (JS यहाँ भरती है)
+        ====================================== -->
+
+        <ul class="pr-grid" id="pricingGrid"></ul>
+
+        <noscript>
+            <p class="pr-noscript">Pricing needs JavaScript to load.</p>
+        </noscript>
+
+        <div class="pr-foot">
+
+            <button type="button" class="pr-more" id="pricingMore" aria-controls="pricingGrid" aria-expanded="false" hidden>
+                <span id="pricingMoreText">Show all pricing</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+
+            <p class="pr-note" id="pricingNote"></p>
+
+        </div>
+
+    </div>
+
+</section>

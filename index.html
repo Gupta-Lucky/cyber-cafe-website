@@ -3,7 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maa Sharda Cyber</title>
+    <meta
+      name="description"
+      content="Maa Sharda Cyber provides digital, document, printing and online form services."
+    />
+    <title>Maa Sharda Cyber | Digital &amp; Document Services</title>
+
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
     <!-- Satoshi -->
     <link
@@ -22,9 +31,6 @@
       rel="stylesheet"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -39,9 +45,10 @@
     <link rel="stylesheet" href="categories.css" />
     <link rel="stylesheet" href="about-2.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="pricing.css">
   </head>
 
-  <body class="dark-theme">
+  <body id="top" class="dark-theme">
     <script>
       try {
         if (localStorage.getItem("theme") === "light-theme") {
@@ -53,7 +60,7 @@
      MOBILE DRAWER BACKDROP
 ========================================= -->
 
-    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
 
     <!-- =========================================
      HEADER
@@ -64,11 +71,11 @@
         <nav class="navbar">
           <!-- Logo -->
 
-          <a href="#" class="logo-wrapper">
+          <a href="#top" class="logo-wrapper">
             <div class="logo-image">
               <!-- Replace with your logo -->
 
-              <img src="/image/sharda-logo-white.webp" alt="Maa Sharda Cyber" />
+              <img src="image/sharda-logo-white.webp" alt="Maa Sharda Cyber" />
             </div>
 
             <div class="logo-content">
@@ -81,13 +88,13 @@
           <!-- Desktop Navigation -->
 
           <div class="desktop-nav">
-            <a href="#">Home</a>
+            <a href="#top">Home</a>
 
             <a href="#categories"> Services </a>
 
             <a href="#"> Pricing </a>
 
-            <a href="/about.html"> About Us </a>
+            <a href="about.html"> About Us </a>
 
             <a href="#"> Job Vacancies </a>
           </div>
@@ -104,7 +111,7 @@
               🌙
             </button>
 
-            <a href="#" class="contact-btn"> Contact Now </a>
+            <a href="#contact" class="contact-btn"> Contact Now </a>
           </div>
 
           <!-- Mobile Menu -->
@@ -136,6 +143,7 @@
       aria-modal="true"
       aria-hidden="true"
       aria-label="Mobile navigation"
+      inert
     >
       <div class="drawer-header">
         <h2>Maa Sharda Cyber</h2>
@@ -153,13 +161,18 @@
       <!-- Services Dropdown -->
 
       <div class="drawer-dropdown">
-        <button class="dropdown-btn active" type="button" aria-expanded="true">
+        <button
+          class="dropdown-btn active"
+          type="button"
+          aria-expanded="true"
+          aria-controls="servicesDropdown"
+        >
           <span> Our Services </span>
 
           <span class="dropdown-icon"> ⌄ </span>
         </button>
 
-        <div class="dropdown-content open">
+        <div class="dropdown-content open" id="servicesDropdown">
           <a href="#"> Online Forms </a>
 
           <a href="#"> Document Scanning </a>
@@ -180,19 +193,24 @@
 
       <a href="#" class="drawer-link"> Pricing </a>
 
-      <a href="/about.html" class="drawer-link"> About Us </a>
+      <a href="about.html" class="drawer-link"> About Us </a>
       <a href="#feedback" class="drawer-link">Feedback</a>
 
       <!-- Jobs Dropdown -->
 
       <div class="drawer-dropdown">
-        <button class="dropdown-btn" type="button" aria-expanded="false">
+        <button
+          class="dropdown-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="jobsDropdown"
+        >
           <span> New Job Vacancies </span>
 
           <span class="dropdown-icon"> ⌄ </span>
         </button>
 
-        <div class="dropdown-content">
+        <div class="dropdown-content" id="jobsDropdown">
           <a href="#"> SSC Jobs </a>
 
           <a href="#"> Railway Jobs </a>
@@ -211,7 +229,11 @@
         <span> Dark Mode </span>
 
         <label class="switch">
-          <input type="checkbox" id="drawerThemeToggle" />
+          <input
+            type="checkbox"
+            id="drawerThemeToggle"
+            aria-label="Use light theme"
+          />
 
           <span class="slider"></span>
         </label>
@@ -873,7 +895,7 @@
              CUSTOMER REVIEWS
         ====================================== -->
 
-        <section id="feedback">
+        <section id="reviews-and-feedback">
         <div class="rv-block" id="reviews">
 
             <div class="rv-head">
@@ -1204,7 +1226,7 @@
             <ul class="ct-social-grid">
 
                 <li>
-                    <a class="ct-soc" href="https://www.instagram.com/shardacyber_0099/" target="_blank" rel="noopener noreferrer">
+                    <a class="ct-soc" href="https://www.instagram.com/shardacyber_0099/" target="_blank" rel="noopener noreferrer" aria-label="Visit Maa Sharda Cyber on Instagram">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
                     </a>
                     <span class="ct-soc-text">Instagram</span>
@@ -1213,7 +1235,7 @@
 
                 <li>
                     <!-- DEMO link: अपना YouTube channel link डालें -->
-                    <a class="ct-soc" href="https://www.youtube.com/@your-channel" target="_blank" rel="noopener noreferrer">
+                    <a class="ct-soc" href="https://www.youtube.com/@your-channel" target="_blank" rel="noopener noreferrer" aria-label="Visit Maa Sharda Cyber on YouTube">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
                         
                     </a>
@@ -1222,7 +1244,7 @@
 
                 <li>
                     <!-- DEMO link: अपना Facebook page link डालें -->
-                    <a class="ct-soc" href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer">
+                    <a class="ct-soc" href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Visit Maa Sharda Cyber on Facebook">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         
                     </a>
@@ -1231,7 +1253,7 @@
 
                 <li>
                     <!-- DEMO link: अपना Twitter link डालें -->
-                    <a class="ct-soc" href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer">
+                    <a class="ct-soc" href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer" aria-label="Visit Maa Sharda Cyber on Twitter">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
                         
                     </a>
@@ -1264,7 +1286,7 @@
             </div>
 
             <div class="ct-qr">
-                <img src="/image/whatsapp-qr.webp" alt="WhatsApp QR code of Maa Sharda Cyber" width="336" height="336" loading="lazy" decoding="async">
+                <img src="image/whatsapp-qr.webp" alt="WhatsApp QR code of Maa Sharda Cyber" width="336" height="336" loading="lazy" decoding="async">
             </div>
 
             <div class="ct-card-meta">
@@ -1298,7 +1320,7 @@
             </div>
 
             <div class="ct-qr">
-                <img src="/image/insta-qr.webp" alt="Instagram QR code of Maa Sharda Cyber" width="408" height="408" loading="lazy" decoding="async">
+                <img src="image/insta-qr.webp" alt="Instagram QR code of Maa Sharda Cyber" width="408" height="408" loading="lazy" decoding="async">
             </div>
 
             <div class="ct-card-meta">
@@ -1314,18 +1336,72 @@
     </dialog>
 
 </section>
+<section class="pricing-section" id="pricing" aria-labelledby="pricingTitle">
+
+    <!-- हल्के background shapes -->
+    <div class="pr-bg" aria-hidden="true">
+        <span class="pr-shape pr-ring-a"></span>
+        <span class="pr-shape pr-ring-b"></span>
+        <span class="pr-shape pr-dots"></span>
+    </div>
+
+    <div class="container pr-inner">
+
+        <!-- =====================================
+             HEADING
+        ====================================== -->
+
+        <header class="pr-head">
+
+            <h2 id="pricingTitle">Pricing</h2>
+
+            <span class="pr-divider" aria-hidden="true"></span>
+
+            <p>No need to visit the cafe! Complete cyber services at home, priced perfectly for you.</p>
+
+        </header>
+
+        <!-- जब तक दाम नमूना हैं, तब तक एक छोटी चेतावनी (pricing-data.js से बंद होती है) -->
+        <p class="pr-sample" id="pricingSample" hidden></p>
+
+        <!-- =====================================
+             CARDS (JS यहाँ भरती है)
+        ====================================== -->
+
+        <ul class="pr-grid" id="pricingGrid"></ul>
+
+        <noscript>
+            <p class="pr-noscript">Pricing needs JavaScript to load.</p>
+        </noscript>
+
+        <div class="pr-foot">
+
+            <button type="button" class="pr-more" id="pricingMore" aria-controls="pricingGrid" aria-expanded="false" hidden>
+                <span id="pricingMoreText">Show all pricing</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+
+            <p class="pr-note" id="pricingNote"></p>
+
+        </div>
+
+    </div>
+
+</section>
     
 
     <!-- =========================================
      SCRIPTS
 ========================================= -->
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="script.js"></script>
-    <script src="categories.js"></script>
-    <SCRipt src="about-2.js"></SCRipt>
-    <script src="feedback-data.js"></script>
-    <script src="contact.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="categories.js"></script>
+    <script defer src="feedback-data.js"></script>
+    <script defer src="about-2.js"></script>
+    <script defer src="contact.js"></script>
+    <script defer src="pricing-data.js"></script>
+    <script defer src="pricing.js"></script>
   </body>
 </html>
