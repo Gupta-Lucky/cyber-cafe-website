@@ -5,7 +5,7 @@
 
 .category-section {
     --cat-link: #48B1DC;              /* dark theme में link color */
-    padding: 0 0 64px;
+    padding: 30px 0 64px;
 }
 
 body.light-theme .category-section {
