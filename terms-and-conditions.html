@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms &amp; Conditions: Refund &amp; Cancellation Policy | Maa Sharda Cyber</title>
+    <meta name="description" content="Terms &amp; Conditions of Maa Sharda Cyber: service charges, cancellations and refunds." />
+
+    <!-- Satoshi -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+
+    <!-- Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="legal.css" />
+  </head>
+
+  <body class="dark-theme">
+    <script>
+      try {
+        if (localStorage.getItem("theme") === "light-theme") {
+          document.body.className = "light-theme";
+        }
+      } catch (e) {}
+    </script>
+
+    <!-- =========================================
+     MOBILE DRAWER BACKDROP + HEADER + DRAWER
+     (index.html जैसा ही)
+========================================= -->
+
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- =========================================
+     HEADER
+========================================= -->
+
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <!-- Logo -->
+
+          <a href="index.html" class="logo-wrapper">
+            <div class="logo-image">
+              <!-- Replace with your logo -->
+
+              <img src="image_577e3bf5.jpg" alt="Maa Sharda Cyber" />
+            </div>
+
+            <div class="logo-content">
+              <span class="logo-small"> Maa </span>
+
+              <span class="logo-script"> Sharda Cyber </span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+
+          <div class="desktop-nav">
+            <a href="index.html">Home</a>
+
+            <a href="index.html#services"> Services </a>
+
+            <a href="index.html#pricing"> Pricing </a>
+
+            <a href="index.html#about"> About Us </a>
+
+            <a href="#"> Job Vacancies </a>
+          </div>
+
+          <!-- Desktop Actions -->
+
+          <div class="desktop-actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              type="button"
+              aria-label="Theme Toggle"
+            >
+              🌙
+            </button>
+
+            <a href="index.html#contact" class="contact-btn"> Contact Now </a>
+          </div>
+
+          <!-- Mobile Menu -->
+
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Open Menu"
+            aria-controls="mobileDrawer"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================================
+     MOBILE DRAWER
+========================================= -->
+
+    <aside
+      class="mobile-drawer"
+      id="mobileDrawer"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-label="Mobile navigation"
+    >
+      <div class="drawer-header">
+        <h2>Maa Sharda Cyber</h2>
+
+        <button
+          class="drawer-close"
+          id="drawerClose"
+          type="button"
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Services Dropdown -->
+
+      <div class="drawer-dropdown">
+        <button class="dropdown-btn active" type="button" aria-expanded="true">
+          <span> Our Services </span>
+
+          <span class="dropdown-icon"> ⌄ </span>
+        </button>
+
+        <div class="dropdown-content open">
+          <a href="index.html#categories"> Online Forms </a>
+
+          <a href="index.html#categories"> Document Scanning </a>
+
+          <a href="index.html#categories"> Print & Photocopy </a>
+
+          <a href="index.html#categories"> Passport Photos </a>
+
+          <a href="index.html#categories"> Digital Services </a>
+
+          <a href="index.html#categories"> PAN Services </a>
+
+          <a href="index.html#categories"> Aadhaar Services </a>
+
+          <a href="index.html#categories"> University Forms </a>
+        </div>
+      </div>
+
+      <a href="index.html#pricing" class="drawer-link"> Pricing </a>
+
+      <a href="index.html#about" class="drawer-link"> About Us </a>
+
+      <!-- Jobs Dropdown -->
+
+      <div class="drawer-dropdown">
+        <button class="dropdown-btn" type="button" aria-expanded="false">
+          <span> New Job Vacancies </span>
+
+          <span class="dropdown-icon"> ⌄ </span>
+        </button>
+
+        <div class="dropdown-content">
+          <a href="#"> SSC Jobs </a>
+
+          <a href="#"> Railway Jobs </a>
+
+          <a href="#"> Banking Jobs </a>
+
+          <a href="#"> State Jobs </a>
+
+          <a href="#"> Central Govt Jobs </a>
+        </div>
+      </div>
+
+      <!-- Theme Switch -->
+
+      <div class="drawer-theme">
+        <span> Dark Mode </span>
+
+        <label class="switch">
+          <input type="checkbox" id="drawerThemeToggle" />
+
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <a href="index.html#contact" class="drawer-contact-btn"> Contact Us </a>
+    </aside>
+
+    <!-- =========================================
+     PAGE
+========================================= -->
+
+    <main class="lg-main" id="top">
+
+      <!-- Page heading -->
+
+      <section class="lg-hero">
+        <div class="container">
+
+          <nav class="lg-crumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Terms &amp; Conditions</span>
+          </nav>
+
+          <p class="lg-eyebrow">Terms &amp; Conditions</p>
+
+          <h1>Refund &amp; Cancellation Policy</h1>
+          <p class="lg-h1-hi" lang="hi">धनवापसी (रिफ़ंड) और रद्दीकरण नीति</p>
+
+          <p class="lg-updated">
+            Last Updated <span lang="hi">/ अंतिम अपडेट:</span>
+            <strong data-biz="updated">[DD/MM/YYYY]</strong>
+          </p>
+
+          <p class="lg-note">
+            Every point is followed by its Hindi meaning.
+            <span lang="hi">हर बिंदु के नीचे उसका हिंदी अर्थ दिया गया है।</span>
+          </p>
+
+        </div>
+      </section>
+
+      <!-- Contents + document -->
+
+      <div class="container lg-layout">
+
+        <nav class="lg-toc" aria-label="Contents">
+          <details class="lg-toc-box" open>
+            <summary>Contents <span lang="hi">/ विषय सूची</span></summary>
+            <ol class="lg-toc-list"><li><a href="#s1"><span class="lg-toc-n">1</span><span class="lg-toc-t">Service Charges and Payment<small lang="hi">सेवा शुल्क और भुगतान</small></span></a></li><li><a href="#s2"><span class="lg-toc-n">2</span><span class="lg-toc-t">Customer-Initiated Cancellations<small lang="hi">ग्राहक द्वारा रद्द करना</small></span></a></li><li><a href="#s3"><span class="lg-toc-n">3</span><span class="lg-toc-t">Services That Have Already Been Completed<small lang="hi">पहले से पूरी हो चुकी सेवाएँ</small></span></a></li><li><a href="#s4"><span class="lg-toc-n">4</span><span class="lg-toc-t">Government Fees and Third-Party Charges<small lang="hi">सरकारी शुल्क और तीसरे पक्ष के शुल्क</small></span></a></li><li><a href="#s5"><span class="lg-toc-n">5</span><span class="lg-toc-t">Refunds Due to Errors or Service Issues<small lang="hi">गलतियों या सेवा संबंधी समस्याओं के कारण धनवापसी</small></span></a></li><li><a href="#s6"><span class="lg-toc-n">6</span><span class="lg-toc-t">Delays, Rejections, and Government Decisions<small lang="hi">देरी, अस्वीकृति और सरकारी निर्णय</small></span></a></li><li><a href="#s7"><span class="lg-toc-n">7</span><span class="lg-toc-t">Duplicate or Incorrect Payments<small lang="hi">दोहरा या गलत भुगतान</small></span></a></li><li><a href="#s8"><span class="lg-toc-n">8</span><span class="lg-toc-t">How to Request a Refund<small lang="hi">धनवापसी का अनुरोध कैसे करें</small></span></a></li><li><a href="#s9"><span class="lg-toc-n">9</span><span class="lg-toc-t">Refund Review and Processing<small lang="hi">धनवापसी की समीक्षा और प्रक्रिया</small></span></a></li><li><a href="#s10"><span class="lg-toc-n">10</span><span class="lg-toc-t">No Waiver of Consumer Rights<small lang="hi">उपभोक्ता अधिकारों की कोई छूट नहीं</small></span></a></li><li><a href="#s11"><span class="lg-toc-n">11</span><span class="lg-toc-t">Changes to This Policy<small lang="hi">इस नीति में बदलाव</small></span></a></li><li><a href="#s12"><span class="lg-toc-n">12</span><span class="lg-toc-t">Contact Us<small lang="hi">हमसे संपर्क करें</small></span></a></li></ol>
+          </details>
+        </nav>
+
+        <article class="lg-doc">
+
+          <div class="lg-intro">
+            <div class="lg-pair"><p class="lg-en">Maa Sharda Cyber aims to provide clear service charges, fair cancellation terms, and transparent refund procedures for customers using our shop-based and remote services.</p><p class="lg-hi" lang="hi">माँ शारदा साइबर का उद्देश्य अपनी दुकान और दूर से (रिमोट) ली जाने वाली सेवाओं के ग्राहकों को स्पष्ट सेवा शुल्क, उचित रद्दीकरण शर्तें और पारदर्शी धनवापसी (रिफ़ंड) प्रक्रिया देना है।</p></div>
+            <div class="lg-pair"><p class="lg-en">This policy applies to services requested at our physical shop or through our website, WhatsApp, or telephone.</p><p class="lg-hi" lang="hi">यह नीति हमारी दुकान पर या हमारी वेबसाइट, WhatsApp अथवा फ़ोन के ज़रिए माँगी गई सेवाओं पर लागू होती है।</p></div>
+          </div>
+
+          <div class="lg-biz-wrap">
+            <h2 class="lg-biz-title">Business Details <span lang="hi">/ व्यवसाय का विवरण</span></h2>
+            <dl class="lg-biz">
+              <div class="lg-biz-row">
+                <dt>Business Name <small lang="hi">व्यवसाय का नाम</small></dt>
+                <dd><span data-biz="name">Maa Sharda Cyber</span></dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Business Address <small lang="hi">व्यवसाय का पता</small></dt>
+                <dd data-biz="address">[Enter Your Complete Business Address]</dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Phone / WhatsApp <small lang="hi">फ़ोन / WhatsApp</small></dt>
+                <dd><a data-biz-link="phone" href="tel:+919241062900"><span data-biz="phone">+91 92410 62900</span></a></dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Email <small lang="hi">ईमेल</small></dt>
+                <dd><a data-biz-link="email" href="#"><span data-biz="email">[Enter Your Business Email Address]</span></a></dd>
+              </div>
+            </dl>
+          </div>
+
+          <section class="lg-sec" id="s1" aria-labelledby="s1-title">
+            <h2 id="s1-title"><span class="lg-num" aria-hidden="true">1</span><span>Service Charges and Payment</span></h2>
+            <p class="lg-h2-hi" lang="hi">सेवा शुल्क और भुगतान</p>
+            <div class="lg-pair"><p class="lg-en">Before a service begins, we will communicate the applicable service charges and, where reasonably possible, any separate government or third-party fees.</p><p class="lg-hi" lang="hi">सेवा शुरू होने से पहले हम लागू सेवा शुल्क बताएँगे और, जहाँ उचित रूप से संभव हो, किसी अलग सरकारी या तीसरे पक्ष के शुल्क की जानकारी भी देंगे।</p></div>
+            <div class="lg-pair"><p class="lg-en">Depending on the service, payment may be required before work starts, after completion, or in agreed stages.</p><p class="lg-hi" lang="hi">सेवा के अनुसार भुगतान काम शुरू होने से पहले, पूरा होने के बाद, या तय किए गए चरणों में माँगा जा सकता है।</p></div>
+            <div class="lg-pair"><p class="lg-en">Customers should retain their receipts and transaction references for any refund request.</p><p class="lg-hi" lang="hi">किसी भी धनवापसी अनुरोध के लिए ग्राहकों को अपनी रसीदें और लेन-देन के संदर्भ संभालकर रखने चाहिए।</p></div>
+          </section>
+          <section class="lg-sec" id="s2" aria-labelledby="s2-title">
+            <h2 id="s2-title"><span class="lg-num" aria-hidden="true">2</span><span>Customer-Initiated Cancellations</span></h2>
+            <p class="lg-h2-hi" lang="hi">ग्राहक द्वारा रद्द करना</p>
+            <div class="lg-pair"><p class="lg-en">Customers may request cancellation before or after work begins.</p><p class="lg-hi" lang="hi">ग्राहक काम शुरू होने से पहले या बाद में रद्द करने का अनुरोध कर सकते हैं।</p></div>
+            <ul class="lg-list"><li><span class="lg-en"><strong>Before work begins:</strong> Where no work has been performed and no non-recoverable third-party charge has been incurred, an eligible payment will generally be refunded.</span><span class="lg-hi" lang="hi"><strong>काम शुरू होने से पहले:</strong> जहाँ कोई काम नहीं हुआ है और कोई ऐसा तीसरे पक्ष का शुल्क नहीं लगा है जो वापस न मिल सके, वहाँ पात्र भुगतान आम तौर पर वापस किया जाएगा।</span></li><li><span class="lg-en"><strong>After work begins:</strong> The refund will be assessed based on the work actually completed, any clearly disclosed and lawful charges already incurred, and the applicable consumer-protection requirements.</span><span class="lg-hi" lang="hi"><strong>काम शुरू होने के बाद:</strong> धनवापसी का आकलन वास्तव में पूरे हुए काम, पहले से लगे स्पष्ट रूप से बताए गए और वैध शुल्क, और लागू उपभोक्ता-संरक्षण की आवश्यकताओं के आधार पर किया जाएगा।</span></li><li><span class="lg-en"><strong>After service completion:</strong> Refunds will depend on whether the service was delivered as agreed, whether there was an error or deficiency, and any applicable legal rights.</span><span class="lg-hi" lang="hi"><strong>सेवा पूरी होने के बाद:</strong> धनवापसी इस पर निर्भर करेगी कि सेवा तय शर्तों के अनुसार दी गई या नहीं, कोई गलती या कमी थी या नहीं, और कौन-से कानूनी अधिकार लागू होते हैं।</span></li></ul>
+            <div class="lg-pair"><p class="lg-en">We will not automatically forfeit the entire payment solely because a customer requests cancellation.</p><p class="lg-hi" lang="hi">केवल इसलिए कि ग्राहक ने रद्द करने का अनुरोध किया है, हम पूरा भुगतान अपने-आप ज़ब्त नहीं करेंगे।</p></div>
+          </section>
+          <section class="lg-sec" id="s3" aria-labelledby="s3-title">
+            <h2 id="s3-title"><span class="lg-num" aria-hidden="true">3</span><span>Services That Have Already Been Completed</span></h2>
+            <p class="lg-h2-hi" lang="hi">पहले से पूरी हो चुकी सेवाएँ</p>
+            <div class="lg-pair"><p class="lg-en">Services such as form filling, online applications, document preparation, printing, and other digital assistance may involve work that cannot be reversed once completed or submitted.</p><p class="lg-hi" lang="hi">फ़ॉर्म भरना, ऑनलाइन आवेदन, दस्तावेज़ तैयार करना, प्रिंटिंग और अन्य डिजिटल सहायता जैसी सेवाओं में ऐसा काम हो सकता है जिसे एक बार पूरा या जमा हो जाने के बाद पलटा नहीं जा सकता।</p></div>
+            <div class="lg-pair"><p class="lg-en">Where a service has been properly completed as agreed, a change of mind alone may not entitle the customer to a full refund.</p><p class="lg-hi" lang="hi">जहाँ कोई सेवा तय शर्तों के अनुसार ठीक से पूरी हो चुकी है, वहाँ केवल मन बदल जाने से ग्राहक पूर्ण धनवापसी का हकदार नहीं हो सकता।</p></div>
+            <div class="lg-pair"><p class="lg-en">However, if the service was not delivered as agreed, was materially incomplete, or involved an error attributable to Maa Sharda Cyber, the complaint and any appropriate remedy will be assessed fairly under applicable law.</p><p class="lg-hi" lang="hi">लेकिन यदि सेवा तय शर्तों के अनुसार नहीं दी गई, काफ़ी हद तक अधूरी थी, या उसमें माँ शारदा साइबर की किसी गलती के कारण त्रुटि हुई, तो शिकायत और उचित समाधान का आकलन लागू कानून के तहत निष्पक्ष रूप से किया जाएगा।</p></div>
+          </section>
+          <section class="lg-sec" id="s4" aria-labelledby="s4-title">
+            <h2 id="s4-title"><span class="lg-num" aria-hidden="true">4</span><span>Government Fees and Third-Party Charges</span></h2>
+            <p class="lg-h2-hi" lang="hi">सरकारी शुल्क और तीसरे पक्ष के शुल्क</p>
+            <div class="lg-pair"><p class="lg-en">Some services require separate payments to government departments, examination authorities, official portals, or third-party providers.</p><p class="lg-hi" lang="hi">कुछ सेवाओं में सरकारी विभागों, परीक्षा प्राधिकरणों, आधिकारिक पोर्टलों या तीसरे पक्ष के प्रदाताओं को अलग से भुगतान करना पड़ता है।</p></div>
+            <ul class="lg-list"><li><span class="lg-en">Refund eligibility for these charges may depend on the relevant authority's or provider's rules.</span><span class="lg-hi" lang="hi">इन शुल्कों की धनवापसी की पात्रता संबंधित प्राधिकरण या प्रदाता के नियमों पर निर्भर कर सकती है।</span></li><li><span class="lg-en">Maa Sharda Cyber cannot promise that a government or third-party fee will be refunded.</span><span class="lg-hi" lang="hi">माँ शारदा साइबर यह वादा नहीं कर सकता कि किसी सरकारी या तीसरे पक्ष के शुल्क की धनवापसी हो जाएगी।</span></li><li><span class="lg-en">Where a third-party refund is available, we will reasonably assist the customer with the relevant information or process, where applicable.</span><span class="lg-hi" lang="hi">जहाँ तीसरे पक्ष से धनवापसी उपलब्ध हो, वहाँ हम, जहाँ लागू हो, ग्राहक को संबंधित जानकारी या प्रक्रिया में उचित सहायता देंगे।</span></li><li><span class="lg-en">Any non-refundable fee or restriction known to us should be communicated before payment wherever reasonably possible.</span><span class="lg-hi" lang="hi">हमें ज्ञात कोई भी गैर-वापसी योग्य शुल्क या प्रतिबंध, जहाँ उचित रूप से संभव हो, भुगतान से पहले बताया जाना चाहिए।</span></li></ul>
+            <div class="lg-pair"><p class="lg-en">This clause does not remove any refund right that applies under law.</p><p class="lg-hi" lang="hi">यह खंड कानून के तहत लागू किसी भी धनवापसी अधिकार को समाप्त नहीं करता।</p></div>
+          </section>
+          <section class="lg-sec" id="s5" aria-labelledby="s5-title">
+            <h2 id="s5-title"><span class="lg-num" aria-hidden="true">5</span><span>Refunds Due to Errors or Service Issues</span></h2>
+            <p class="lg-h2-hi" lang="hi">गलतियों या सेवा संबंधी समस्याओं के कारण धनवापसी</p>
+            <div class="lg-pair"><p class="lg-en">If a customer believes an application, document, payment, or other service contains an error, the customer should contact us as soon as reasonably possible and provide the relevant receipt, application reference, or supporting details.</p><p class="lg-hi" lang="hi">यदि ग्राहक को लगता है कि किसी आवेदन, दस्तावेज़, भुगतान या अन्य सेवा में कोई गलती है, तो उसे जितनी जल्दी संभव हो हमसे संपर्क करना चाहिए और संबंधित रसीद, आवेदन का संदर्भ या सहायक विवरण देना चाहिए।</p></div>
+            <div class="lg-pair"><p class="lg-en">We will review the issue and, where appropriate:</p><p class="lg-hi" lang="hi">हम मामले की समीक्षा करेंगे और, जहाँ उचित हो:</p></div>
+            <ul class="lg-list"><li><span class="lg-en">Correct an error caused by Maa Sharda Cyber, where correction is possible.</span><span class="lg-hi" lang="hi">माँ शारदा साइबर की वजह से हुई गलती को सुधारेंगे, जहाँ सुधार संभव हो।</span></li><li><span class="lg-en">Re-perform the affected part of the service, where reasonable.</span><span class="lg-hi" lang="hi">सेवा के प्रभावित हिस्से को दोबारा करेंगे, जहाँ उचित हो।</span></li><li><span class="lg-en">Provide an appropriate refund or other remedy where required by applicable law or agreed with the customer.</span><span class="lg-hi" lang="hi">जहाँ लागू कानून के तहत आवश्यक हो या ग्राहक के साथ सहमति बनी हो, वहाँ उचित धनवापसी या अन्य समाधान देंगे।</span></li></ul>
+            <div class="lg-pair"><p class="lg-en">Where an error results from incorrect information supplied by the customer, the available remedy will depend on the circumstances, whether the customer approved the details, and whether additional work or charges are reasonably necessary.</p><p class="lg-hi" lang="hi">जहाँ गलती ग्राहक द्वारा दी गई गलत जानकारी के कारण हुई हो, वहाँ उपलब्ध समाधान परिस्थितियों पर, इस पर कि ग्राहक ने विवरण को मंज़ूरी दी थी या नहीं, और इस पर निर्भर करेगा कि अतिरिक्त काम या शुल्क उचित रूप से ज़रूरी हैं या नहीं।</p></div>
+          </section>
+          <section class="lg-sec" id="s6" aria-labelledby="s6-title">
+            <h2 id="s6-title"><span class="lg-num" aria-hidden="true">6</span><span>Delays, Rejections, and Government Decisions</span></h2>
+            <p class="lg-h2-hi" lang="hi">देरी, अस्वीकृति और सरकारी निर्णय</p>
+            <div class="lg-pair"><p class="lg-en">Some services depend on government departments, examination boards, external portals, banks, or other service providers.</p><p class="lg-hi" lang="hi">कुछ सेवाएँ सरकारी विभागों, परीक्षा बोर्डों, बाहरी पोर्टलों, बैंकों या अन्य सेवा प्रदाताओं पर निर्भर करती हैं।</p></div>
+            <div class="lg-pair"><p class="lg-en">A delay or rejection by an external authority does not automatically mean that Maa Sharda Cyber has failed to provide its service.</p><p class="lg-hi" lang="hi">किसी बाहरी प्राधिकरण द्वारा देरी या अस्वीकृति का अर्थ अपने-आप यह नहीं है कि माँ शारदा साइबर अपनी सेवा देने में विफल रहा।</p></div>
+            <div class="lg-pair"><p class="lg-en">Refund eligibility will depend on the specific service agreed upon, the work actually performed, the reason for the delay or rejection, and applicable law.</p><p class="lg-hi" lang="hi">धनवापसी की पात्रता तय की गई विशिष्ट सेवा, वास्तव में किए गए काम, देरी या अस्वीकृति के कारण और लागू कानून पर निर्भर करेगी।</p></div>
+            <div class="lg-pair"><p class="lg-en">If Maa Sharda Cyber fails to provide an agreed service or contributes to a problem through its own error, we will review the matter fairly and provide any appropriate remedy.</p><p class="lg-hi" lang="hi">यदि माँ शारदा साइबर तय की गई सेवा देने में विफल रहता है या अपनी किसी गलती से समस्या में योगदान देता है, तो हम मामले की निष्पक्ष समीक्षा करेंगे और उचित समाधान देंगे।</p></div>
+          </section>
+          <section class="lg-sec" id="s7" aria-labelledby="s7-title">
+            <h2 id="s7-title"><span class="lg-num" aria-hidden="true">7</span><span>Duplicate or Incorrect Payments</span></h2>
+            <p class="lg-h2-hi" lang="hi">दोहरा या गलत भुगतान</p>
+            <div class="lg-pair"><p class="lg-en">If a customer accidentally makes a duplicate payment or pays an incorrect amount, the customer should contact us with the transaction reference and proof of payment.</p><p class="lg-hi" lang="hi">यदि ग्राहक से गलती से दोहरा भुगतान हो जाए या गलत राशि चली जाए, तो उसे लेन-देन के संदर्भ और भुगतान के प्रमाण के साथ हमसे संपर्क करना चाहिए।</p></div>
+            <div class="lg-pair"><p class="lg-en">After verification, any confirmed excess payment will be refunded or otherwise resolved appropriately.</p><p class="lg-hi" lang="hi">सत्यापन के बाद, पुष्टि हुई अतिरिक्त राशि वापस की जाएगी या उचित तरीके से सुलझाई जाएगी।</p></div>
+            <div class="lg-pair"><p class="lg-en">Refunds involving payment gateways, banks, or other providers may require additional processing time. We will communicate any known delay and assist with the applicable process.</p><p class="lg-hi" lang="hi">पेमेंट गेटवे, बैंक या अन्य प्रदाताओं से जुड़ी धनवापसी में अतिरिक्त प्रोसेसिंग समय लग सकता है। हमें ज्ञात किसी भी देरी की जानकारी हम देंगे और संबंधित प्रक्रिया में सहायता करेंगे।</p></div>
+          </section>
+          <section class="lg-sec" id="s8" aria-labelledby="s8-title">
+            <h2 id="s8-title"><span class="lg-num" aria-hidden="true">8</span><span>How to Request a Refund</span></h2>
+            <p class="lg-h2-hi" lang="hi">धनवापसी का अनुरोध कैसे करें</p>
+            <div class="lg-pair"><p class="lg-en">To request a cancellation or refund, contact us using the details below and provide:</p><p class="lg-hi" lang="hi">रद्द करने या धनवापसी का अनुरोध करने के लिए नीचे दिए विवरण से हमसे संपर्क करें और ये जानकारी दें:</p></div>
+            <ul class="lg-list"><li><span class="lg-en">Customer name and contact number.</span><span class="lg-hi" lang="hi">ग्राहक का नाम और संपर्क नंबर।</span></li><li><span class="lg-en">Service requested.</span><span class="lg-hi" lang="hi">माँगी गई सेवा।</span></li><li><span class="lg-en">Date of payment.</span><span class="lg-hi" lang="hi">भुगतान की तारीख।</span></li><li><span class="lg-en">Amount paid and transaction reference, if available.</span><span class="lg-hi" lang="hi">भुगतान की गई राशि और लेन-देन का संदर्भ, यदि उपलब्ध हो।</span></li><li><span class="lg-en">Receipt or other proof of payment, if available.</span><span class="lg-hi" lang="hi">रसीद या भुगतान का अन्य प्रमाण, यदि उपलब्ध हो।</span></li><li><span class="lg-en">Reason for requesting the refund.</span><span class="lg-hi" lang="hi">धनवापसी माँगने का कारण।</span></li></ul>
+            <div class="lg-pair"><p class="lg-en">Please do not send passwords, UPI PINs, card PINs, or other sensitive authentication credentials as proof of payment.</p><p class="lg-hi" lang="hi">कृपया भुगतान के प्रमाण के रूप में पासवर्ड, UPI PIN, कार्ड PIN या अन्य संवेदनशील प्रमाणीकरण जानकारी न भेजें।</p></div>
+          </section>
+          <section class="lg-sec" id="s9" aria-labelledby="s9-title">
+            <h2 id="s9-title"><span class="lg-num" aria-hidden="true">9</span><span>Refund Review and Processing</span></h2>
+            <p class="lg-h2-hi" lang="hi">धनवापसी की समीक्षा और प्रक्रिया</p>
+            <div class="lg-pair"><p class="lg-en">We will acknowledge and review refund requests within a reasonable period and may contact the customer for additional information where necessary.</p><p class="lg-hi" lang="hi">हम धनवापसी अनुरोधों की प्राप्ति स्वीकार करेंगे और उचित समय के भीतर उनकी समीक्षा करेंगे, और ज़रूरत पड़ने पर अतिरिक्त जानकारी के लिए ग्राहक से संपर्क कर सकते हैं।</p></div>
+            <div class="lg-pair"><p class="lg-en">Once a refund is approved, it will be processed through the original payment method wherever reasonably possible, or through another mutually agreed lawful method.</p><p class="lg-hi" lang="hi">धनवापसी मंज़ूर होने पर, जहाँ उचित रूप से संभव हो, वह मूल भुगतान माध्यम से की जाएगी, या आपसी सहमति से तय किसी अन्य वैध तरीके से।</p></div>
+            <div class="lg-pair"><p class="lg-en">The actual time for the money to reach the customer may depend on the bank, payment provider, or applicable rules. We will communicate the expected processing time where it can reasonably be determined.</p><p class="lg-hi" lang="hi">पैसा ग्राहक तक पहुँचने में लगने वाला वास्तविक समय बैंक, भुगतान प्रदाता या लागू नियमों पर निर्भर कर सकता है। जहाँ उचित रूप से तय किया जा सके, वहाँ हम अनुमानित प्रोसेसिंग समय बताएँगे।</p></div>
+            <div class="lg-pair"><p class="lg-en">Where a specific statutory deadline applies, that deadline will take precedence.</p><p class="lg-hi" lang="hi">जहाँ कोई विशिष्ट कानूनी समय-सीमा लागू हो, वहाँ वही समय-सीमा मान्य होगी।</p></div>
+          </section>
+          <section class="lg-sec" id="s10" aria-labelledby="s10-title">
+            <h2 id="s10-title"><span class="lg-num" aria-hidden="true">10</span><span>No Waiver of Consumer Rights</span></h2>
+            <p class="lg-h2-hi" lang="hi">उपभोक्ता अधिकारों की कोई छूट नहीं</p>
+            <div class="lg-pair"><p class="lg-en">Nothing in this policy is intended to exclude or restrict rights and remedies available to customers under applicable Indian law, including consumer-protection legislation.</p><p class="lg-hi" lang="hi">इस नीति में कुछ भी ऐसा नहीं है जिसका उद्देश्य उपभोक्ता-संरक्षण कानून सहित लागू भारतीय कानून के तहत ग्राहकों को उपलब्ध अधिकारों और उपायों को समाप्त या सीमित करना हो।</p></div>
+            <div class="lg-pair"><p class="lg-en">If a term of this policy conflicts with a mandatory legal requirement, the applicable legal requirement will prevail.</p><p class="lg-hi" lang="hi">यदि इस नीति की कोई शर्त किसी अनिवार्य कानूनी आवश्यकता से टकराती है, तो लागू कानूनी आवश्यकता ही मान्य होगी।</p></div>
+          </section>
+          <section class="lg-sec" id="s11" aria-labelledby="s11-title">
+            <h2 id="s11-title"><span class="lg-num" aria-hidden="true">11</span><span>Changes to This Policy</span></h2>
+            <p class="lg-h2-hi" lang="hi">इस नीति में बदलाव</p>
+            <div class="lg-pair"><p class="lg-en">Maa Sharda Cyber may update this Refund &amp; Cancellation Policy when its services or legal requirements change.</p><p class="lg-hi" lang="hi">जब सेवाएँ या कानूनी आवश्यकताएँ बदलें, तब माँ शारदा साइबर इस धनवापसी और रद्दीकरण नीति को अपडेट कर सकता है।</p></div>
+            <div class="lg-pair"><p class="lg-en">The updated version will be published on our website with a revised “Last Updated” date. Changes will not retrospectively remove rights that customers already have under applicable law.</p><p class="lg-hi" lang="hi">अपडेट किया गया संस्करण हमारी वेबसाइट पर संशोधित “अंतिम अपडेट” तारीख के साथ प्रकाशित होगा। इन बदलावों से ग्राहकों के वे अधिकार पिछली तारीख से समाप्त नहीं होंगे जो उन्हें लागू कानून के तहत पहले से प्राप्त हैं।</p></div>
+          </section>
+          <section class="lg-sec" id="s12" aria-labelledby="s12-title">
+            <h2 id="s12-title"><span class="lg-num" aria-hidden="true">12</span><span>Contact Us</span></h2>
+            <p class="lg-h2-hi" lang="hi">हमसे संपर्क करें</p>
+            <div class="lg-pair"><p class="lg-en">For cancellation requests, refund queries, payment disputes, or service complaints, contact:</p><p class="lg-hi" lang="hi">रद्द करने के अनुरोधों, धनवापसी के प्रश्नों, भुगतान विवादों या सेवा शिकायतों के लिए संपर्क करें:</p></div>
+            <dl class="lg-biz">
+              <div class="lg-biz-row">
+                <dt>Business Name <small lang="hi">व्यवसाय का नाम</small></dt>
+                <dd><span data-biz="name">Maa Sharda Cyber</span></dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Business Address <small lang="hi">व्यवसाय का पता</small></dt>
+                <dd data-biz="address">[Enter Your Complete Business Address]</dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Phone / WhatsApp <small lang="hi">फ़ोन / WhatsApp</small></dt>
+                <dd><a data-biz-link="phone" href="tel:+919241062900"><span data-biz="phone">+91 92410 62900</span></a></dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Email <small lang="hi">ईमेल</small></dt>
+                <dd><a data-biz-link="email" href="#"><span data-biz="email">lakkiguptaa0816@gmail.com</span></a></dd>
+              </div>
+            </dl>
+            <div class="lg-pair"><p class="lg-en">Please include your service or transaction reference wherever possible so that we can review your request efficiently.</p><p class="lg-hi" lang="hi">कृपया जहाँ संभव हो अपनी सेवा या लेन-देन का संदर्भ शामिल करें, ताकि हम आपके अनुरोध की कुशलता से समीक्षा कर सकें।</p></div>
+          </section>
+
+        </article>
+
+      </div>
+
+    </main>
+
+    <!-- =========================================
+     FOOTER (index.html जैसा ही)
+========================================= -->
+
+    <footer class="site-footer" id="footer">
+
+    <div class="container">
+
+        <!-- =====================================
+             CALL TO ACTION
+        ====================================== -->
+
+        <div class="ft-cta">
+
+            <div class="ft-cta-text">
+                <h2 class="ft-cta-title">Get your work done from home</h2>
+                <p>Call or message us, send your documents, and we will take care of the rest.</p>
+            </div>
+
+            <div class="ft-cta-actions">
+
+                <a class="ft-btn ft-btn-primary" href="tel:+919241062900">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Call Now
+                </a>
+
+                <a class="ft-btn ft-btn-outline" href="https://wa.me/919241062900" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.65-4.9A9 9 0 1 1 8.1 19.4L3 21z"/><g transform="translate(8.2 8.2) scale(.33)"><path stroke-width="5.4" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></g></svg>
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================
+             COLUMNS
+        ====================================== -->
+
+        <div class="ft-cols">
+
+            <!-- Brand + about + social -->
+
+            <div class="ft-brand">
+
+                <a href="index.html" class="ft-brand-link" aria-label="Maa Sharda Cyber, back to top">
+
+                    <span class="ft-badge" aria-hidden="true">
+                        <span class="ft-logo"></span>
+                    </span>
+
+                    <span class="ft-brand-name">
+                        <span class="ft-brand-small">Maa</span>
+                        <span class="ft-brand-script">Sharda Cyber</span>
+                    </span>
+
+                </a>
+
+                <p class="ft-about">
+                    माँ शारदा साइबर आपके पास का भरोसेमंद डिजिटल सेवा केंद्र है।
+                    फ़ॉर्म, दस्तावेज़ और प्रिंट, हर काम सही और समय पर।
+                </p>
+
+                <ul class="ft-social" aria-label="Social media">
+
+                    <li>
+                        <a href="https://www.instagram.com/shardacyber_0099/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <!-- DEMO link: अपना YouTube channel link डालें -->
+                        <a href="https://www.youtube.com/@your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <!-- DEMO link: अपना Facebook page link डालें -->
+                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <!-- DEMO link: अपना Twitter link डालें -->
+                        <a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Quick links -->
+
+            <nav class="ft-links" aria-label="Quick links">
+
+                <h2 class="ft-title">Quick Links</h2>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="#">Job Vacancies</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+
+            </nav>
+
+            <!-- Our services -->
+
+            <nav class="ft-links" aria-label="Our services">
+
+                <h2 class="ft-title">Our Services</h2>
+
+                <ul>
+                    <li><a href="index.html#categories">Online Forms</a></li>
+                    <li><a href="index.html#categories">Document Scanning</a></li>
+                    <li><a href="index.html#categories">Print &amp; Photocopy</a></li>
+                    <li><a href="index.html#categories">Passport Photos</a></li>
+                    <li><a href="index.html#categories">PAN Services</a></li>
+                    <li><a href="index.html#categories">Aadhaar Services</a></li>
+                    <li><a href="index.html#categories">University Forms</a></li>
+                </ul>
+
+            </nav>
+
+            <!-- Contact -->
+
+            <div class="ft-contact">
+
+                <h2 class="ft-title">Contact</h2>
+
+                <ul>
+
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:+919241062900">+91 92410 62900</a>
+                    </li>
+
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <!-- DEMO email: अपना असली email यहाँ (दोनों जगह) डालें -->
+                        <a href="mailto:lakkiguptaa0816@gmail.com">lakkiguptaa0816@gmail.com</a>
+                    </li>
+
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <a href="https://maps.app.goo.gl/QKYQZ7fWPP4RtKxd8" target="_blank" rel="noopener noreferrer">Find us on Google Maps</a>
+                    </li>
+
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        <span>Monday – Saturday</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================
+             BOTTOM BAR
+        ====================================== -->
+
+        <div class="ft-bottom">
+
+            <p class="ft-copy">&copy; <span id="ftYear">2026</span> Maa Sharda Cyber. All rights reserved.</p>
+
+            <ul class="ft-legal" aria-label="Legal">
+                <!-- ये pages बाद में बनेंगे, तब तक ये नाम रखे हैं -->
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-and-conditions.html" aria-current="page">Terms &amp; Conditions</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+
+            <a href="#" class="ft-top">
+                Back to top
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+    <script src="footer.js"></script>
+    <script src="legal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | Maa Sharda Cyber</title>
+    <meta name="description" content="How Maa Sharda Cyber collects, uses, stores, shares and protects personal information." />
+
+    <!-- Satoshi -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet" />
+
+    <!-- Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="legal.css" />
+  </head>
+
+  <body class="dark-theme">
+    <script>
+      try {
+        if (localStorage.getItem("theme") === "light-theme") {
+          document.body.className = "light-theme";
+        }
+      } catch (e) {}
+    </script>
+
+    <!-- =========================================
+     MOBILE DRAWER BACKDROP + HEADER + DRAWER
+     (index.html जैसा ही)
+========================================= -->
+
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- =========================================
+     HEADER
+========================================= -->
+
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <!-- Logo -->
+
+          <a href="index.html" class="logo-wrapper">
+            <div class="logo-image">
+              <!-- Replace with your logo -->
+
+              <img src="image_577e3bf5.jpg" alt="Maa Sharda Cyber" />
+            </div>
+
+            <div class="logo-content">
+              <span class="logo-small"> Maa </span>
+
+              <span class="logo-script"> Sharda Cyber </span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+
+          <div class="desktop-nav">
+            <a href="index.html">Home</a>
+
+            <a href="index.html#services"> Services </a>
+
+            <a href="index.html#pricing"> Pricing </a>
+
+            <a href="index.html#about"> About Us </a>
+
+            <a href="#"> Job Vacancies </a>
+          </div>
+
+          <!-- Desktop Actions -->
+
+          <div class="desktop-actions">
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              type="button"
+              aria-label="Theme Toggle"
+            >
+              🌙
+            </button>
+
+            <a href="index.html#contact" class="contact-btn"> Contact Now </a>
+          </div>
+
+          <!-- Mobile Menu -->
+
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Open Menu"
+            aria-controls="mobileDrawer"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================================
+     MOBILE DRAWER
+========================================= -->
+
+    <aside
+      class="mobile-drawer"
+      id="mobileDrawer"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-label="Mobile navigation"
+    >
+      <div class="drawer-header">
+        <h2>Maa Sharda Cyber</h2>
+
+        <button
+          class="drawer-close"
+          id="drawerClose"
+          type="button"
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Services Dropdown -->
+
+      <div class="drawer-dropdown">
+        <button class="dropdown-btn active" type="button" aria-expanded="true">
+          <span> Our Services </span>
+
+          <span class="dropdown-icon"> ⌄ </span>
+        </button>
+
+        <div class="dropdown-content open">
+          <a href="index.html#categories"> Online Forms </a>
+
+          <a href="index.html#categories"> Document Scanning </a>
+
+          <a href="index.html#categories"> Print & Photocopy </a>
+
+          <a href="index.html#categories"> Passport Photos </a>
+
+          <a href="index.html#categories"> Digital Services </a>
+
+          <a href="index.html#categories"> PAN Services </a>
+
+          <a href="index.html#categories"> Aadhaar Services </a>
+
+          <a href="index.html#categories"> University Forms </a>
+        </div>
+      </div>
+
+      <a href="index.html#pricing" class="drawer-link"> Pricing </a>
+
+      <a href="index.html#about" class="drawer-link"> About Us </a>
+
+      <!-- Jobs Dropdown -->
+
+      <div class="drawer-dropdown">
+        <button class="dropdown-btn" type="button" aria-expanded="false">
+          <span> New Job Vacancies </span>
+
+          <span class="dropdown-icon"> ⌄ </span>
+        </button>
+
+        <div class="dropdown-content">
+          <a href="#"> SSC Jobs </a>
+
+          <a href="#"> Railway Jobs </a>
+
+          <a href="#"> Banking Jobs </a>
+
+          <a href="#"> State Jobs </a>
+
+          <a href="#"> Central Govt Jobs </a>
+        </div>
+      </div>
+
+      <!-- Theme Switch -->
+
+      <div class="drawer-theme">
+        <span> Dark Mode </span>
+
+        <label class="switch">
+          <input type="checkbox" id="drawerThemeToggle" />
+
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <a href="index.html#contact" class="drawer-contact-btn"> Contact Us </a>
+    </aside>
+
+    <!-- =========================================
+     PAGE
+========================================= -->
+
+    <main class="lg-main" id="top">
+
+      <!-- Page heading -->
+
+      <section class="lg-hero">
+        <div class="container">
+
+          <nav class="lg-crumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Privacy Policy</span>
+          </nav>
+
+          <p class="lg-eyebrow">Privacy Policy</p>
+
+          <h1>Privacy Policy</h1>
+          <p class="lg-h1-hi" lang="hi">गोपनीयता नीति</p>
+
+          <p class="lg-updated">
+            Last Updated <span lang="hi">/ अंतिम अपडेट:</span>
+            <strong data-biz="updated">[DD/MM/YYYY]</strong>
+          </p>
+
+          <p class="lg-note">
+            Every point is followed by its Hindi meaning.
+            <span lang="hi">हर बिंदु के नीचे उसका हिंदी अर्थ दिया गया है।</span>
+          </p>
+
+        </div>
+      </section>
+
+      <!-- Contents + document -->
+
+      <div class="container lg-layout">
+
+        <nav class="lg-toc" aria-label="Contents">
+          <details class="lg-toc-box" open>
+            <summary>Contents <span lang="hi">/ विषय सूची</span></summary>
+            <ol class="lg-toc-list"><li><a href="#s1"><span class="lg-toc-n">1</span><span class="lg-toc-t">Information We Collect<small lang="hi">हम कौन-सी जानकारी एकत्र करते हैं</small></span></a></li><li><a href="#s2"><span class="lg-toc-n">2</span><span class="lg-toc-t">How We Use Your Information<small lang="hi">हम आपकी जानकारी का उपयोग कैसे करते हैं</small></span></a></li><li><a href="#s3"><span class="lg-toc-n">3</span><span class="lg-toc-t">Consent and Authorisation<small lang="hi">सहमति और अनुमति</small></span></a></li><li><a href="#s4"><span class="lg-toc-n">4</span><span class="lg-toc-t">Sharing of Personal Information<small lang="hi">व्यक्तिगत जानकारी साझा करना</small></span></a></li><li><a href="#s5"><span class="lg-toc-n">5</span><span class="lg-toc-t">Storage, Retention, and Deletion<small lang="hi">जानकारी सहेजना, रखने की अवधि और हटाना</small></span></a></li><li><a href="#s6"><span class="lg-toc-n">6</span><span class="lg-toc-t">Security of Your Information<small lang="hi">आपकी जानकारी की सुरक्षा</small></span></a></li><li><a href="#s7"><span class="lg-toc-n">7</span><span class="lg-toc-t">Cookies and Website Technologies<small lang="hi">कुकीज़ और वेबसाइट तकनीकें</small></span></a></li><li><a href="#s8"><span class="lg-toc-n">8</span><span class="lg-toc-t">Third-Party Websites and Services<small lang="hi">तीसरे पक्ष की वेबसाइटें और सेवाएँ</small></span></a></li><li><a href="#s9"><span class="lg-toc-n">9</span><span class="lg-toc-t">Children's Personal Information<small lang="hi">बच्चों की व्यक्तिगत जानकारी</small></span></a></li><li><a href="#s10"><span class="lg-toc-n">10</span><span class="lg-toc-t">Your Privacy Rights<small lang="hi">आपके निजता अधिकार</small></span></a></li><li><a href="#s11"><span class="lg-toc-n">11</span><span class="lg-toc-t">Changes to This Privacy Policy<small lang="hi">इस गोपनीयता नीति में बदलाव</small></span></a></li><li><a href="#s12"><span class="lg-toc-n">12</span><span class="lg-toc-t">Contact Us<small lang="hi">हमसे संपर्क करें</small></span></a></li></ol>
+          </details>
+        </nav>
+
+        <article class="lg-doc">
+
+          <div class="lg-intro">
+            <div class="lg-pair"><p class="lg-en">Maa Sharda Cyber (“we”, “our”, or “us”) respects the privacy of our customers and is committed to handling personal information responsibly.</p><p class="lg-hi" lang="hi">माँ शारदा साइबर (“हम”, “हमारा” या “हमें”) अपने ग्राहकों की निजता का सम्मान करता है और व्यक्तिगत जानकारी को ज़िम्मेदारी से संभालने के लिए प्रतिबद्ध है।</p></div>
+            <div class="lg-pair"><p class="lg-en">This Privacy Policy explains how we collect, use, store, share, and protect personal information when customers visit our shop, use our website, or request services through WhatsApp or telephone.</p><p class="lg-hi" lang="hi">यह गोपनीयता नीति बताती है कि जब ग्राहक हमारी दुकान पर आते हैं, हमारी वेबसाइट का उपयोग करते हैं, या WhatsApp अथवा फ़ोन के ज़रिए सेवा माँगते हैं, तब हम व्यक्तिगत जानकारी को कैसे एकत्र करते हैं, उपयोग करते हैं, सहेजकर रखते हैं, साझा करते हैं और उसकी सुरक्षा करते हैं।</p></div>
+          </div>
+
+          <div class="lg-biz-wrap">
+            <h2 class="lg-biz-title">Business Details <span lang="hi">/ व्यवसाय का विवरण</span></h2>
+            <dl class="lg-biz">
+              <div class="lg-biz-row">
+                <dt>Business Name <small lang="hi">व्यवसाय का नाम</small></dt>
+                <dd><span data-biz="name">Maa Sharda Cyber</span></dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Business Address <small lang="hi">व्यवसाय का पता</small></dt>
+                <dd data-biz="address">[Enter Your Complete Business Address]</dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Phone / WhatsApp <small lang="hi">फ़ोन / WhatsApp</small></dt>
+                <dd><a data-biz-link="phone" href="tel:+919241062900"><span data-biz="phone">+91 92410 62900</span></a></dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Email <small lang="hi">ईमेल</small></dt>
+                <dd><a data-biz-link="email" href="#"><span data-biz="email">[Enter Your Business Email Address]</span></a></dd>
+              </div>
+            </dl>
+          </div>
+
+          <section class="lg-sec" id="s1" aria-labelledby="s1-title">
+            <h2 id="s1-title"><span class="lg-num" aria-hidden="true">1</span><span>Information We Collect</span></h2>
+            <p class="lg-h2-hi" lang="hi">हम कौन-सी जानकारी एकत्र करते हैं</p>
+            <div class="lg-pair"><p class="lg-en">Depending on the service requested, we may collect the following information:</p><p class="lg-hi" lang="hi">माँगी गई सेवा के अनुसार, हम निम्नलिखित जानकारी एकत्र कर सकते हैं:</p></div>
+            <ul class="lg-list"><li><span class="lg-en"><strong>Identity information:</strong> Name, date of birth, address, and identification details required for a service.</span><span class="lg-hi" lang="hi"><strong>पहचान संबंधी जानकारी:</strong> नाम, जन्म तिथि, पता, और किसी सेवा के लिए आवश्यक पहचान विवरण।</span></li><li><span class="lg-en"><strong>Documents:</strong> PAN-related documents, certificates, marksheets, photographs, application documents, and other files voluntarily provided for processing.</span><span class="lg-hi" lang="hi"><strong>दस्तावेज़:</strong> PAN से जुड़े दस्तावेज़, प्रमाण पत्र, अंकपत्र (मार्कशीट), फ़ोटो, आवेदन के दस्तावेज़, और प्रक्रिया के लिए स्वेच्छा से दी गई अन्य फ़ाइलें।</span></li><li><span class="lg-en"><strong>Contact information:</strong> Mobile number, email address, and communication details.</span><span class="lg-hi" lang="hi"><strong>संपर्क जानकारी:</strong> मोबाइल नंबर, ईमेल पता, और बातचीत से जुड़ा विवरण।</span></li><li><span class="lg-en"><strong>Application information:</strong> Form details, application numbers, acknowledgements, transaction references, and service status.</span><span class="lg-hi" lang="hi"><strong>आवेदन की जानकारी:</strong> फ़ॉर्म का विवरण, आवेदन संख्या, पावती (acknowledgement), लेन-देन का संदर्भ, और सेवा की स्थिति।</span></li><li><span class="lg-en"><strong>Payment information:</strong> Payment amount, payment status, transaction reference, and receipt details. We do not intentionally collect or retain payment credentials such as UPI PINs, card PINs, or banking passwords.</span><span class="lg-hi" lang="hi"><strong>भुगतान की जानकारी:</strong> भुगतान की राशि, भुगतान की स्थिति, लेन-देन का संदर्भ और रसीद का विवरण। हम जानबूझकर UPI PIN, कार्ड PIN या बैंकिंग पासवर्ड जैसी भुगतान की गोपनीय जानकारी न तो लेते हैं और न ही रखते हैं।</span></li><li><span class="lg-en"><strong>Technical information:</strong> Limited website usage information, such as browser or device information, where collected by the website or its service providers.</span><span class="lg-hi" lang="hi"><strong>तकनीकी जानकारी:</strong> वेबसाइट के उपयोग की सीमित जानकारी, जैसे ब्राउज़र या डिवाइस की जानकारी, जहाँ वेबसाइट या उसके सेवा प्रदाता इसे एकत्र करते हैं।</span></li></ul>
+            <div class="lg-pair"><p class="lg-en">We aim to collect only information reasonably necessary for the requested service or another lawful purpose.</p><p class="lg-hi" lang="hi">हमारा प्रयास रहता है कि हम केवल वही जानकारी लें जो माँगी गई सेवा या किसी अन्य वैध उद्देश्य के लिए उचित रूप से आवश्यक हो।</p></div>
+          </section>
+          <section class="lg-sec" id="s2" aria-labelledby="s2-title">
+            <h2 id="s2-title"><span class="lg-num" aria-hidden="true">2</span><span>How We Use Your Information</span></h2>
+            <p class="lg-h2-hi" lang="hi">हम आपकी जानकारी का उपयोग कैसे करते हैं</p>
+            <div class="lg-pair"><p class="lg-en">Your information may be used to:</p><p class="lg-hi" lang="hi">आपकी जानकारी का उपयोग इन कामों के लिए किया जा सकता है:</p></div>
+            <ul class="lg-list"><li><span class="lg-en">Provide online applications, document assistance, printing, digital services, and other requested services.</span><span class="lg-hi" lang="hi">ऑनलाइन आवेदन, दस्तावेज़ों में सहायता, प्रिंटिंग, डिजिटल सेवाएँ और माँगी गई अन्य सेवाएँ उपलब्ध कराना।</span></li><li><span class="lg-en">Complete forms and submit applications with the necessary authorisation.</span><span class="lg-hi" lang="hi">आवश्यक अनुमति के साथ फ़ॉर्म भरना और आवेदन जमा करना।</span></li><li><span class="lg-en">Contact you regarding missing documents, payments, corrections, or application status.</span><span class="lg-hi" lang="hi">छूटे हुए दस्तावेज़, भुगतान, सुधार या आवेदन की स्थिति के बारे में आपसे संपर्क करना।</span></li><li><span class="lg-en">Provide receipts, acknowledgements, and completed documents.</span><span class="lg-hi" lang="hi">रसीदें, पावती और पूरे किए गए दस्तावेज़ देना।</span></li><li><span class="lg-en">Maintain business, accounting, and transaction records.</span><span class="lg-hi" lang="hi">व्यावसायिक, लेखा (अकाउंटिंग) और लेन-देन के रिकॉर्ड रखना।</span></li><li><span class="lg-en">Prevent fraud, investigate service-related complaints, and comply with applicable legal obligations.</span><span class="lg-hi" lang="hi">धोखाधड़ी रोकना, सेवा से जुड़ी शिकायतों की जाँच करना, और लागू कानूनी ज़िम्मेदारियों का पालन करना।</span></li><li><span class="lg-en">Improve the security and functioning of our website and services.</span><span class="lg-hi" lang="hi">हमारी वेबसाइट और सेवाओं की सुरक्षा और कार्यप्रणाली बेहतर बनाना।</span></li></ul>
+            <div class="lg-pair"><p class="lg-en">We will not knowingly use your personal information for unrelated purposes without an appropriate lawful basis.</p><p class="lg-hi" lang="hi">हम उचित वैध आधार के बिना जानबूझकर आपकी व्यक्तिगत जानकारी का उपयोग असंबंधित उद्देश्यों के लिए नहीं करेंगे।</p></div>
+          </section>
+          <section class="lg-sec" id="s3" aria-labelledby="s3-title">
+            <h2 id="s3-title"><span class="lg-num" aria-hidden="true">3</span><span>Consent and Authorisation</span></h2>
+            <p class="lg-h2-hi" lang="hi">सहमति और अनुमति</p>
+            <div class="lg-pair"><p class="lg-en">Where consent is required, we will seek it in an appropriate manner before processing personal information.</p><p class="lg-hi" lang="hi">जहाँ सहमति आवश्यक हो, वहाँ व्यक्तिगत जानकारी का उपयोग करने से पहले हम उचित तरीके से सहमति लेंगे।</p></div>
+            <div class="lg-pair"><p class="lg-en">By providing information or documents for a requested service, you confirm that you are authorised to provide them and understand that they may be used for that service.</p><p class="lg-hi" lang="hi">किसी सेवा के लिए जानकारी या दस्तावेज़ देकर आप पुष्टि करते हैं कि आप उन्हें देने के लिए अधिकृत हैं और यह समझते हैं कि उनका उपयोग उसी सेवा के लिए किया जा सकता है।</p></div>
+            <div class="lg-pair"><p class="lg-en">Where an application involves another person's personal information, the necessary authority or permission must be obtained.</p><p class="lg-hi" lang="hi">जहाँ किसी आवेदन में किसी अन्य व्यक्ति की व्यक्तिगत जानकारी शामिल हो, वहाँ आवश्यक अधिकार या अनुमति पहले से प्राप्त होनी चाहिए।</p></div>
+            <div class="lg-pair"><p class="lg-en">You may contact us to withdraw consent where processing is based on consent. Withdrawal may affect our ability to complete a service, and it does not automatically invalidate processing already lawfully carried out or remove records that must be retained under applicable law.</p><p class="lg-hi" lang="hi">जहाँ जानकारी का उपयोग सहमति पर आधारित है, वहाँ आप सहमति वापस लेने के लिए हमसे संपर्क कर सकते हैं। सहमति वापस लेने से सेवा पूरी करने की हमारी क्षमता प्रभावित हो सकती है, और इससे पहले से वैध रूप से किया जा चुका उपयोग अपने-आप अमान्य नहीं हो जाता, न ही वे रिकॉर्ड हटते हैं जिन्हें लागू कानून के तहत रखना आवश्यक है।</p></div>
+          </section>
+          <section class="lg-sec" id="s4" aria-labelledby="s4-title">
+            <h2 id="s4-title"><span class="lg-num" aria-hidden="true">4</span><span>Sharing of Personal Information</span></h2>
+            <p class="lg-h2-hi" lang="hi">व्यक्तिगत जानकारी साझा करना</p>
+            <div class="lg-pair"><p class="lg-en">We may share relevant information with:</p><p class="lg-hi" lang="hi">हम संबंधित जानकारी इनके साथ साझा कर सकते हैं:</p></div>
+            <ul class="lg-list"><li><span class="lg-en">Government departments and official application portals.</span><span class="lg-hi" lang="hi">सरकारी विभाग और आधिकारिक आवेदन पोर्टल।</span></li><li><span class="lg-en">Authorised service providers and intermediaries involved in completing your requested service.</span><span class="lg-hi" lang="hi">आपकी माँगी गई सेवा पूरी करने में शामिल अधिकृत सेवा प्रदाता और मध्यस्थ।</span></li><li><span class="lg-en">Payment service providers, where necessary to process or verify payments.</span><span class="lg-hi" lang="hi">भुगतान सेवा प्रदाता, जहाँ भुगतान की प्रक्रिया या सत्यापन के लिए आवश्यक हो।</span></li><li><span class="lg-en">Professional advisers or competent authorities where disclosure is legally required.</span><span class="lg-hi" lang="hi">पेशेवर सलाहकार या सक्षम प्राधिकारी, जहाँ कानूनन जानकारी देना ज़रूरी हो।</span></li></ul>
+            <div class="lg-pair"><p class="lg-en">We will limit sharing to what is reasonably necessary for the relevant purpose and permitted by applicable law.</p><p class="lg-hi" lang="hi">हम साझा करने को उतने तक सीमित रखेंगे जितना संबंधित उद्देश्य के लिए उचित रूप से आवश्यक हो और लागू कानून द्वारा अनुमत हो।</p></div>
+            <div class="lg-pair"><p class="lg-en">We do not intend to sell customers' personal documents or personal information to third parties for their independent marketing purposes.</p><p class="lg-hi" lang="hi">हमारा इरादा ग्राहकों के व्यक्तिगत दस्तावेज़ या व्यक्तिगत जानकारी तीसरे पक्ष को उनके अपने मार्केटिंग उद्देश्यों के लिए बेचने का नहीं है।</p></div>
+          </section>
+          <section class="lg-sec" id="s5" aria-labelledby="s5-title">
+            <h2 id="s5-title"><span class="lg-num" aria-hidden="true">5</span><span>Storage, Retention, and Deletion</span></h2>
+            <p class="lg-h2-hi" lang="hi">जानकारी सहेजना, रखने की अवधि और हटाना</p>
+            <div class="lg-pair"><p class="lg-en">We retain personal information only for as long as reasonably necessary for the purpose for which it was collected, applicable legal requirements, accounting obligations, and the establishment or resolution of legitimate claims.</p><p class="lg-hi" lang="hi">हम व्यक्तिगत जानकारी को केवल उतने समय तक रखते हैं जितना उस उद्देश्य, लागू कानूनी आवश्यकताओं, लेखा संबंधी ज़िम्मेदारियों, और वैध दावों को स्थापित करने या सुलझाने के लिए उचित रूप से ज़रूरी हो जिसके लिए वह एकत्र की गई थी।</p></div>
+            <div class="lg-pair"><p class="lg-en">Where information is no longer required and there is no lawful reason to retain it, we will take appropriate steps to delete it or otherwise dispose of it securely.</p><p class="lg-hi" lang="hi">जहाँ जानकारी की अब आवश्यकता नहीं है और उसे रखने का कोई वैध कारण नहीं है, वहाँ हम उसे हटाने या सुरक्षित तरीके से नष्ट करने के उचित कदम उठाएँगे।</p></div>
+            <div class="lg-pair"><p class="lg-en">Customers may contact us to request deletion of information, subject to applicable retention requirements and other lawful grounds for keeping it.</p><p class="lg-hi" lang="hi">ग्राहक जानकारी हटाने का अनुरोध करने के लिए हमसे संपर्क कर सकते हैं, जो लागू रिकॉर्ड-रखरखाव की आवश्यकताओं और उसे रखने के अन्य वैध आधारों के अधीन होगा।</p></div>
+          </section>
+          <section class="lg-sec" id="s6" aria-labelledby="s6-title">
+            <h2 id="s6-title"><span class="lg-num" aria-hidden="true">6</span><span>Security of Your Information</span></h2>
+            <p class="lg-h2-hi" lang="hi">आपकी जानकारी की सुरक्षा</p>
+            <div class="lg-pair"><p class="lg-en">We take reasonable steps appropriate to our business and the nature of the information to protect personal data against unauthorised access, disclosure, loss, misuse, or alteration.</p><p class="lg-hi" lang="hi">हम अपने व्यवसाय और जानकारी की प्रकृति के अनुरूप उचित कदम उठाते हैं ताकि व्यक्तिगत डेटा को अनधिकृत पहुँच, खुलासे, हानि, दुरुपयोग या बदलाव से बचाया जा सके।</p></div>
+            <div class="lg-pair"><p class="lg-en">However, no method of electronic transmission or storage can be guaranteed to be completely secure.</p><p class="lg-hi" lang="hi">फिर भी, इलेक्ट्रॉनिक रूप से भेजने या सहेजने का कोई भी तरीका पूरी तरह सुरक्षित होने की गारंटी नहीं दे सकता।</p></div>
+            <div class="lg-pair"><p class="lg-en">Customers should avoid sending passwords, UPI PINs, card PINs, or unnecessary authentication credentials through WhatsApp, telephone, or other channels.</p><p class="lg-hi" lang="hi">ग्राहकों को WhatsApp, फ़ोन या अन्य माध्यमों से पासवर्ड, UPI PIN, कार्ड PIN या अनावश्यक प्रमाणीकरण (authentication) जानकारी भेजने से बचना चाहिए।</p></div>
+          </section>
+          <section class="lg-sec" id="s7" aria-labelledby="s7-title">
+            <h2 id="s7-title"><span class="lg-num" aria-hidden="true">7</span><span>Cookies and Website Technologies</span></h2>
+            <p class="lg-h2-hi" lang="hi">कुकीज़ और वेबसाइट तकनीकें</p>
+            <div class="lg-pair"><p class="lg-en">Our website may use essential technical features needed for its proper operation.</p><p class="lg-hi" lang="hi">हमारी वेबसाइट अपने सही संचालन के लिए ज़रूरी तकनीकी सुविधाओं का उपयोग कर सकती है।</p></div>
+            <div class="lg-pair"><p class="lg-en">If analytics tools, advertising technologies, or non-essential cookies are introduced, their use will be explained and any consent required by applicable law will be obtained.</p><p class="lg-hi" lang="hi">यदि एनालिटिक्स टूल, विज्ञापन तकनीकें या गैर-ज़रूरी कुकीज़ शुरू की जाती हैं, तो उनके उपयोग की जानकारी दी जाएगी और लागू कानून के अनुसार आवश्यक सहमति ली जाएगी।</p></div>
+            <div class="lg-pair"><p class="lg-en">For information about cookies or website technologies, contact us using the details below.</p><p class="lg-hi" lang="hi">कुकीज़ या वेबसाइट तकनीकों के बारे में जानकारी के लिए नीचे दिए गए विवरण से हमसे संपर्क करें।</p></div>
+          </section>
+          <section class="lg-sec" id="s8" aria-labelledby="s8-title">
+            <h2 id="s8-title"><span class="lg-num" aria-hidden="true">8</span><span>Third-Party Websites and Services</span></h2>
+            <p class="lg-h2-hi" lang="hi">तीसरे पक्ष की वेबसाइटें और सेवाएँ</p>
+            <div class="lg-pair"><p class="lg-en">Our website or service communications may contain links to government portals or third-party websites.</p><p class="lg-hi" lang="hi">हमारी वेबसाइट या सेवा से जुड़े संदेशों में सरकारी पोर्टल या तीसरे पक्ष की वेबसाइटों के लिंक हो सकते हैं।</p></div>
+            <div class="lg-pair"><p class="lg-en">Those websites operate under their own terms and privacy policies. Maa Sharda Cyber does not control the privacy practices or security of external websites.</p><p class="lg-hi" lang="hi">वे वेबसाइटें अपनी शर्तों और गोपनीयता नीतियों के अनुसार चलती हैं। माँ शारदा साइबर बाहरी वेबसाइटों की गोपनीयता संबंधी प्रथाओं या सुरक्षा पर नियंत्रण नहीं रखता।</p></div>
+            <div class="lg-pair"><p class="lg-en">Customers should verify that they are using the correct official website before submitting sensitive information.</p><p class="lg-hi" lang="hi">संवेदनशील जानकारी देने से पहले ग्राहकों को जाँच लेना चाहिए कि वे सही आधिकारिक वेबसाइट का उपयोग कर रहे हैं।</p></div>
+          </section>
+          <section class="lg-sec" id="s9" aria-labelledby="s9-title">
+            <h2 id="s9-title"><span class="lg-num" aria-hidden="true">9</span><span>Children's Personal Information</span></h2>
+            <p class="lg-h2-hi" lang="hi">बच्चों की व्यक्तिगत जानकारी</p>
+            <div class="lg-pair"><p class="lg-en">Where a service concerns a child, personal information will be handled in accordance with applicable law, including any required parental or lawful guardian consent and safeguards.</p><p class="lg-hi" lang="hi">जहाँ कोई सेवा किसी बच्चे से जुड़ी हो, वहाँ व्यक्तिगत जानकारी लागू कानून के अनुसार संभाली जाएगी, जिसमें माता-पिता या वैध अभिभावक की आवश्यक सहमति और सुरक्षा उपाय शामिल हैं।</p></div>
+            <div class="lg-pair"><p class="lg-en">Customers must not submit a child's information without the necessary authority.</p><p class="lg-hi" lang="hi">ग्राहकों को आवश्यक अधिकार के बिना किसी बच्चे की जानकारी जमा नहीं करनी चाहिए।</p></div>
+          </section>
+          <section class="lg-sec" id="s10" aria-labelledby="s10-title">
+            <h2 id="s10-title"><span class="lg-num" aria-hidden="true">10</span><span>Your Privacy Rights</span></h2>
+            <p class="lg-h2-hi" lang="hi">आपके निजता अधिकार</p>
+            <div class="lg-pair"><p class="lg-en">Subject to applicable law, customers may have rights to:</p><p class="lg-hi" lang="hi">लागू कानून के अधीन, ग्राहकों को ये अधिकार हो सकते हैं:</p></div>
+            <ul class="lg-list"><li><span class="lg-en">Request information about the personal data being processed.</span><span class="lg-hi" lang="hi">जिस व्यक्तिगत डेटा का उपयोग हो रहा है, उसके बारे में जानकारी माँगना।</span></li><li><span class="lg-en">Request correction or updating of inaccurate information.</span><span class="lg-hi" lang="hi">गलत जानकारी को सुधारने या अपडेट करने का अनुरोध करना।</span></li><li><span class="lg-en">Request deletion of personal data where legally permissible.</span><span class="lg-hi" lang="hi">जहाँ कानूनन अनुमति हो, वहाँ व्यक्तिगत डेटा हटाने का अनुरोध करना।</span></li><li><span class="lg-en">Withdraw consent where processing is based on consent.</span><span class="lg-hi" lang="hi">जहाँ उपयोग सहमति पर आधारित है, वहाँ सहमति वापस लेना।</span></li><li><span class="lg-en">Raise a privacy concern or complaint.</span><span class="lg-hi" lang="hi">निजता से जुड़ी चिंता या शिकायत दर्ज कराना।</span></li></ul>
+            <div class="lg-pair"><p class="lg-en">To make a request, please contact us using the details in the Contact section. We may need to verify your identity or authority before acting on a request.</p><p class="lg-hi" lang="hi">अनुरोध करने के लिए कृपया संपर्क अनुभाग में दिए गए विवरण से हमसे संपर्क करें। किसी अनुरोध पर कार्रवाई करने से पहले हमें आपकी पहचान या अधिकार की पुष्टि करनी पड़ सकती है।</p></div>
+          </section>
+          <section class="lg-sec" id="s11" aria-labelledby="s11-title">
+            <h2 id="s11-title"><span class="lg-num" aria-hidden="true">11</span><span>Changes to This Privacy Policy</span></h2>
+            <p class="lg-h2-hi" lang="hi">इस गोपनीयता नीति में बदलाव</p>
+            <div class="lg-pair"><p class="lg-en">We may update this Privacy Policy when our services, practices, or legal obligations change.</p><p class="lg-hi" lang="hi">जब हमारी सेवाएँ, कार्यप्रणाली या कानूनी ज़िम्मेदारियाँ बदलें, तब हम इस गोपनीयता नीति को अपडेट कर सकते हैं।</p></div>
+            <div class="lg-pair"><p class="lg-en">The revised version will be published on our website with an updated “Last Updated” date. Material changes will be communicated where required by applicable law.</p><p class="lg-hi" lang="hi">संशोधित संस्करण हमारी वेबसाइट पर “अंतिम अपडेट” की नई तारीख के साथ प्रकाशित किया जाएगा। जहाँ लागू कानून के अनुसार ज़रूरी हो, वहाँ महत्वपूर्ण बदलावों की सूचना दी जाएगी।</p></div>
+          </section>
+          <section class="lg-sec" id="s12" aria-labelledby="s12-title">
+            <h2 id="s12-title"><span class="lg-num" aria-hidden="true">12</span><span>Contact Us</span></h2>
+            <p class="lg-h2-hi" lang="hi">हमसे संपर्क करें</p>
+            <div class="lg-pair"><p class="lg-en">For privacy questions, personal-data requests, or complaints, contact:</p><p class="lg-hi" lang="hi">निजता से जुड़े प्रश्नों, व्यक्तिगत डेटा के अनुरोधों या शिकायतों के लिए संपर्क करें:</p></div>
+            <dl class="lg-biz">
+              <div class="lg-biz-row">
+                <dt>Business Name <small lang="hi">व्यवसाय का नाम</small></dt>
+                <dd><span data-biz="name">Maa Sharda Cyber</span></dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Business Address <small lang="hi">व्यवसाय का पता</small></dt>
+                <dd data-biz="address">[Enter Your Complete Business Address]</dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Phone / WhatsApp <small lang="hi">फ़ोन / WhatsApp</small></dt>
+                <dd><a data-biz-link="phone" href="tel:+919241062900"><span data-biz="phone">+91 92410 62900</span></a></dd>
+              </div>
+              <div class="lg-biz-row">
+                <dt>Email <small lang="hi">ईमेल</small></dt>
+                <dd><a data-biz-link="email" href="#"><span data-biz="email">[lakkiguptaa0816@gmail.com]</span></a></dd>
+              </div>
+            </dl>
+            <div class="lg-pair"><p class="lg-en">We will review privacy-related requests and respond in accordance with applicable law.</p><p class="lg-hi" lang="hi">हम निजता से जुड़े अनुरोधों की समीक्षा करेंगे और लागू कानून के अनुसार जवाब देंगे।</p></div>
+          </section>
+
+        </article>
+
+      </div>
+
+    </main>
+
+    <!-- =========================================
+     FOOTER (index.html जैसा ही)
+========================================= -->
+
+    <footer class="site-footer" id="footer">
+
+    <div class="container">
+
+        <!-- =====================================
+             CALL TO ACTION
+        ====================================== -->
+
+        <div class="ft-cta">
+
+            <div class="ft-cta-text">
+                <h2 class="ft-cta-title">Get your work done from home</h2>
+                <p>Call or message us, send your documents, and we will take care of the rest.</p>
+            </div>
+
+            <div class="ft-cta-actions">
+
+                <a class="ft-btn ft-btn-primary" href="tel:+919241062900">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Call Now
+                </a>
+
+                <a class="ft-btn ft-btn-outline" href="https://wa.me/919241062900" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.65-4.9A9 9 0 1 1 8.1 19.4L3 21z"/><g transform="translate(8.2 8.2) scale(.33)"><path stroke-width="5.4" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></g></svg>
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================
+             COLUMNS
+        ====================================== -->
+
+        <div class="ft-cols">
+
+            <!-- Brand + about + social -->
+
+            <div class="ft-brand">
+
+                <a href="index.html" class="ft-brand-link" aria-label="Maa Sharda Cyber, back to top">
+
+                    <span class="ft-badge" aria-hidden="true">
+                        <span class="ft-logo"></span>
+                    </span>
+
+                    <span class="ft-brand-name">
+                        <span class="ft-brand-small">Maa</span>
+                        <span class="ft-brand-script">Sharda Cyber</span>
+                    </span>
+
+                </a>
+
+                <p class="ft-about">
+                    माँ शारदा साइबर आपके पास का भरोसेमंद डिजिटल सेवा केंद्र है।
+                    फ़ॉर्म, दस्तावेज़ और प्रिंट, हर काम सही और समय पर।
+                </p>
+
+                <ul class="ft-social" aria-label="Social media">
+
+                    <li>
+                        <a href="https://www.instagram.com/shardacyber_0099/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <!-- DEMO link: अपना YouTube channel link डालें -->
+                        <a href="https://www.youtube.com/@your-channel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <!-- DEMO link: अपना Facebook page link डालें -->
+                        <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <!-- DEMO link: अपना Twitter link डालें -->
+                        <a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Quick links -->
+
+            <nav class="ft-links" aria-label="Quick links">
+
+                <h2 class="ft-title">Quick Links</h2>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="#">Job Vacancies</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+
+            </nav>
+
+            <!-- Our services -->
+
+            <nav class="ft-links" aria-label="Our services">
+
+                <h2 class="ft-title">Our Services</h2>
+
+                <ul>
+                    <li><a href="index.html#categories">Online Forms</a></li>
+                    <li><a href="index.html#categories">Document Scanning</a></li>
+                    <li><a href="index.html#categories">Print &amp; Photocopy</a></li>
+                    <li><a href="index.html#categories">Passport Photos</a></li>
+                    <li><a href="index.html#categories">PAN Services</a></li>
+                    <li><a href="index.html#categories">Aadhaar Services</a></li>
+                    <li><a href="index.html#categories">University Forms</a></li>
+                </ul>
+
+            </nav>
+
+            <!-- Contact -->
+
+            <div class="ft-contact">
+
+                <h2 class="ft-title">Contact</h2>
+
+                <ul>
+
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:+919241062900">+91 92410 62900</a>
+                    </li>
+
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <!-- DEMO email: अपना असली email यहाँ (दोनों जगह) डालें -->
+                        <a href="mailto:yourmail@example.com">yourmail@example.com</a>
+                    </li>
+
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <a href="https://maps.app.goo.gl/QKYQZ7fWPP4RtKxd8" target="_blank" rel="noopener noreferrer">Find us on Google Maps</a>
+                    </li>
+
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        <span>Monday – Saturday</span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- =====================================
+             BOTTOM BAR
+        ====================================== -->
+
+        <div class="ft-bottom">
+
+            <p class="ft-copy">&copy; <span id="ftYear">2026</span> Maa Sharda Cyber. All rights reserved.</p>
+
+            <ul class="ft-legal" aria-label="Legal">
+                <!-- ये pages बाद में बनेंगे, तब तक ये नाम रखे हैं -->
+                <li><a href="privacy-policy.html" aria-current="page">Privacy Policy</a></li>
+                <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+
+            <a href="#" class="ft-top">
+                Back to top
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+    <script src="footer.js"></script>
+    <script src="legal.js"></script>
+  </body>
+</html>

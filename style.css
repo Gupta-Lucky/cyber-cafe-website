@@ -143,11 +143,11 @@ textarea:focus-visible {
 }
 
 .nav-logo {
-    content: url("image/sharda-swirl-blue.webp");
+    content: url("image/sharda-logo-white.webp");
 }
 
 body.light-theme .nav-logo {
-    content: url("image/sharda-logo-white.webp");
+    content: url("image/sharda-swirl-blue.webp");
 }
 
 /* =========================================
@@ -698,8 +698,6 @@ body.light-theme .nav-logo {
     align-items: center;
     min-height: 32px;
     padding: 5px 8px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
     color: var(--text);
     font-size: 14px;
     font-weight: 500;
