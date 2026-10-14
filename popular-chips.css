@@ -1,0 +1,76 @@
+/* =========================================
+   POPULAR SERVICES : दाईं तरफ़ के 2 cards (icon + text)
+   style.css के बाद लोड करें। classes वही हैं:
+   .service-chips, .service-chip, .view-all
+   नई classes: .chip-icon, .chip-text
+   बिना border, बिना gradient।
+========================================= */
+
+.popular-services {
+    --pc-icon-bg: rgba(72, 177, 220, 0.14);
+    --pc-icon: #48B1DC;
+}
+
+body.light-theme .popular-services {
+    --pc-icon-bg: rgba(2, 106, 162, 0.10);
+    --pc-icon: #026AA2;
+}
+
+/* सारी rows एक के नीचे एक (दूसरे column में कभी नहीं टूटेंगी) */
+.service-card .service-chips {
+    flex-wrap: nowrap;
+    gap: 6px;
+}
+
+/* हर row : बाएँ icon, दाएँ सादा text */
+.service-card .service-chip {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    min-height: 40px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.chip-icon {
+    display: grid;
+    flex: 0 0 36px;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--pc-icon-bg);
+    color: var(--pc-icon);
+}
+
+.chip-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.chip-text {
+    min-width: 0;
+}
+
+/* पुराना खाली गोला (अगर कहीं रह गया हो) */
+.service-card .chip-circle {
+    display: none;
+}
+
+@media (min-width: 1025px) {
+    .service-card .service-chip {
+        font-size: 16px;
+    }
+}
