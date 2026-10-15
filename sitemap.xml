@@ -1,23 +1,13 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
   <url>
     <loc>https://maa-sharda-cyber.netlify.app/</loc>
-    <lastmod>2026-10-15</lastmod>
   </url>
-
-  <!-- Privacy Policy -->
   <url>
     <loc>https://maa-sharda-cyber.netlify.app/privacy-policy.html</loc>
-    <lastmod>2026-10-15</lastmod>
   </url>
-
-  <!-- Terms and Conditions -->
   <url>
     <loc>https://maa-sharda-cyber.netlify.app/terms-and-conditions.html</loc>
-    <lastmod>2026-10-15</lastmod>
   </url>
-
 </urlset>
