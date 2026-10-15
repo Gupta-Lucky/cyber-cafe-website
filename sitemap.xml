@@ -14,17 +14,17 @@
 
   <!-- Home page (इसी में Services, Pricing, About और Contact sections हैं) -->
   <url>
-    <loc>https://www.yourdomain.com/</loc>
+    <loc>https://maa-sharda-cyber.netlify.app/</loc>
     <lastmod>2026-10-15</lastmod>
   </url>
 
   <url>
-    <loc>https://www.yourdomain.com/privacy-policy.html</loc>
+    <loc>https://maa-sharda-cyber.netlify.app/privacy-policy.html</loc>
     <lastmod>2026-10-15</lastmod>
   </url>
 
   <url>
-    <loc>https://www.yourdomain.com/terms-and-conditions.html</loc>
+    <loc>https://maa-sharda-cyber.netlify.app/terms-and-conditions.html</loc>
     <lastmod>2026-10-15</lastmod>
   </url>
 
