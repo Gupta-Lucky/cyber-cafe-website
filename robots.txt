@@ -1,0 +1,6 @@
+# Maa Sharda Cyber
+User-agent: *
+Allow: /
+
+# "https://www.yourdomain.com" को अपने असली domain से बदलिए
+Sitemap: https://www.yourdomain.com/sitemap.xml
