@@ -152,15 +152,15 @@
     if (mobileBreakpoint.matches && typeof window.Swiper === "function") {
       if (!servicesSwiper) {
         servicesSwiper = new window.Swiper(swiperElement, {
-          slidesPerView: 1.45, //
+          slidesPerView: 1.3, //
           spaceBetween: 16,
           loop: true,
           speed: 800,
 
-          // autoplay: {
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // },
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
           grabCursor: true,
           allowTouchMove: true,
           watchOverflow: false,
