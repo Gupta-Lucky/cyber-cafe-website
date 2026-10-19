@@ -43,7 +43,7 @@ window.MSC_PRICING = {
       items: [
         { name: "New PAN Card", price: 200 },
         { name: "PAN Correction", price: 150 },
-        { name: "PAN Reprint", price: 90 },
+        { name: "PAN Reprint", price: 80 },
       ],
     },
     {
@@ -52,26 +52,26 @@ window.MSC_PRICING = {
       items: [
         { name: "Download & Print", price: 30 },
         { name: "Address Update", price: 100 },
-        { name: "PVC Card Order", price: 150 },
+        { name: "PVC Card Order", price: 80 },
       ],
     },
     {
       icon: "graduation-cap",
       title: "B.A / B.Sc / B.Com",
       items: [
-        { name: "Exam Form", price: 100 },
-        { name: "Admit Card", price: 30 },
-        { name: "Admission", price: 200 },
+        { name: "Exam Form", price: 120 },
+        { name: "Admit Card", price: 25 },
+        { name: "Admission", price: "___" },
       ],
     },
     {
       icon: "landmark",
       title: "Govt Certificates",
       items: [
-        { name: "Caste", price: 100 },
-        { name: "Income", price: 100 },
-        { name: "Residence", price: 100 },
-        { name: "EWS / NCL", price: 150 },
+        { name: "Caste", price: 50 },
+        { name: "Income", price: 50 },
+        { name: "Residence", price: 50 },
+        { name: "EWS / NCL", price: 100 },
       ],
     },
     {
@@ -88,15 +88,15 @@ window.MSC_PRICING = {
       title: "Ration Card",
       items: [
         { name: "New Ration Card", price: 150 },
-        { name: "Add / Remove Member", price: 100 },
-        { name: "Correction", price: 100 },
+        { name: "Add / Remove Member", price: 50 },
+        { name: "Correction", price: 50 },
       ],
     },
     {
       icon: "award",
       title: "Scholarship",
       items: [
-        { name: "New Application", price: 100 },
+        { name: "New Application", price: 150 },
         { name: "Renewal", price: 80 },
         { name: "Status Check", price: 20 },
       ],
@@ -105,8 +105,8 @@ window.MSC_PRICING = {
       icon: "train",
       title: "SSC & Railway",
       items: [
-        { name: "SSC Exam Form", price: 100 },
-        { name: "RRB Exam Form", price: 100 },
+        { name: "SSC Exam Form", price: "___" },
+        { name: "RRB Exam Form", price: "____" },
         { name: "Admit Card", price: 30 },
       ],
     },
@@ -114,56 +114,56 @@ window.MSC_PRICING = {
       icon: "briefcase",
       title: "Govt Job Forms",
       items: [
-        { name: "State Govt Job", price: 100 },
-        { name: "Central Govt Job", price: 100 },
-        { name: "Police / BSSC", price: 120 },
+        { name: "State Govt Job", price: "___" },
+        { name: "Central Govt Job", price: "___" },
+        { name: "Police / BSSC", price: "___" },
       ],
     },
-    {
-      icon: "calculator",
-      title: "Tax & GST",
-      items: [
-        { name: "ITR (Salaried)", price: 400 },
-        { name: "ITR (Business)", price: 800 },
-        { name: "GST Registration", price: 1000 },
-      ],
-    },
-    {
-      icon: "building",
-      title: "Business Registration",
-      items: [
-        { name: "Udyam (MSME)", price: 300 },
-        { name: "FSSAI", price: 800 },
-        { name: "Digital Signature", price: 1500 },
-      ],
-    },
+    // {
+    //   icon: "calculator",
+    //   title: "Tax & GST",
+    //   items: [
+    //     { name: "ITR (Salaried)", price: 400 },
+    //     { name: "ITR (Business)", price: 800 },
+    //     { name: "GST Registration", price: 1000 },
+    //   ],
+    // },
+    // {
+    //   icon: "building",
+    //   title: "Business Registration",
+    //   items: [
+    //     { name: "Udyam (MSME)", price: 300 },
+    //     { name: "FSSAI", price: 800 },
+    //     { name: "Digital Signature", price: 1500 },
+    //   ],
+    // },
     {
       icon: "car",
       title: "Driving Licence",
       items: [
         { name: "Learner Licence", price: 300 },
-        { name: "DL Renewal", price: 400 },
+        { name: "DL Renewal", price: "___" },
         { name: "e-Challan Payment", price: 50 },
       ],
     },
-    {
-      icon: "book",
-      title: "Passport",
-      items: [
-        { name: "New Passport Form", price: 400 },
-        { name: "Renewal Form", price: 400 },
-        { name: "Appointment Booking", price: 100 },
-      ],
-    },
-    {
-      icon: "map",
-      title: "Land Records",
-      items: [
-        { name: "Jamabandi Copy", price: 50 },
-        { name: "Rent Receipt", price: 60 },
-        { name: "Dakhil-Kharij", price: 300 },
-      ],
-    },
+    // {
+    //   icon: "book",
+    //   title: "Passport",
+    //   items: [
+    //     { name: "New Passport Form", price: 400 },
+    //     { name: "Renewal Form", price: 400 },
+    //     { name: "Appointment Booking", price: 100 },
+    //   ],
+    // },
+    // {
+    //   icon: "map",
+    //   title: "Land Records",
+    //   items: [
+    //     { name: "Jamabandi Copy", price: 50 },
+    //     { name: "Rent Receipt", price: 60 },
+    //     { name: "Dakhil-Kharij", price: 300 },
+    //   ],
+    // },
     {
       icon: "heart",
       title: "Govt Schemes",
@@ -187,18 +187,18 @@ window.MSC_PRICING = {
       icon: "plane",
       title: "Travel Tickets",
       items: [
-        { name: "Train (IRCTC)", price: 30 },
-        { name: "Bus Ticket", price: 20 },
-        { name: "Flight Ticket", price: 100 },
+        { name: "Train (IRCTC)", price: "___" },
+        { name: "Bus Ticket", price: "___" },
+        // { name: "Flight Ticket", price: 100 },
       ],
     },
     {
       icon: "file-text",
       title: "Resume & Typing",
       items: [
-        { name: "Resume / CV", price: 150 },
+        { name: "Resume / CV", price: 100 },
         { name: "Typing (per page)", price: 30 },
-        { name: "Translation (per page)", price: 100 },
+        { name: "Translation (per page)", price: 50 },
       ],
     },
     {
@@ -226,7 +226,7 @@ window.MSC_PRICING = {
       title: "Website Development",
       items: [
         { name: "Landing Page", price: "₹2,999+" },
-        { name: "Portfolio Website", price: "₹4,999+" },
+        { name: "Portfolio Website", price: "₹2,000+" },
         { name: "Business Website", price: "₹7,999+" },
         { name: "Maintenance", price: "₹499/mo" },
       ],
@@ -235,19 +235,19 @@ window.MSC_PRICING = {
       icon: "video",
       title: "Video Editing",
       items: [
-        { name: "Reel / Short", price: "₹300+" },
-        { name: "Product Video", price: "₹1,000+" },
-        { name: "Event Video", price: "₹1,500+" },
+        // { name: "Reel / Short", price: "₹300+" },
+        { name: "marri Video", price: "₹___" },
+        { name: "Event Video", price: "₹___" },
       ],
     },
     {
       icon: "megaphone",
       title: "Digital Marketing",
       items: [
-        { name: "Social Media Post", price: "₹100+" },
+        { name: "Social Media Post", price: "___" },
         { name: "Poster / Banner", price: "₹150+" },
-        { name: "Google Business Profile", price: 499 },
-        { name: "Logo Design", price: 499 },
+        { name: "Google Business Profile", price: "___" },
+        { name: "Logo Design", price: "___" },
       ],
     },
   ],
